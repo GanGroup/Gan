@@ -66,7 +66,9 @@ International Conference on Neural Information Processing Systems (NIPS 2014). p
   ## Next meeting:
 
   21 May 10am Irish time using zoom (discussion of GANs and the literature)
+  
   TODO
+  
   ● Github initialisation (KD)
   
   ● Copy general doc file to github (SY)
