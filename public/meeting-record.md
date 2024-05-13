@@ -7,8 +7,11 @@
 ● Practical implementation is given using Tensorflow
 
 ● Using this example, implement your own DCGAN for some dataset
+
 ● Invent your own GAN analysis (to do together)
+
 ● Learn GAN and DCGAN
+
 ● Literature review
 
 ### Literature
@@ -31,19 +34,33 @@ International Conference on Neural Information Processing Systems (NIPS 2014). p
   ## Time plan
 
   ● Thesis submission: 2 October
+  
   ● Presentation: 27 September (20+5 min)
+  
   ● Whatsup group created
+  
   ● Work plan:
+  
   ○ Learning literature and other sources: 3 weeks
+  
   ○ Running and understanding the tensorflow example: 3 days
+  
   ○ Finding your “own” dataset and implementing it with tensorflow: 2 weeks
+  
   ○ Thinking about additional research questions on the analysis of the obtained
+  
   results, e.g. embedding of the generated images/text and comparing them with
+  
   the training data.Implementing it. 1 month
+  
   ○ Start writing in August. For writing: > 1.5 months
+  
   ● Kai: 18 June in Cork
+  
   ● Jiaxue: 11 August in Cork
+  
   ● Online meetings ~weekly about 1 hour (max 2 hours)
+  
   ● Time shift: +7 for China
 
   ## Next meeting:
@@ -51,6 +68,9 @@ International Conference on Neural Information Processing Systems (NIPS 2014). p
   21 May 10am Irish time using zoom (discussion of GANs and the literature)
   TODO
   ● Github initialisation (KD)
+  
   ● Copy general doc file to github (SY)
+  
   ● Copy PDFs of the papers to github (all)
+  
   ● Read the sources, look for important references (all)
