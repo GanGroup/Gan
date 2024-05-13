@@ -3,7 +3,9 @@
 ## 2023.5.13
 
 ● Explorative project
+
 ● Practical implementation is given using Tensorflow
+
 ● Using this example, implement your own DCGAN for some dataset
 ● Invent your own GAN analysis (to do together)
 ● Learn GAN and DCGAN
