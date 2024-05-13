@@ -1,0 +1,102 @@
+\documentclass[12pt,a4paper]{report}
+
+\setcounter{secnumdepth}{3} %The level of sections that get numbered
+\setcounter{tocdepth}{3} %The level of sections to appear in ToC
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{setspace}
+
+%Date formatting Package
+\usepackage[ddmmyyyy]{datetime}
+
+\usepackage{wrapfig}
+
+
+\begin{document}
+\begin{titlepage} \vspace{1cm}
+
+\begin{center}
+\textbf{\Huge Title}
+\end{center}
+
+\vspace{1.0cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.7]{Images/UCC_logo} 
+\end{figure}
+
+\vspace{1.0cm}
+
+\begin{center}
+\textbf{\Large Author:} \Large{Name} {\LARGE\par}
+\textbf{\Large Supervisor:} \Large{Name} {\LARGE\par}
+\end{center}
+\vspace{1.0cm}
+
+\begin{center}
+\Large
+A thesis submitted in partial fulfilment of the requirements for the degree of\\ MSc Mathematical Modelling and Machine Learning
+\vfill{}
+\Large{School of Mathematical Sciences, \\
+University College Cork, \\
+Ireland \\
+\vspace{0.4cm}
+September 2024}
+\end{center}
+
+\end{titlepage}
+
+\onehalfspacing
+
+\chapter*{Declaration of Authorship}
+
+This report is wholly the work of the author, except where explicitly
+stated otherwise. The source of any material which was not created
+by the author has been clearly cited. \\
+\medskip{}
+
+\textbf{Date:} \quad \today
+
+\medskip{}
+
+\textbf{Signature:} 
+
+\chapter*{Acknowledgements}
+
+I would like to thank...
+
+\chapter*{Abstract}
+
+A brief overview of the thesis...
+
+\tableofcontents{}
+
+\listoffigures{}
+
+\newpage
+\input{01_Introduction}
+
+\newpage
+\input{02_Theoretical_Background}
+
+\newpage
+\input{03_Literature_Review}
+
+\newpage
+\input{04_Results}
+
+\newpage
+\input{05_Discussion}
+
+\newpage
+\appendix
+\input{Appendix}
+
+\bibliographystyle{unsrt}
+\bibliography{References}
+
+\end{document}
