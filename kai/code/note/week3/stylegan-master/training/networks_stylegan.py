@@ -407,6 +407,7 @@ def G_mapping(
     x = latents_in
 
     # Embed labels and concatenate them with latents.
+    # if apply the label then the x is 1 * 1024
     if label_size:
         with tf.variable_scope('LabelConcat'):
             w = tf.get_variable('weight', shape=[label_size, latent_size], initializer=tf.initializers.random_normal())
