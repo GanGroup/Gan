@@ -1,0 +1,61 @@
+\chapter{Related Work}
+\label{Related Work}
+
+\section*{Deep generative models}
+
+
+Deep generative models, such as Deep Boltzmann Machines (DBMs), are a significant area of research in machine learning. These models are characterized by providing parameterized specifications of probability distribution functions and are typically trained by maximizing the log-likelihood function \citep{10.48550/arxiv.1603.06170}. DBMs have shown success in extracting deep hierarchical representations of input data, although they often face challenges due to intractable likelihood functions, necessitating multiple approximations of the likelihood gradient \citep{10.1109/access.2014.2319813}.
+
+One approach to addressing the challenges in training deep generative models is through techniques like deep tempering, which leverages properties of models like Deep Belief Networks (DBNs) to enhance ergodicity by sampling from deeper levels of the latent variable hierarchy \citep{10.48550/arxiv.1410.0123}. Additionally, methods like reweighted wake-sleep have been proposed to improve the generative performance of deep models by capturing high-level abstractions and enhancing generalization capabilities \citep{10.48550/arxiv.1406.2751}.
+
+Furthermore, the training of DBMs can be optimized by centering binary variables, which has been shown to improve generative performance and stabilize learning processes \citep{10.48550/arxiv.1311.1354}. Additionally, the use of mean-field inference in Gaussian Restricted Boltzmann Machines has been explored to meet the increasing demand for analyzing computational algorithms for RBMs in various fields \citep{10.7566/jpsj.85.034001}.
+
+In conclusion, the development and training of deep generative models like DBMs involve addressing challenges related to intractable likelihood functions, gradient approximations, and model optimization techniques. By leveraging properties of these models, exploring novel training algorithms, and optimizing learning processes, researchers aim to enhance the generative performance and generalization capabilities of deep generative models.
+
+
+
+
+\section*{Generative Stochastic Networks}
+
+Generative machines have emerged as a solution to the challenges associated with training Deep Boltzmann Machines (DBMs) \citep{10.1093/imaiai/iaw003}. One notable example is Generative Stochastic Networks (GSNs), which have been developed to generate samples without explicitly representing the likelihood function. GSNs can be trained using exact backpropagation, eliminating the need for approximate methods required by DBMs. These networks are based on learning the transition operator of a Markov chain to estimate the data distribution. Furthermore, the concept of generative machines has been extended by eliminating Markov chains in generative stochastic networks, enhancing their efficiency and effectiveness \citep{10.48550/arxiv.2302.09465}.
+
+Generative Neurosymbolic Machines represent another advancement in generative models, combining distributed and symbolic representations to support structured symbolic components and density-based generation. This approach leverages the benefits of both types of representations to enhance the overall performance of generative models.
+
+In summary, generative machines like GSNs and Generative Neurosymbolic Machines offer innovative solutions for generating samples without explicitly modeling the likelihood function, thereby overcoming the complexities associated with training DBMs. These advancements in generative models pave the way for more efficient and effective sample generation in machine learning applications.
+
+
+
+\section*{Variational Autoencoders}
+
+
+Variational Autoencoders (VAEs) have gained significant attention in the field of deep learning due to their ability to learn latent representations of complex data. Kingma and Welling, along with Rezende et al., introduced a stochastic back-propagation rule that enables training VAEs by back-propagation through a Gaussian distribution \citep{10.48550/arxiv.1909.13062}. This approach pairs a generative network with a discriminative model to perform approximate inference, allowing VAEs to learn to encode data into a low-dimensional latent space and decode it back to the original data \citep{10.3390/bioengineering10101209}.
+
+However, VAEs face limitations in modeling discrete data as they require back-propagation through hidden units, which poses challenges in handling such data types effectively \citep{10.48550/arxiv.1909.13062}. Despite this limitation, VAEs have been extensively used to represent high-dimensional complex data by learning a low-dimensional latent space in an unsupervised manner \citep{10.48550/arxiv.2106.06500}.
+
+In summary, VAEs offer a powerful framework for deep generative modeling, enabling the creation of latent representations of data that can be decoded back to the original form. While they excel in modeling continuous data, challenges persist in effectively modeling discrete data due to the nature of back-propagation through hidden units.
+
+
+\section*{Generative Stochastic Networks}
+
+
+Noise Contrastive Estimation (NCE) is a technique used in training generative models by distinguishing between data and noise samples \citep{10.21437/interspeech.2016-1295}. It has been applied in various fields such as speech recognition and language modeling due to its ability to handle large vocabularies efficiently \citep{10.1609/aaai.v32i1.11967}. NCE addresses the computational challenges posed by traditional methods like softmax by transforming the estimation problem into a binary classification task \citep{10.18653/v1/e17-2003}. By discriminating between observed data and artificially generated noise, NCE enables the estimation of non-normalized models effectively \citep{10.48550/arxiv.1805.07516}.
+
+One of the key limitations of NCE is the need to evaluate and backpropagate two probability densities, one for the noise distribution and the other for the model distribution \citep{10.18653/v1/e17-2003}. Despite this limitation, NCE has proven to be a highly effective approach for unsupervised representation learning using deep networks \citep{10.48550/arxiv.2205.01789}. The method has also been extended to flow models for energy-based models, where the update is based on noise contrastive estimation \citep{10.1109/cvpr42600.2020.00754}.
+
+In the context of training large vocabulary neural language models, NCE has been shown to be a sampling-based technique that offers speed improvements \citep{10.18653/v1/p16-1186}. Researchers have explored different strategies to enhance the training algorithms, including investigating noise contrastive estimation and diagonal contexts for further speed improvements \citep{10.3115/v1/n15-1083}. Additionally, the use of noise-contrastive estimation has been linked to self-supervised tasks in state-of-the-art methods \citep{10.48550/arxiv.2203.01110}.
+
+In conclusion, Noise Contrastive Estimation (NCE) is a valuable technique for training generative models efficiently, particularly in scenarios with large vocabularies. While it has some limitations related to the evaluation of multiple probability densities, researchers continue to explore and extend NCE to address various challenges in unsupervised representation learning.
+
+
+\section*{Predictability minimization}
+
+
+Predictability minimization is a technique that involves training two neural networks competitively to encourage the hidden units of the neural network to be independent of each other. Unlike Generative Adversarial Networks (GANs), where the competition is the sole training criterion, predictability minimization uses a regularizer to promote independence among the hidden units \citep{10.1145/2640087.2644155}.
+
+In the context of predictive coding, predictability minimization aims to reduce prediction errors by minimizing the mismatch between incoming sensations and predictions established through experience. This process involves deviance processing, which is part of an inference process where prediction errors are minimized at different levels of the auditory hierarchy \citep{10.3389/fnhum.2015.00505}.
+
+Regularization techniques play a crucial role in predictability minimization by penalizing model complexity to prevent overfitting. These methods typically involve balancing prediction errors on training data against regularization to optimize the model's performance \citep{10.1186/1471-2105-16-s16-s2}. Regularization functions often impose constraints on the model to ensure smooth transitions and prevent over-parameterization, thus aiding in minimizing prediction errors \citep{10.1007/978-1-4615-5339-7_102}.
+
+Overall, predictability minimization, through the use of regularization techniques and competitive training of neural networks, aims to enhance the independence of hidden units and reduce prediction errors by optimizing model complexity and promoting smoother transitions within the model.
+
+
