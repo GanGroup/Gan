@@ -54,6 +54,8 @@ International Conference on Neural Information Processing Systems (NIPS 2014). p
   the training data.Implementing it. 1 month
   
   ○ Start writing in August. For writing: > 1.5 months
+
+  ○ Try to finishe thesis at the end of Augest (need about 1 week to review the thesis).
   
   ● Kai: 18 June in Cork
   
