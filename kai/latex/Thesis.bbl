@@ -165,14 +165,14 @@ T.~Miyato.
 \newblock Cgans with projection discriminator.
 \newblock 2018.
 
-\bibitem{10.48550/arxiv.1908.05861}
-A.~Lahiri.
-\newblock The angel is in the priors: improving gan based image and sequence inpainting with better noise and structural priors.
-\newblock 2019.
+\bibitem{10.1007/s11263-019-01265-2}
+G.~Qi.
+\newblock Loss-sensitive generative adversarial networks on lipschitz densities.
+\newblock {\em International Journal of Computer Vision}, 128:1118--1140, 2019.
 
-\bibitem{10.1002/mp.14062}
-X.~Tie, S.~Lam, Y.~Zhang, K.~Lee, K.~Au, and J.~Cai.
-\newblock Pseudo‐ct generation from multi‐parametric mri using a novel multi‐channel multi‐path conditional generative adversarial network for nasopharyngeal carcinoma patients.
-\newblock {\em Medical Physics}, 47:1750--1762, 2020.
+\bibitem{10.1109/tpami.2018.2872043}
+X.~Mao, Q.~Li, H.~Xie, R.~Y.~K. Lau, Z.~Wang, and S.~P. Smolley.
+\newblock On the effectiveness of least squares generative adversarial networks.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 41:2947--2960, 2019.
 
 \end{thebibliography}
