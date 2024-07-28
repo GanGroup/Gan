@@ -175,4 +175,9 @@ X.~Mao, Q.~Li, H.~Xie, R.~Y.~K. Lau, Z.~Wang, and S.~P. Smolley.
 \newblock On the effectiveness of least squares generative adversarial networks.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 41:2947--2960, 2019.
 
+\bibitem{goodfellow2014generative}
+Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
+\newblock Generative adversarial networks.
+\newblock 2014.
+
 \end{thebibliography}
