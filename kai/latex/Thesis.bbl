@@ -180,4 +180,19 @@ Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
 \newblock Generative adversarial networks.
 \newblock 2014.
 
+\bibitem{10.48550/arxiv.2203.06026}
+T.~Kynkäänniemi, T.~Karras, M.~Aittala, T.~Aila, and J.~Lehtinen.
+\newblock The role of imagenet classes in fréchet inception distance.
+\newblock 2022.
+
+\bibitem{10.3390/app12157599}
+Y.~Xu, T.~Wu, J.~Charlton, and K.~Bennett.
+\newblock Gan training acceleration using fréchet descriptor-based coreset.
+\newblock {\em Applied Sciences}, 12:7599, 2022.
+
+\bibitem{10.1117/12.2673366}
+R.~Xu, J.~Wang, J.~Liu, F.~Ni, and B.~Cao.
+\newblock Thermal infrared face image data enhancement method based on deep learning.
+\newblock 2023.
+
 \end{thebibliography}
