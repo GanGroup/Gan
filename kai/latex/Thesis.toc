@@ -1,6 +1,6 @@
 \contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Related Work}{7}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Theoretical Background}{12}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Results}{21}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Experiments}{21}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Discussion}{22}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Code}{23}{appendix.A}%
