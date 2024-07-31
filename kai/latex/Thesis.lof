@@ -2,11 +2,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram of GAN training process\relax }}{15}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Training Accuracy\relax }}{21}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Generate Images\relax }}{21}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Training accuracy\relax }}{21}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Generate images\relax }}{21}{figure.caption.20}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The structure for generator\relax }}{23}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The Structure For Discriminator\relax }}{23}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Model performance \relax }}{24}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The structure for discriminator\relax }}{23}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Model performance 1000 epochs\relax }}{24}{figure.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
