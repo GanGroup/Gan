@@ -8,5 +8,7 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The structure for generator\relax }}{23}{figure.caption.23}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The structure for discriminator\relax }}{23}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Model performance 1000 epochs\relax }}{24}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The FID scores for standard GAN without data augmentation\relax }}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The FID scores for standard GAN with data augmentation\relax }}{26}{figure.caption.28}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

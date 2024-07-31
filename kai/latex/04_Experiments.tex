@@ -79,5 +79,61 @@ Consequently, I selected the standard GAN model implemented with convolutional l
     \label{fig:combined}
 \end{figure}
 
+\section*{Data Augmentation}
 
-\section*{Apply new dataset}
+I conducted three training runs of the standard GAN model, both with and without data augmentation, 
+and compared the FID scores. The results indicate that data augmentation generally led to lower optimization performance.
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/standard_GAN_without_data_augementation1.jpg}
+        \caption{Standard GAN without data augmentation 1}
+        \label{fig:Dense}
+    \end{subfigure}
+    \vspace{0.05\linewidth} 
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/standard_GAN_without_data_augementation2.jpg}
+        \caption{Standard GAN without data augmentation 2}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/standard_GAN_without_data_augementation3.jpg}
+        \caption{Standard GAN without data augmentation 3}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \caption{The FID scores for standard GAN without data augmentation}
+    \label{fig:combined}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/standard_GAN_with_data_augementation1.jpg}
+        \caption{Standard GAN with data augmentation 1}
+        \label{fig:Dense}
+    \end{subfigure}
+    \vspace{0.05\linewidth} 
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/standard_GAN_with_data_augementation2.jpg}
+        \caption{Standard GAN with data augmentation 2}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/standard_GAN_with_data_augementation3.jpg}
+        \caption{Standard GAN with data augmentation 3}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \caption{The FID scores for standard GAN with data augmentation}
+    \label{fig:combined}
+\end{figure}
+
+\section*{Apply New Dataset}
