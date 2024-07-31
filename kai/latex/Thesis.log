@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  30 JUL 2024 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  31 JUL 2024 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -311,11 +311,37 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen167
+\captionmargin=\dimen168
+\caption@leftmargin=\dimen169
+\caption@rightmargin=\dimen170
+\caption@width=\dimen171
+\caption@indent=\dimen172
+\caption@parindent=\dimen173
+\caption@hangindent=\dimen174
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count299
+\c@continuedfloat=\count300
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count301
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count302
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
  (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count299
+\etb@tempcnta=\count303
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2020/01/30 v3.07
  (/usr/local/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -324,89 +350,120 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks29
 \XKV@tempa@toks=\toks30
 )
-\XKV@depth=\count300
+\XKV@depth=\count304
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fcprefix.sty
 Package: fcprefix 2012/09/28
  (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count301
+\fc@digit@counter=\count305
 ))
-\c@padzeroesN=\count302
-\fc@tmpcatcode=\count303
-\@DT@modctr=\count304
-\@ordinalctr=\count305
-\@orgargctr=\count306
-\@strctr=\count307
-\@tmpstrctr=\count308
-\@DT@loopN=\count309
-\@DT@X=\count310
+\c@padzeroesN=\count306
+\fc@tmpcatcode=\count307
+\@DT@modctr=\count308
+\@ordinalctr=\count309
+\@orgargctr=\count310
+\@strctr=\count311
+\@tmpstrctr=\count312
+\@DT@loopN=\count313
+\@DT@X=\count314
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count311
-\@month=\count312
-\@year=\count313
-\c@HOUR=\count314
-\c@HOURXII=\count315
-\c@MINUTE=\count316
-\c@TOHOUR=\count317
-\c@TOMINUTE=\count318
-\c@SECOND=\count319
-\currenthour=\count320
-\currentminute=\count321
-\currentsecond=\count322
+\@day=\count315
+\@month=\count316
+\@year=\count317
+\c@HOUR=\count318
+\c@HOURXII=\count319
+\c@MINUTE=\count320
+\c@TOHOUR=\count321
+\c@TOMINUTE=\count322
+\c@SECOND=\count323
+\currenthour=\count324
+\currentminute=\count325
+\currentsecond=\count326
 Package datetime Info: No datetime.cfg file found, using default settings on input line 308.
-\@dtctr=\count323
-\dayofyear=\count324
-\dayofweek=\count325
+\@dtctr=\count327
+\dayofyear=\count328
+\dayofweek=\count329
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks31
 \dt@b=\toks32
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen167
-\WF@size=\dimen168
-\c@WF@wrappedlines=\count326
+\wrapoverhang=\dimen175
+\WF@size=\dimen176
+\c@WF@wrappedlines=\count330
 \WF@box=\box59
 \WF@everypar=\toks33
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count327
+\l__color_backend_stack_int=\count331
 \l__pdf_internal_box=\box60
-) (./Thesis.aux)
+) (./Thesis.aux
+
+LaTeX Warning: Label `fig:my_picture' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_picture' multiply defined.
+
+
+LaTeX Warning: Label `fig:Dense' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Dense' multiply defined.
+
+
+LaTeX Warning: Label `fig:Conv2D Transpose' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Conv2D Transpose' multiply defined.
+
+
+LaTeX Warning: Label `fig:combined' multiply defined.
+
+
+LaTeX Warning: Label `fig:Dense' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Dense' multiply defined.
+
+
+LaTeX Warning: Label `fig:combined' multiply defined.
+
+)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen169
+\scratchcounter=\count332
+\scratchdimen=\dimen177
 \scratchbox=\box61
-\nofMPsegments=\count329
-\nofMParguments=\count330
+\nofMPsegments=\count333
+\nofMParguments=\count334
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen170
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
+\MPscratchCnt=\count335
+\MPscratchDim=\dimen178
+\MPnumerator=\count336
+\makeMPintoPDFobject=\count337
 \everyMPtoPDFconversion=\toks35
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -419,19 +476,22 @@ Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-\c@lstlisting=\count334
-Package hyperref Info: Link coloring OFF on input line 24.
+\c@lstlisting=\count338
+Package hyperref Info: Link coloring OFF on input line 25.
  (./Thesis.out) (./Thesis.out)
 \@outlinefile=\write3
 \openout3 = `Thesis.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
 <Images/UCC_logo.png, id=28, 196.0926pt x 211.2693pt>
 File: Images/UCC_logo.png Graphic file (type png)
 <use Images/UCC_logo.png>
-Package pdftex.def Info: Images/UCC_logo.png  used on input line 35.
+Package pdftex.def Info: Images/UCC_logo.png  used on input line 36.
 (pdftex.def)             Requested size: 137.26387pt x 147.8875pt.
  [1
 
@@ -439,7 +499,7 @@ Package pdftex.def Info: Images/UCC_logo.png  used on input line 35.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \chapter
+l.75 \chapter
              *{Acknowledgements} [1
 
 ] [2
@@ -479,7 +539,7 @@ Chapter 3.
 [12
 
 ] [13] [14]
-<./Images/data_distribution.jpg, id=206, 1025.8325pt x 332.24126pt>
+<./Images/data_distribution.jpg, id=217, 1025.8325pt x 332.24126pt>
 File: ./Images/data_distribution.jpg Graphic file (type jpg)
 <use ./Images/data_distribution.jpg>
 Package pdftex.def Info: ./Images/data_distribution.jpg  used on input line 99.
@@ -499,37 +559,93 @@ Overfull \hbox (39.37967pt too wide) detected at line 237
 [][][]\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D[]; G\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/12 d\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 :
  []
 
-[18] [19]) [20] (./04_Experiments.tex
-Chapter 4.
-) [21
+[18] [19]
+<./Images/model_accuracy.jpg, id=275, 1089.06876pt x 369.38pt>
+File: ./Images/model_accuracy.jpg Graphic file (type jpg)
+<use ./Images/model_accuracy.jpg>
+Package pdftex.def Info: ./Images/model_accuracy.jpg  used on input line 301.
+(pdftex.def)             Requested size: 467.99881pt x 158.72884pt.
 
-] (./05_Discussion.tex
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 301--302
+ [][] 
+ []
+
+[20]
+<./Images/generate_images.jpg, id=283, 920.43875pt x 250.9375pt>
+File: ./Images/generate_images.jpg Graphic file (type jpg)
+<use ./Images/generate_images.jpg>
+Package pdftex.def Info: ./Images/generate_images.jpg  used on input line 308.
+(pdftex.def)             Requested size: 467.99881pt x 127.59352pt.
+
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 308--309
+ [][] 
+ []
+
+) [21 <./Images/model_accuracy.jpg> <./Images/generate_images.jpg>] (./04_Experiments.tex
+Chapter 4.
+<./Images/generator_dense.jpg, id=290, 725.71124pt x 689.57625pt>
+File: ./Images/generator_dense.jpg Graphic file (type jpg)
+<use ./Images/generator_dense.jpg>
+Package pdftex.def Info: ./Images/generator_dense.jpg  used on input line 27.
+(pdftex.def)             Requested size: 175.49881pt x 166.7538pt.
+<./Images/generator_cnn.jpg, id=291, 746.79pt x 735.74875pt>
+File: ./Images/generator_cnn.jpg Graphic file (type jpg)
+<use ./Images/generator_cnn.jpg>
+Package pdftex.def Info: ./Images/generator_cnn.jpg  used on input line 34.
+(pdftex.def)             Requested size: 175.49881pt x 172.90097pt.
+[22
+
+]
+<./Images/discriminator_dense.jpg, id=298, 749.80125pt x 495.8525pt>
+File: ./Images/discriminator_dense.jpg Graphic file (type jpg)
+<use ./Images/discriminator_dense.jpg>
+Package pdftex.def Info: ./Images/discriminator_dense.jpg  used on input line 47.
+(pdftex.def)             Requested size: 175.49881pt x 116.05624pt.
+<./Images/discriminator_cnn.jpg, id=299, 728.7225pt x 489.83pt>
+File: ./Images/discriminator_cnn.jpg Graphic file (type jpg)
+<use ./Images/discriminator_cnn.jpg>
+Package pdftex.def Info: ./Images/discriminator_cnn.jpg  used on input line 54.
+(pdftex.def)             Requested size: 175.49881pt x 117.9652pt.
+<./Images/generate_image_by_dense_layer.jpg, id=300, 624.3325pt x 146.5475pt>
+File: ./Images/generate_image_by_dense_layer.jpg Graphic file (type jpg)
+<use ./Images/generate_image_by_dense_layer.jpg>
+Package pdftex.def Info: ./Images/generate_image_by_dense_layer.jpg  used on input line 67.
+(pdftex.def)             Requested size: 272.99881pt x 64.08081pt.
+<./Images/generate_image_by_Convelution_layer.jpg, id=301, 618.31pt x 134.5025pt>
+File: ./Images/generate_image_by_Convelution_layer.jpg Graphic file (type jpg)
+<use ./Images/generate_image_by_Convelution_layer.jpg>
+Package pdftex.def Info: ./Images/generate_image_by_Convelution_layer.jpg  used on input line 74.
+(pdftex.def)             Requested size: 272.99881pt x 59.38855pt.
+) [23 <./Images/generator_dense.jpg> <./Images/generator_cnn.jpg> <./Images/discriminator_dense.jpg> <./Images/discriminator_cnn.jpg>] [24 <./Images/generate_image_by_dense_layer.jpg> <./Images/generate_image_by_Convelution_layer.jpg>] (./05_Discussion.tex
 Chapter 5.
-) [22
+) [25
 
 ] (./Appendix.tex
 Appendix A.
-) (./Thesis.bbl [23
+) (./Thesis.bbl [26
 
-] [24
+] [27
 
-] [25] [26]) [27] (./Thesis.aux)
+] [28] [29]) [30] (./Thesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: CB7BF77ABC2453C8271AF2D7E0AF5BAC;620.
  ) 
 Here is how much of TeX's memory you used:
- 13748 strings out of 476025
- 217543 string characters out of 5790017
+ 15226 strings out of 476025
+ 247479 string characters out of 5790017
  1859388 words of memory out of 5000000
- 33845 multiletter control sequences out of 15000+600000
+ 35295 multiletter control sequences out of 15000+600000
  520960 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,76p,1055b,673s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,77p,1055b,673s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Thesis.pdf (28 pages, 469170 bytes).
+Output written on Thesis.pdf (31 pages, 1468163 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 331 compressed objects within 4 object streams
- 115 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 446 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 

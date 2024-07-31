@@ -293,6 +293,24 @@ measure the quality and diversity of generated data. In generation tasks, there 
 "correct answer" and the generated data has no "real label", so it is impossible to directly 
 compare the correspondence between the generated data and a real sample. 
 
+The following is a result for a standard GANs model with high accuracy but generate low quality images.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.2\linewidth]{./Images/model_accuracy.jpg}
+    \caption{Training Accuracy}
+    \label{fig:my_picture}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.2\linewidth]{./Images/generate_images.jpg}
+    \caption{Generate Images}
+    \label{fig:my_picture}
+\end{figure}
+
+
 FID (Fréchet Inception Distance) quantifies the difference between generated data and real 
 data by comparing their distribution in the Inception network feature space. FID takes into 
 account the overall distribution of generated data and real data, and can reflect the quality 
