@@ -80,10 +80,62 @@ Consequently, I selected the standard GAN model implemented with convolutional l
 \end{figure}
 
 
+\section*{Explore More Layers}
+
+In this section, I explored the impact of changing convolutional layers in the generator and discriminator of a GAN.
+
+Firstly, I trained the basic convolutional GAN model three times and recorded the FID scores. Secondly, based on the basic structure, I gradually added convolutional layers to the generator, from one to three layers, while keeping the discriminator structure fixed. I trained the model three times for each configuration and recorded the FID scores.
+
+Finally, using the base GAN with three additional convolutional layers in the generator, I gradually added convolutional layers to the discriminator, from one to three layers, while keeping the generator structure fixed. I trained the model three times for each configuration and recorded the FID scores.
+
+Upon comparing, I found that increasing the number of layers in either the generator or the discriminator alone worsened the model’s performance. This imbalance disrupts the dynamic equilibrium between the generator and discriminator in the GAN framework. However, simultaneously increasing the layers in both the generator and the discriminator improved the model’s performance. This finding aligns with the concept of maintaining a balance between the generator and discriminator during training, as highlighted in the literature \citep{10.48550/arxiv.1703.10717}. The importance of this balance is crucial for the effective operation of GANs, ensuring stable learning and improved image quality \citep{10.48550/arxiv.2002.02112}. 
+
+\begin{table}[h]
+    \centering
+    \caption{FID scores for different structure}
+    \begin{tabular}{|l|c|c|c|}
+      \hline
+      & 1st training & 2nd training & 3rd training \\
+      \hline
+      Basic structure & 68.27 & 76.33 & 59.49 \\
+      \hline
+      Add 1 convolution layer in generator & 77.25 & 81.14 & 78.46 \\
+      \hline
+      Add 2 convolution layer in generator & 90.14 & 85.96 & 121.42 \\
+      \hline
+      Add 3 convolution layer in generator & 151.55 & 147.53 & 284.91 \\
+      \hline
+      \multicolumn{1}{|l|}{Add 3 convolution layer in generator} & 70.72 & 72.97 & 70.93 \\
+      \multicolumn{1}{|l|}{Add 1 convolution layers in discriminator} & & & \\
+      \hline
+      \multicolumn{1}{|l|}{Add 3 convolution layer in generator} & 37.41 & 42.45 & 31.43 \\
+      \multicolumn{1}{|l|}{Add 2 convolution layers in discriminator} & & & \\
+      \hline
+      \multicolumn{1}{|l|}{Add 3 convolution layer in generator} & 36.75 & 35.87 & 34.72 \\
+      \multicolumn{1}{|l|}{Add 3 convolution layers in discriminator} & & & \\
+      \hline
+    \end{tabular}
+\end{table}
 
 
-
-
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{./Images/generate_image_by_Convelution_layer.jpg}
+        \caption{Images generate by basic structure}
+        \label{fig:Dense}
+    \end{subfigure}
+    \vspace{0.05\linewidth} 
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{./Images/both_generator_and_discrimminator_are_add_3_layers.jpg}
+        \caption{Images generate by both generator and discriminator are add 3 layers}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \caption{The output images for different GAN structure}
+    \label{fig:combined}
+\end{figure}
 
 
 \section*{Data Augmentation}
@@ -142,7 +194,6 @@ and compared the FID scores. The results indicate that data augmentation general
     \caption{The FID scores for standard GAN with data augmentation}
     \label{fig:combined}
 \end{figure}
-
 
 
 

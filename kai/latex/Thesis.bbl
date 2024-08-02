@@ -195,4 +195,14 @@ R.~Xu, J.~Wang, J.~Liu, F.~Ni, and B.~Cao.
 \newblock Thermal infrared face image data enhancement method based on deep learning.
 \newblock 2023.
 
+\bibitem{10.48550/arxiv.1703.10717}
+D.~Berthelot, T.~Schumm, and L.~Metz.
+\newblock Began: boundary equilibrium generative adversarial networks.
+\newblock 2017.
+
+\bibitem{10.48550/arxiv.2002.02112}
+H.~Hyungrok, T.~Jun, and D.~Kim.
+\newblock Unbalanced gans: pre-training the generator of generative adversarial network using variational autoencoder.
+\newblock 2020.
+
 \end{thebibliography}

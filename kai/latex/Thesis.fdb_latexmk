@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex Thesis"] 1722447603 "Thesis.aux" "Thesis.bbl" "Thesis" 1722518019 0
-  "./References.bib" 1722352656 11246 06a894126abd116a7bd2ed9754756ad3 ""
+["bibtex Thesis"] 1722599892 "Thesis.aux" "Thesis.bbl" "Thesis" 1722599893 0
+  "./References.bib" 1722599890 11732 7bb237fb200844138d1618737c55456b ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Thesis.aux" 1722518019 10442 130cb290e9b9fa4677b9a154d1cf154f "pdflatex"
+  "Thesis.aux" 1722599892 11545 0cf27192e10c530844c3c4a20065f99f "pdflatex"
   (generated)
   "Thesis.bbl"
   "Thesis.blg"
   (rewritten before read)
-["pdflatex"] 1722518016 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1722518019 0
-  "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" 1722431151 2054 69c3e5a3b97df3de86f43c5e33186c5f ""
+["pdflatex"] 1722599890 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1722599893 0
+  "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" 1722597441 2077 90824e4821e788e319273e6bfaecf43c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -118,6 +118,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg" 1677530001 1829 d8258b7d94f5f955e70c623e525f9f45 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty" 1677530001 80947 75a96bb4c9f40ae31d54a01d924df2ff ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty" 1677530001 77021 d05e9115c67855816136d82929db8892 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty" 1615845910 6149 2398eec4faa1ee24ff761581e580ecf1 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty" 1291685959 45456 1c8843383c0bd05870c45fa0ebea6cc2 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty" 1667072951 6572 ea530fbbe537629fd97736d33babc07d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty" 1667072951 2224 1230ab76aa62221ccbd90bca8c8c015e ""
@@ -138,10 +139,11 @@
   "01_Introduction.tex" 1722022399 1691 94141f71ce8035b5eb05acbc968d8b61 ""
   "02_Related_Work.tex" 1722027749 8972 8ec5c81e3e4421d66c40848905be832a ""
   "03_Theoretical_Background.tex" 1722437633 17117 0d9bb866f1074a0a60dbc86f00e0c206 ""
-  "04_Experiments.tex" 1722518016 5507 69eafeb524210552c0682587ea7dee53 ""
+  "04_Experiments.tex" 1722599884 8867 fe9c2e1063b68e7639293880fbe4e777 ""
   "05_Discussion.tex" 1715636041 106 035fd14d57bb9df98b447556bb2f9050 ""
   "Appendix.tex" 1715636041 97 6218c7d8b4b819069d98901d47fd309d ""
   "Images/UCC_logo.png" 1715636041 211008 0f70c5e117d99f913efac02b464a1857 ""
+  "Images/both_generator_and_discrimminator_are_add_3_layers.jpg" 1722598082 13933 5033d7ca309aaac6ce08358f07333d7c ""
   "Images/data_distribution.jpg" 1722171549 73133 1e9fb8b00a3dfe25d38414f387ed8c9f ""
   "Images/discriminator_cnn.jpg" 1722431916 151911 eceba0ac8283b69c768a766534af5b4f ""
   "Images/discriminator_dense.jpg" 1722431916 143266 5dd8606fa3923aa1233d6fff1dbaa611 ""
@@ -157,12 +159,12 @@
   "Images/standard_GAN_without_data_augementation1.jpg" 1722447309 183755 d2e6d20bcb1bc58042d834d12a3efa5f ""
   "Images/standard_GAN_without_data_augementation2.jpg" 1722447309 177454 607d6b2486afbcbdc046b49dc68e34df ""
   "Images/standard_GAN_without_data_augementation3.jpg" 1722447309 188389 142b7bd96d818300777ee92f15b04d46 ""
-  "Thesis.aux" 1722518019 10442 130cb290e9b9fa4677b9a154d1cf154f "pdflatex"
-  "Thesis.bbl" 1722447603 7811 91aa95f32acb7d9e0d9e5b3d33ac7c80 "bibtex Thesis"
-  "Thesis.lof" 1722518019 1093 cde9ab365c0102110ef185ea2354cbe4 "pdflatex"
-  "Thesis.out" 1722518019 620 cb7bf77abc2453c8271af2d7e0af5bac "pdflatex"
-  "Thesis.tex" 1722431151 2054 69c3e5a3b97df3de86f43c5e33186c5f ""
-  "Thesis.toc" 1722518019 412 b6e5c3d523cbadf3b225eef702f24edf "pdflatex"
+  "Thesis.aux" 1722599892 11545 0cf27192e10c530844c3c4a20065f99f "pdflatex"
+  "Thesis.bbl" 1722599893 8178 5f848229020a5118a9acc2a00ab65eb8 "bibtex Thesis"
+  "Thesis.lof" 1722599892 1227 cf9063f7bf787c2f57a97b6306bd63f6 "pdflatex"
+  "Thesis.out" 1722599892 620 cb7bf77abc2453c8271af2d7e0af5bac "pdflatex"
+  "Thesis.tex" 1722597441 2077 90824e4821e788e319273e6bfaecf43c ""
+  "Thesis.toc" 1722599892 412 26dbb69e89782c1c008f33c91944595f "pdflatex"
   (generated)
   "Thesis.aux"
   "Thesis.lof"

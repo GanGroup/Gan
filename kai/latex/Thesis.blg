@@ -25,36 +25,38 @@ Warning--empty journal in 10.48550/arxiv.1802.05637
 Warning--empty journal in goodfellow2014generative
 Warning--empty journal in 10.48550/arxiv.2203.06026
 Warning--empty journal in 10.1117/12.2673366
-You've used 39 entries,
+Warning--empty journal in 10.48550/arxiv.1703.10717
+Warning--empty journal in 10.48550/arxiv.2002.02112
+You've used 41 entries,
             1791 wiz_defined-function locations,
-            619 strings with 9820 characters,
-and the built_in function-call counts, 7516 in all, are:
-= -- 557
-> -- 487
+            625 strings with 10113 characters,
+and the built_in function-call counts, 7834 in all, are:
+= -- 579
+> -- 509
 < -- 1
-+ -- 178
-- -- 139
-* -- 468
-:= -- 1343
-add.period$ -- 117
-call.type$ -- 39
-change.case$ -- 39
++ -- 186
+- -- 145
+* -- 484
+:= -- 1401
+add.period$ -- 123
+call.type$ -- 41
+change.case$ -- 41
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 334
-empty$ -- 661
-format.name$ -- 139
-if$ -- 1586
+cite$ -- 65
+duplicate$ -- 350
+empty$ -- 689
+format.name$ -- 145
+if$ -- 1652
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 39
-newline$ -- 198
-num.names$ -- 39
-pop$ -- 129
+int.to.str$ -- 41
+missing$ -- 41
+newline$ -- 208
+num.names$ -- 41
+pop$ -- 139
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 139
+skip$ -- 145
 stack$ -- 0
 substring$ -- 253
 swap$ -- 26
@@ -62,8 +64,8 @@ text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 22
-while$ -- 53
-width$ -- 41
-write$ -- 387
-(There were 22 warnings)
+warning$ -- 24
+while$ -- 55
+width$ -- 43
+write$ -- 405
+(There were 24 warnings)
