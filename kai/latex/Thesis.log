@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  2 AUG 2024 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  15 AUG 2024 10:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -605,20 +605,20 @@ Chapter 3.
 <./Images/data_distribution.jpg, id=223, 1025.8325pt x 332.24126pt>
 File: ./Images/data_distribution.jpg Graphic file (type jpg)
 <use ./Images/data_distribution.jpg>
-Package pdftex.def Info: ./Images/data_distribution.jpg  used on input line 99.
+Package pdftex.def Info: ./Images/data_distribution.jpg  used on input line 100.
 (pdftex.def)             Requested size: 467.99881pt x 151.57556pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 99--100
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 100--101
  [][] 
  []
 
 [15 <./Images/data_distribution.jpg>] [16] [17]
-Overfull \hbox (59.92122pt too wide) detected at line 225
+Overfull \hbox (59.92122pt too wide) detected at line 226
 [][][]\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D[]; G\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/12 d\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 :
  []
 
 
-Overfull \hbox (39.37967pt too wide) detected at line 237
+Overfull \hbox (39.37967pt too wide) detected at line 238
 [][][]\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D[]; G\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/12 d\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 :
  []
 
@@ -626,10 +626,10 @@ Overfull \hbox (39.37967pt too wide) detected at line 237
 <./Images/model_accuracy.jpg, id=281, 1089.06876pt x 369.38pt>
 File: ./Images/model_accuracy.jpg Graphic file (type jpg)
 <use ./Images/model_accuracy.jpg>
-Package pdftex.def Info: ./Images/model_accuracy.jpg  used on input line 301.
+Package pdftex.def Info: ./Images/model_accuracy.jpg  used on input line 302.
 (pdftex.def)             Requested size: 467.99881pt x 158.72884pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 301--302
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 302--303
  [][] 
  []
 
@@ -637,10 +637,10 @@ Overfull \hbox (77.99881pt too wide) in paragraph at lines 301--302
 <./Images/generate_images.jpg, id=289, 920.43875pt x 250.9375pt>
 File: ./Images/generate_images.jpg Graphic file (type jpg)
 <use ./Images/generate_images.jpg>
-Package pdftex.def Info: ./Images/generate_images.jpg  used on input line 308.
+Package pdftex.def Info: ./Images/generate_images.jpg  used on input line 309.
 (pdftex.def)             Requested size: 467.99881pt x 127.59352pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 308--309
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 309--310
  [][] 
  []
 
@@ -743,14 +743,14 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  15365 strings out of 476025
- 251977 string characters out of 5790017
+ 251985 string characters out of 5790017
  1863388 words of memory out of 5000000
  35410 multiletter control sequences out of 15000+600000
  520960 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,9n,77p,1055b,673s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Thesis.pdf (35 pages, 2668948 bytes).
+Output written on Thesis.pdf (35 pages, 2668999 bytes).
 PDF statistics:
  492 PDF objects out of 1000 (max. 8388607)
  384 compressed objects within 4 object streams

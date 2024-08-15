@@ -1,5 +1,5 @@
 \chapter{Theoretical Background}
-\label{Theoretical Background}
+\label{Theoretical Background for GAN}
 
 \section*{Generative Adversarial Nets}
 
@@ -12,13 +12,14 @@ learns to differentiate between real and generated samples \citep{10.1109/taslp.
 The training process involves iteratively updating the weights and biases of the networks through 
 adversarial training, where the generator tries to deceive the discriminator, and the discriminator 
 aims to accurately classify samples \citep{10.48550/arxiv.1802.05637}.
+The formula 3.1 is the objective function of Generative Adversarial Networks (GANs):
 
 \begin{equation}
     \min_{G} \max_{D} V(D, G) = \mathbb{E}_{x \sim p_{data}(x)} [\log D(x)] + \mathbb{E}_{z \sim p_{z}(z)} [\log(1 - D(G(z)))].
 \end{equation}
 
 
-The formula 3.1 is the objective function of Generative Adversarial Networks (GANs). 
+
 It describes the game process between the Generator (G) and the Discriminator (D). Specifically, the formula defines a minimax game between the Discriminator and the Generator.
 
 \begin{itemize}
