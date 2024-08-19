@@ -4,10 +4,6 @@ The top-level auxiliary file: Thesis.aux
 The style file: unsrt.bst
 Database file #1: References.bib
 Warning--empty journal in 10.48550/arxiv.1704.00028
-Warning--empty journal in 10.48550/arxiv.1603.06170
-Warning--empty journal in 10.48550/arxiv.1410.0123
-Warning--empty journal in 10.48550/arxiv.1406.2751
-Warning--empty journal in 10.48550/arxiv.1311.1354
 Warning--empty journal in 10.48550/arxiv.2302.09465
 Warning--empty journal in 10.48550/arxiv.1909.13062
 Warning--empty journal in 10.48550/arxiv.2106.06500
@@ -27,45 +23,45 @@ Warning--empty journal in 10.48550/arxiv.2203.06026
 Warning--empty journal in 10.1117/12.2673366
 Warning--empty journal in 10.48550/arxiv.1703.10717
 Warning--empty journal in 10.48550/arxiv.2002.02112
-You've used 41 entries,
+You've used 37 entries,
             1791 wiz_defined-function locations,
-            625 strings with 10113 characters,
-and the built_in function-call counts, 7834 in all, are:
-= -- 579
-> -- 509
+            613 strings with 9817 characters,
+and the built_in function-call counts, 7263 in all, are:
+= -- 533
+> -- 488
 < -- 1
-+ -- 186
-- -- 145
-* -- 484
-:= -- 1401
-add.period$ -- 123
-call.type$ -- 41
-change.case$ -- 41
++ -- 177
+- -- 140
+* -- 467
+:= -- 1302
+add.period$ -- 111
+call.type$ -- 37
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 65
-duplicate$ -- 350
-empty$ -- 689
-format.name$ -- 145
-if$ -- 1652
+cite$ -- 57
+duplicate$ -- 318
+empty$ -- 629
+format.name$ -- 140
+if$ -- 1530
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 41
-newline$ -- 208
-num.names$ -- 41
-pop$ -- 139
+int.to.str$ -- 37
+missing$ -- 37
+newline$ -- 188
+num.names$ -- 37
+pop$ -- 119
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 145
+skip$ -- 130
 stack$ -- 0
-substring$ -- 253
+substring$ -- 241
 swap$ -- 26
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 24
-while$ -- 55
-width$ -- 43
-write$ -- 405
-(There were 24 warnings)
+warning$ -- 20
+while$ -- 51
+width$ -- 39
+write$ -- 369
+(There were 20 warnings)

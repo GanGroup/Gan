@@ -1,16 +1,11 @@
-\chapter{Related Work}
+\chapter{History Models of Image Generate}
 \label{Related Work}
 
-\section*{Deep generative models}
+\section*{Deep Boltzmann Machines}
 
+Deep Boltzmann Machines (DBMs) are complex multi-layer probabilistic generative models designed to capture intricate data distributions through an undirected network structure. The training process of DBMs is computationally intensive due to the utilization of Markov chains for estimating the model's probability distribution \citep{10.3390/a11040042}. This reliance on Markov chains can result in slow convergence, particularly with high-dimensional data, necessitating extensive sampling and iteration, leading to prolonged training times and stabilization challenges \citep{10.3390/a11040042}.
 
-Deep generative models, such as Deep Boltzmann Machines (DBMs), are a significant area of research in machine learning. These models are characterized by providing parameterized specifications of probability distribution functions and are typically trained by maximizing the log-likelihood function \citep{10.48550/arxiv.1603.06170}. DBMs have shown success in extracting deep hierarchical representations of input data, although they often face challenges due to intractable likelihood functions, necessitating multiple approximations of the likelihood gradient \citep{10.1109/access.2014.2319813}.
-
-One approach to addressing the challenges in training deep generative models is through techniques like deep tempering, which leverages properties of models like Deep Belief Networks (DBNs) to enhance ergodicity by sampling from deeper levels of the latent variable hierarchy \citep{10.48550/arxiv.1410.0123}. Additionally, methods like reweighted wake-sleep have been proposed to improve the generative performance of deep models by capturing high-level abstractions and enhancing generalization capabilities \citep{10.48550/arxiv.1406.2751}.
-
-Furthermore, the training of DBMs can be optimized by centering binary variables, which has been shown to improve generative performance and stabilize learning processes \citep{10.48550/arxiv.1311.1354}. Additionally, the use of mean-field inference in Gaussian Restricted Boltzmann Machines has been explored to meet the increasing demand for analyzing computational algorithms for RBMs in various fields \citep{10.7566/jpsj.85.034001}.
-
-In conclusion, the development and training of deep generative models like DBMs involve addressing challenges related to intractable likelihood functions, gradient approximations, and model optimization techniques. By leveraging properties of these models, exploring novel training algorithms, and optimizing learning processes, researchers aim to enhance the generative performance and generalization capabilities of deep generative models.
+The intricacies of training DBMs not only affect computational efficiency but also impact the quality of generated samples. Consequently, DBMs have been somewhat overshadowed by more efficient models like Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) \citep{10.1016/s0364-0213(85)80012-4}. GANs and VAEs offer superior training efficiency and generation capabilities compared to DBMs as they do not rely on Markov chains for training, thus overcoming the limitations associated with DBMs \citep{10.1016/s0364-0213(85)80012-4}.
 
 
 

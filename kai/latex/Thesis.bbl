@@ -30,35 +30,15 @@ R.~Abdal, Y.~Qin, and P.~Wonka.
 \newblock Image2stylegan: how to embed images into the stylegan latent space?
 \newblock {\em 2019 IEEE/CVF International Conference on Computer Vision (ICCV)}, 2019.
 
-\bibitem{10.48550/arxiv.1603.06170}
-H.~Xu and Z.~Ou.
-\newblock Joint stochastic approximation learning of helmholtz machines.
-\newblock 2016.
+\bibitem{10.3390/a11040042}
+M.~Yasuda.
+\newblock Learning algorithm of boltzmann machine based on spatial monte carlo integration method.
+\newblock {\em Algorithms}, 11:42, 2018.
 
-\bibitem{10.1109/access.2014.2319813}
-K.~Zhang and X.~Chen.
-\newblock Large-scale deep belief nets with mapreduce.
-\newblock {\em Ieee Access}, 2:395--403, 2014.
-
-\bibitem{10.48550/arxiv.1410.0123}
-G.~Desjardins.
-\newblock Deep tempering.
-\newblock 2014.
-
-\bibitem{10.48550/arxiv.1406.2751}
-J.~Bornschein.
-\newblock Reweighted wake-sleep.
-\newblock 2014.
-
-\bibitem{10.48550/arxiv.1311.1354}
-J.~Melchior.
-\newblock How to center binary deep boltzmann machines.
-\newblock 2013.
-
-\bibitem{10.7566/jpsj.85.034001}
-C.~Takahashi and M.~Yasuda.
-\newblock Mean-field inference in gaussian restricted boltzmann machine.
-\newblock {\em Journal of the Physical Society of Japan}, 85:034001, 2016.
+\bibitem{10.1016/s0364-0213(85)80012-4}
+D.~Ackley, G.~Hinton, and T.~Sejnowski.
+\newblock A learning algorithm for boltzmann machines.
+\newblock {\em Cognitive Science}, 9:147--169, 1985.
 
 \bibitem{10.1093/imaiai/iaw003}
 G.~Alain, Y.~Bengio, L.~Yao, J.~Yosinski, É. Thibodeau-Laufer, S.~Zhang, and P.~Vincent.
