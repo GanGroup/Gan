@@ -10,61 +10,56 @@ Warning--empty journal in 10.48550/arxiv.2303.10728
 Warning--empty journal in 10.48550/arxiv.2002.10464
 Warning--empty journal in 10.48550/arxiv.1909.13062
 Warning--empty journal in 10.48550/arxiv.2106.06500
+Warning--empty journal in 10.48550/arxiv.1711.00658
+Warning--empty journal in 10.48550/arxiv.2110.11271
 Warning--empty journal in 10.21437/interspeech.2016-1295
 Warning--empty journal in 10.18653/v1/e17-2003
-Warning--empty journal in 10.48550/arxiv.1805.07516
-Warning--empty journal in 10.48550/arxiv.2205.01789
-Warning--empty journal in 10.1109/cvpr42600.2020.00754
-Warning--empty journal in 10.18653/v1/p16-1186
-Warning--empty journal in 10.3115/v1/n15-1083
-Warning--empty journal in 10.48550/arxiv.2203.01110
-Warning--empty journal in 10.1145/2640087.2644155
-Warning--empty journal in 10.1007/978-1-4615-5339-7_102
+Warning--empty journal in 10.48550/arxiv.2101.03288
 Warning--empty journal in 10.48550/arxiv.1802.05637
 Warning--empty journal in goodfellow2014generative
 Warning--empty journal in 10.48550/arxiv.2203.06026
 Warning--empty journal in 10.1117/12.2673366
 Warning--empty journal in 10.48550/arxiv.1703.10717
 Warning--empty journal in 10.48550/arxiv.2002.02112
-You've used 41 entries,
+You've used 33 entries,
             1791 wiz_defined-function locations,
-            629 strings with 10370 characters,
-and the built_in function-call counts, 8198 in all, are:
-= -- 616
-> -- 526
-< -- 2
-+ -- 191
-- -- 150
-* -- 521
-:= -- 1445
-add.period$ -- 123
-call.type$ -- 41
-change.case$ -- 41
+            596 strings with 9063 characters,
+and the built_in function-call counts, 6698 in all, are:
+= -- 501
+> -- 429
+< -- 1
++ -- 156
+- -- 123
+* -- 441
+:= -- 1183
+add.period$ -- 99
+call.type$ -- 33
+change.case$ -- 33
 chr.to.int$ -- 0
-cite$ -- 64
-duplicate$ -- 361
-empty$ -- 717
-format.name$ -- 150
-if$ -- 1743
+cite$ -- 51
+duplicate$ -- 287
+empty$ -- 590
+format.name$ -- 123
+if$ -- 1418
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 41
-newline$ -- 208
-num.names$ -- 41
-pop$ -- 135
+int.to.str$ -- 33
+missing$ -- 33
+newline$ -- 168
+num.names$ -- 33
+pop$ -- 107
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 156
+skip$ -- 114
 stack$ -- 0
-substring$ -- 314
-swap$ -- 36
-text.length$ -- 2
+substring$ -- 286
+swap$ -- 24
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 23
-while$ -- 58
-width$ -- 43
-write$ -- 408
-(There were 23 warnings)
+warning$ -- 18
+while$ -- 48
+width$ -- 35
+write$ -- 329
+(There were 18 warnings)

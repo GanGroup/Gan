@@ -85,70 +85,30 @@ X.~Bie, L.~Girin, S.~Leglaive, T.~Hueber, and X.~Alameda-Pineda.
 \newblock A benchmark of dynamical variational autoencoders applied to speech spectrogram modeling.
 \newblock 2021.
 
+\bibitem{10.48550/arxiv.1711.00658}
+L.~Han, Y.~Huang, and T.~Zhang.
+\newblock Candidates vs. noises estimation for large multi-class classification problem.
+\newblock 2017.
+
+\bibitem{10.48550/arxiv.2110.11271}
+B.~Liu, E.~Rosenfeld, P.~Ravikumar, and A.~Risteski.
+\newblock Analyzing and improving the optimization landscape of noise-contrastive estimation.
+\newblock 2021.
+
 \bibitem{10.21437/interspeech.2016-1295}
 B.~Damavandi, S.~Kumar, N.~Shazeer, and A.~Bruguier.
 \newblock Nn-grams: unifying neural network and n-gram language models for speech recognition.
 \newblock 2016.
-
-\bibitem{10.1609/aaai.v32i1.11967}
-F.~Liza and M.~Grzes.
-\newblock Improving language modelling with noise contrastive estimation.
-\newblock {\em Proceedings of the Aaai Conference on Artificial Intelligence}, 32, 2018.
 
 \bibitem{10.18653/v1/e17-2003}
 M.~Labeau and A.~Allauzen.
 \newblock An experimental analysis of noise-contrastive estimation: the noise distribution matters.
 \newblock 2017.
 
-\bibitem{10.48550/arxiv.1805.07516}
-T.~Matsuda and A.~Hyvärinen.
-\newblock Estimation of non-normalized mixture models and clustering using deep representation.
-\newblock 2018.
-
-\bibitem{10.48550/arxiv.2205.01789}
-P.~Awasthi, N.~Dikkala, and P.~Kamath.
-\newblock Do more negative samples necessarily hurt in contrastive learning?
-\newblock 2022.
-
-\bibitem{10.1109/cvpr42600.2020.00754}
-R.~Gao, E.~Nijkamp, D.~Kingma, Z.~Xu, A.~Dai, and Y.~Wu.
-\newblock Flow contrastive estimation of energy-based models.
-\newblock 2020.
-
-\bibitem{10.18653/v1/p16-1186}
-W.~Chen, D.~Grangier, and M.~Auli.
-\newblock Strategies for training large vocabulary neural language models.
-\newblock 2016.
-
-\bibitem{10.3115/v1/n15-1083}
-P.~Baltescu and P.~Blunsom.
-\newblock Pragmatic neural language modelling in machine translation.
-\newblock 2015.
-
-\bibitem{10.48550/arxiv.2203.01110}
-O.~Chehab, A.~Gramfort, and A.~Hyvärinen.
-\newblock The optimal noise in noise-contrastive learning is not what you think.
-\newblock 2022.
-
-\bibitem{10.1145/2640087.2644155}
-M.~Li.
-\newblock Scaling distributed machine learning with the parameter server.
-\newblock 2014.
-
-\bibitem{10.3389/fnhum.2015.00505}
-F.~Lecaignard, O.~Bertrand, G.~Gimenez, J.~Mattout, and A.~Caclin.
-\newblock Implicit learning of predictable sound sequences modulates human brain responses at different levels of the auditory hierarchy.
-\newblock {\em Frontiers in Human Neuroscience}, 9, 2015.
-
-\bibitem{10.1186/1471-2105-16-s16-s2}
-H.~Liu, K.~Verspoor, D.~Comeau, A.~MacKinlay, and W.~Wilbur.
-\newblock Optimizing graph-based patterns to extract biomedical events from the literature.
-\newblock {\em BMC Bioinformatics}, 16, 2015.
-
-\bibitem{10.1007/978-1-4615-5339-7_102}
-B.~Wang, J.~Basart, and J.~Moulder.
-\newblock Linear and nonlinear image restoration methods for eddy current nondestructive evaluation.
-\newblock pages 791--798, 1998.
+\bibitem{10.48550/arxiv.2101.03288}
+Y.~Song.
+\newblock How to train your energy-based models.
+\newblock 2021.
 
 \bibitem{10.1007/s10928-021-09787-4}
 J.~Parikh, T.~Rumbell, X.~Butova, T.~Myachina, J.~Acero, S.~Khamzin, O.~Solovyova, J.~Kozloski, A.~Khokhlova, and V.~Gurev.
