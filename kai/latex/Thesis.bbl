@@ -30,35 +30,55 @@ R.~Abdal, Y.~Qin, and P.~Wonka.
 \newblock Image2stylegan: how to embed images into the stylegan latent space?
 \newblock {\em 2019 IEEE/CVF International Conference on Computer Vision (ICCV)}, 2019.
 
-\bibitem{10.3390/a11040042}
-M.~Yasuda.
-\newblock Learning algorithm of boltzmann machine based on spatial monte carlo integration method.
-\newblock {\em Algorithms}, 11:42, 2018.
+\bibitem{10.1007/978-3-642-40728-4_14}
+K.~Cho, T.~Raiko, A.~Ilin, and J.~Karhunen.
+\newblock A two-stage pretraining algorithm for deep boltzmann machines.
+\newblock pages 106--113, 2013.
 
-\bibitem{10.1016/s0364-0213(85)80012-4}
-D.~Ackley, G.~Hinton, and T.~Sejnowski.
-\newblock A learning algorithm for boltzmann machines.
-\newblock {\em Cognitive Science}, 9:147--169, 1985.
+\bibitem{10.48550/arxiv.1203.3783}
+G.~Montavon.
+\newblock Learning feature hierarchies with centered deep boltzmann machines.
+\newblock 2012.
 
-\bibitem{10.1093/imaiai/iaw003}
-G.~Alain, Y.~Bengio, L.~Yao, J.~Yosinski, É. Thibodeau-Laufer, S.~Zhang, and P.~Vincent.
-\newblock Gsns: generative stochastic networks.
-\newblock {\em Information and Inference a Journal of the Ima}, 5:210--249, 2016.
-
-\bibitem{10.48550/arxiv.2302.09465}
-L.~Pan, D.~Zhang, J.~Moksh, L.~Huang, and Y.~Bengio.
-\newblock Stochastic generative flow networks.
+\bibitem{10.48550/arxiv.2303.10728}
+S.~Niazi, N.~Aadit, M.~Mohseni, S.~Chowdhury, and Y.~Qin.
+\newblock Training deep boltzmann networks with sparse ising machines.
 \newblock 2023.
+
+\bibitem{10.1162/neco_a_00311}
+R.~Salakhutdinov and G.~Hinton.
+\newblock An efficient learning procedure for deep boltzmann machines.
+\newblock {\em Neural Computation}, 24:1967--2006, 2012.
+
+\bibitem{10.1561/2200000056}
+D.~Kingma and M.~Welling.
+\newblock An introduction to variational autoencoders.
+\newblock {\em Foundations and Trends® in Machine Learning}, 12:307--392, 2019.
+
+\bibitem{10.3390/jimaging4020036}
+B.~Kiran, D.~Thomas, and R.~Parakkal.
+\newblock An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos.
+\newblock {\em Journal of Imaging}, 4:36, 2018.
+
+\bibitem{10.1109/access.2020.2977671}
+C.~Guo, J.~Zhou, H.~Chen, N.~Ying, J.~Zhang, and D.~Zhou.
+\newblock Variational autoencoder with optimizing gaussian mixture model priors.
+\newblock {\em Ieee Access}, 8:43992--44005, 2020.
+
+\bibitem{10.1088/2632-2153/ab80b7}
+Y.~Varolgunes, T.~Bereau, and J.~Rudzinski.
+\newblock Interpretable embeddings from molecular simulations using gaussian mixture variational autoencoders.
+\newblock {\em Machine Learning Science and Technology}, 1:015012, 2020.
+
+\bibitem{10.48550/arxiv.2002.10464}
+S.~Portillo.
+\newblock Dimensionality reduction of sdss spectra with variational autoencoders.
+\newblock 2020.
 
 \bibitem{10.48550/arxiv.1909.13062}
 P.~Munjal, A.~Paul, and N.~Krishnan.
 \newblock Implicit discriminator in variational autoencoder.
 \newblock 2019.
-
-\bibitem{10.3390/bioengineering10101209}
-M.~Sidulova.
-\newblock Conditional variational autoencoder for functional connectivity analysis of autism spectrum disorder functional magnetic resonance imaging data: a comparative study.
-\newblock {\em Bioengineering}, 10:1209, 2023.
 
 \bibitem{10.48550/arxiv.2106.06500}
 X.~Bie, L.~Girin, S.~Leglaive, T.~Hueber, and X.~Alameda-Pineda.

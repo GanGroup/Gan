@@ -4,7 +4,10 @@ The top-level auxiliary file: Thesis.aux
 The style file: unsrt.bst
 Database file #1: References.bib
 Warning--empty journal in 10.48550/arxiv.1704.00028
-Warning--empty journal in 10.48550/arxiv.2302.09465
+Warning--empty journal in 10.1007/978-3-642-40728-4_14
+Warning--empty journal in 10.48550/arxiv.1203.3783
+Warning--empty journal in 10.48550/arxiv.2303.10728
+Warning--empty journal in 10.48550/arxiv.2002.10464
 Warning--empty journal in 10.48550/arxiv.1909.13062
 Warning--empty journal in 10.48550/arxiv.2106.06500
 Warning--empty journal in 10.21437/interspeech.2016-1295
@@ -23,45 +26,45 @@ Warning--empty journal in 10.48550/arxiv.2203.06026
 Warning--empty journal in 10.1117/12.2673366
 Warning--empty journal in 10.48550/arxiv.1703.10717
 Warning--empty journal in 10.48550/arxiv.2002.02112
-You've used 37 entries,
+You've used 41 entries,
             1791 wiz_defined-function locations,
-            613 strings with 9817 characters,
-and the built_in function-call counts, 7263 in all, are:
-= -- 533
-> -- 488
-< -- 1
-+ -- 177
-- -- 140
-* -- 467
-:= -- 1302
-add.period$ -- 111
-call.type$ -- 37
-change.case$ -- 37
+            629 strings with 10370 characters,
+and the built_in function-call counts, 8198 in all, are:
+= -- 616
+> -- 526
+< -- 2
++ -- 191
+- -- 150
+* -- 521
+:= -- 1445
+add.period$ -- 123
+call.type$ -- 41
+change.case$ -- 41
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 318
-empty$ -- 629
-format.name$ -- 140
-if$ -- 1530
+cite$ -- 64
+duplicate$ -- 361
+empty$ -- 717
+format.name$ -- 150
+if$ -- 1743
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 37
-newline$ -- 188
-num.names$ -- 37
-pop$ -- 119
+int.to.str$ -- 41
+missing$ -- 41
+newline$ -- 208
+num.names$ -- 41
+pop$ -- 135
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 130
+skip$ -- 156
 stack$ -- 0
-substring$ -- 241
-swap$ -- 26
-text.length$ -- 1
+substring$ -- 314
+swap$ -- 36
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 20
-while$ -- 51
-width$ -- 39
-write$ -- 369
-(There were 20 warnings)
+warning$ -- 23
+while$ -- 58
+width$ -- 43
+write$ -- 408
+(There were 23 warnings)

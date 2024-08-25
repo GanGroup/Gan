@@ -3,31 +3,52 @@
 
 \section*{Deep Boltzmann Machines}
 
-Deep Boltzmann Machines (DBMs) are complex multi-layer probabilistic generative models designed to capture intricate data distributions through an undirected network structure. The training process of DBMs is computationally intensive due to the utilization of Markov chains for estimating the model's probability distribution \citep{10.3390/a11040042}. This reliance on Markov chains can result in slow convergence, particularly with high-dimensional data, necessitating extensive sampling and iteration, leading to prolonged training times and stabilization challenges \citep{10.3390/a11040042}.
+Deep Boltzmann Machines (DBMs) are sophisticated generative models that excel in learning intricate data representations 
+in an unsupervised manner. Unlike traditional feedforward networks, DBMs are structured with multiple layers of stochastic, 
+binary latent variables, where each layer captures progressively abstract features of the input data. This architecture is 
+characterized by fully connected layers, with no direct connections between units within the same layer, which enables DBMs 
+to effectively model complex dependencies inherent in the data \citep{10.1007/978-3-642-40728-4_14}. The undirected nature 
+of the connections in DBMs allows for the propagation of uncertainties across layers, enhancing their capability in feature 
+learning and unsupervised pre-training \citep{10.1007/978-3-642-40728-4_14}\citep{10.48550/arxiv.1203.3783}.
 
-The intricacies of training DBMs not only affect computational efficiency but also impact the quality of generated samples. Consequently, DBMs have been somewhat overshadowed by more efficient models like Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) \citep{10.1016/s0364-0213(85)80012-4}. GANs and VAEs offer superior training efficiency and generation capabilities compared to DBMs as they do not rely on Markov chains for training, thus overcoming the limitations associated with DBMs \citep{10.1016/s0364-0213(85)80012-4}.
+However, the training of DBMs presents significant challenges, primarily due to their reliance on Markov Chain Monte Carlo (MCMC) methods, 
+such as Gibbs sampling, for approximate inference. These methods are essential for estimating gradients and the intractable partition 
+function, which is vital for updating model parameters. The computational overhead introduced by MCMC methods often results in 
+slow convergence and increased complexity, particularly when applied to large-scale datasets \citep{10.48550/arxiv.2303.10728}. 
+The requirement for numerous sampling steps to achieve equilibrium further complicates the training process, making DBMs less 
+accessible compared to other generative models, such as Variational Autoencoders (VAEs).
 
-
-
-
-\section*{Generative Stochastic Networks}
-
-Generative machines have emerged as a solution to the challenges associated with training Deep Boltzmann Machines (DBMs) \citep{10.1093/imaiai/iaw003}. One notable example is Generative Stochastic Networks (GSNs), which have been developed to generate samples without explicitly representing the likelihood function. GSNs can be trained using exact backpropagation, eliminating the need for approximate methods required by DBMs. These networks are based on learning the transition operator of a Markov chain to estimate the data distribution. Furthermore, the concept of generative machines has been extended by eliminating Markov chains in generative stochastic networks, enhancing their efficiency and effectiveness \citep{10.48550/arxiv.2302.09465}.
-
-Generative Neurosymbolic Machines represent another advancement in generative models, combining distributed and symbolic representations to support structured symbolic components and density-based generation. This approach leverages the benefits of both types of representations to enhance the overall performance of generative models.
-
-In summary, generative machines like GSNs and Generative Neurosymbolic Machines offer innovative solutions for generating samples without explicitly modeling the likelihood function, thereby overcoming the complexities associated with training DBMs. These advancements in generative models pave the way for more efficient and effective sample generation in machine learning applications.
+To mitigate these training difficulties, DBMs often utilize layer-wise pre-training, which initializes model parameters 
+before the entire network is fine-tuned. This approach has been shown to enhance the efficiency of the learning process
+by providing a sensible initialization for the weights and variational inference \citep{10.1162/neco_a_00311}. Despite 
+these strategies, the inherent complexity associated with MCMC methods continues to pose challenges in scaling DBMs 
+effectively, particularly in comparison to more straightforward generative models like VAEs \citep{10.48550/arxiv.2303.10728}. 
+Recent advancements have explored alternative training methodologies, including the use of specialized hardware systems to improve 
+the efficiency of sampling tasks, thereby addressing some of the computational hurdles associated with traditional training approaches \citep{10.48550/arxiv.2303.10728}.
 
 
 
 \section*{Variational Autoencoders}
+Variational Autoencoders (VAEs) are generative models in machine learning that excel in tasks like image generation and data 
+representation by learning the underlying structure of data through a latent space. 
 
+The architecture of VAEs consists of an encoder that maps input data into a latent space, where the latent variables are 
+typically assumed to follow a Gaussian distribution. This assumption simplifies the learning process, as it allows for 
+the use of techniques such as the reparameterization trick, which enables backpropagation through stochastic layers \citep{10.1561/2200000056}. 
+The decoder then reconstructs the input data from the latent variables, ensuring that the model captures the essential 
+features of the data distribution. The loss function of a VAE combines reconstruction loss with a Kullback-Leibler (KL) 
+divergence term, which regularizes the latent space and encourages the model to learn a smooth and continuous representation \citep{10.3390/jimaging4020036}.
 
-Variational Autoencoders (VAEs) have gained significant attention in the field of deep learning due to their ability to learn latent representations of complex data. Kingma and Welling, along with Rezende et al., introduced a stochastic back-propagation rule that enables training VAEs by back-propagation through a Gaussian distribution \citep{10.48550/arxiv.1909.13062}. This approach pairs a generative network with a discriminative model to perform approximate inference, allowing VAEs to learn to encode data into a low-dimensional latent space and decode it back to the original data \citep{10.3390/bioengineering10101209}.
+In comparison to DBMs, VAEs offer several advantages, including simpler training dynamics and better scalability. DBMs 
+often require complex sampling methods, such as Gibbs sampling, which can be computationally intensive and slow to converge. 
+In contrast, VAEs can be trained using standard gradient descent methods, making them more accessible for 
+practitioners \citep{10.1561/2200000056}\citep{10.1109/access.2020.2977671}. Furthermore, the structured latent space of 
+VAEs not only allows for efficient sampling but also supports various applications, such as image generation, anomaly detection, 
+and data imputation, where the ability to interpolate between data points is crucial \citep{10.1088/2632-2153/ab80b7}\citep{10.48550/arxiv.2002.10464}.
 
-However, VAEs face limitations in modeling discrete data as they require back-propagation through hidden units, which poses challenges in handling such data types effectively \citep{10.48550/arxiv.1909.13062}. Despite this limitation, VAEs have been extensively used to represent high-dimensional complex data by learning a low-dimensional latent space in an unsupervised manner \citep{10.48550/arxiv.2106.06500}.
-
-In summary, VAEs offer a powerful framework for deep generative modeling, enabling the creation of latent representations of data that can be decoded back to the original form. While they excel in modeling continuous data, challenges persist in effectively modeling discrete data due to the nature of back-propagation through hidden units.
+However, VAEs face limitations in modeling discrete data as they require back-propagation through hidden units, which poses challenges 
+in handling such data types effectively \citep{10.48550/arxiv.1909.13062}. Despite this limitation, VAEs have been extensively used to 
+represent high-dimensional complex data by learning a low-dimensional latent space in an unsupervised manner \citep{10.48550/arxiv.2106.06500}.
 
 
 \section*{Generative Stochastic Networks}
