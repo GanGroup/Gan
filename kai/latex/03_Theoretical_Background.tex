@@ -271,11 +271,7 @@ to quantify the dissimilarity between two image distributions \citep{10.48550/ar
 It measures the distance between the distributions of real images and generated images, providing 
 a numerical assessment of the quality of generated images. FID has gained prominence in evaluating 
 the performance of GANs due to its ability to capture both the quality and diversity of generated images \citep{10.3390/app12157599}.
-
-A lower FID value indicates that the distribution of the generated images is closer to that of real images, 
-reflecting higher quality and diversity in the generated images \citep{10.1117/12.2673366}. 
-Specifically, a FID value below 10 is considered to represent very high-quality generated images, 
-while values between 10 and 50 indicate good quality, and values above 50 suggest average or poor quality \citep{10.1117/12.2673366}.
+The following is the object function for FID:
 
 
 \begin{equation}
@@ -297,6 +293,14 @@ while values between 10 and 50 indicate good quality, and values above 50 sugges
     \item $\Sigma_r \text{ and } \Sigma_g$: represent the feature covariance matrices of the real and generated images, respectively.
     \item $\text{Tr}$: represents the trace (the sum of the diagonal elements of the matrix).
 \end{itemize}
+
+
+A lower FID value indicates that the distribution of the generated images is closer to that of real images, 
+reflecting higher quality and diversity in the generated images \citep{10.1117/12.2673366}. 
+Specifically, a FID value below 10 is considered to represent very high-quality generated images, 
+while values between 10 and 50 indicate good quality, and values above 50 suggest average or poor quality \citep{10.1117/12.2673366}.
+
+
 
 \subsection{Why Not Accuracy}
 Accuracy is not suitable for evaluating GANs because accuracy is an indicator of classification tasks, 

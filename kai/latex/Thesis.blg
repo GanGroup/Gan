@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Thesis.aux
+The style file: unsrt.bst
+Database file #1: References.bib
+Warning--empty journal in 10.48550/arxiv.1704.00028
+Warning--empty journal in 10.1007/978-3-642-40728-4_14
+Warning--empty journal in 10.48550/arxiv.1203.3783
+Warning--empty journal in 10.48550/arxiv.2303.10728
+Warning--empty journal in 10.48550/arxiv.2002.10464
+Warning--empty journal in 10.48550/arxiv.1909.13062
+Warning--empty journal in 10.48550/arxiv.2106.06500
+Warning--empty journal in 10.48550/arxiv.1711.00658
+Warning--empty journal in 10.48550/arxiv.2110.11271
+Warning--empty journal in 10.21437/interspeech.2016-1295
+Warning--empty journal in 10.18653/v1/e17-2003
+Warning--empty journal in 10.48550/arxiv.2101.03288
+Warning--empty journal in 10.48550/arxiv.1802.05637
+Warning--empty journal in goodfellow2014generative
+Warning--empty journal in 10.48550/arxiv.2203.06026
+Warning--empty journal in 10.1117/12.2673366
+Warning--empty journal in 10.48550/arxiv.1703.10717
+Warning--empty journal in 10.48550/arxiv.2002.02112
+You've used 33 entries,
+            1791 wiz_defined-function locations,
+            596 strings with 9063 characters,
+and the built_in function-call counts, 6698 in all, are:
+= -- 501
+> -- 429
+< -- 1
++ -- 156
+- -- 123
+* -- 441
+:= -- 1183
+add.period$ -- 99
+call.type$ -- 33
+change.case$ -- 33
+chr.to.int$ -- 0
+cite$ -- 51
+duplicate$ -- 287
+empty$ -- 590
+format.name$ -- 123
+if$ -- 1418
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 33
+newline$ -- 168
+num.names$ -- 33
+pop$ -- 107
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 114
+stack$ -- 0
+substring$ -- 286
+swap$ -- 24
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 18
+while$ -- 48
+width$ -- 35
+write$ -- 329
+(There were 18 warnings)
