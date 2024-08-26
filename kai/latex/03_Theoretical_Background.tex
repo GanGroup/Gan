@@ -98,13 +98,13 @@ To understand how this process works, in the following sections,
 I will describe the GAN training process from the perspectives of data distribution and mathematical formulation.
 
 \subsection{The distribution change for GAN's training}
-a simaple diagram show how distribution change in GAN training
+A simaple diagram show how distribution change in GAN training.
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.2\linewidth]{./Images/data_distribution.jpg}
-    \caption{Diagram of GAN training process}
+    \caption{Diagram of GAN's training process}
     \label{fig:my_picture}
     \vspace{1pt} % Vertical space, optional
     \small{Source: \cite{goodfellow2014generative}}
@@ -112,10 +112,10 @@ a simaple diagram show how distribution change in GAN training
 
 
 \begin{itemize}
-    \item \textbf{ Green Curve:} Represents the distribution of generated samples. Initially, the distribution of generated samples may differ significantly from the real samples. As training progresses, the generated samples’ distribution gradually approaches that of the real samples.
-    \item \textbf{Black Dots:} Represent the distribution of real samples. These points remain unchanged throughout the training process and represent the target distribution.
-    \item \textbf{ Blue Line:} Represents error or noise. Initially, the error is large and manifests as a wavy sine curve. As training progresses, the error gradually decreases, and the blue line becomes increasingly flat.
-    \item \textbf{ Lines Arranged Below (Labeled as x and z):} Represent the distribution of samples in the latent space. In GAN training, samples from the latent space are mapped to the data space through the generator, producing corresponding samples.
+    \item Green Curve: represents the distribution of generated samples. Initially, the distribution of generated samples may differ significantly from the real samples. As training progresses, the generated samples’ distribution gradually approaches that of the real samples.
+    \item Black Dots: represent the distribution of real samples. These points remain unchanged throughout the training process and represent the target distribution.
+    \item Blue Line: represents error or noise. Initially, the error is large and manifests as a wavy sine curve. As training progresses, the error gradually decreases, and the blue line becomes increasingly flat.
+    \item Lines Arranged Below (Labeled as $x$ and $z$): represent the distribution of samples in the latent space. In GAN training, samples from the latent space are mapped to the data space through the generator, producing corresponding samples.
 \end{itemize}
 
 
@@ -132,7 +132,7 @@ state to a state that highly coincides with the real distribution, reflecting a 
 the quality of the generated samples.
 
 
-\subsection{Formula Angle}
+\subsection{The Formula Change for GAN's Training}
 
 
 1. Problem Setup
@@ -140,7 +140,7 @@ the quality of the generated samples.
 In a Generative Adversarial Network (GAN), the objective is to train a generator \( G \) and a discriminator \( D \) to generate data that resembles the real data distribution. The objective function to be maximized is given by:
 
 \begin{equation}
-    V(D, G) = \mathbb{E}_{\mathbf{x} \sim p_{\text{data}}(\mathbf{x})} [\log D(\mathbf{x})] + \mathbb{E}_{\mathbf{z} \sim p_{\mathbf{z}}(\mathbf{z})} [\log (1 - D(G(\mathbf{z})))].
+    V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}(x)} [\log D(x)] + \mathbb{E}_{z \sim p_{z}(z)} [\log (1 - D(G(z)))].
 \end{equation}
 
 2. Rewriting the Objective Function
@@ -148,35 +148,35 @@ In a Generative Adversarial Network (GAN), the objective is to train a generator
 First, the objective function is rewritten in integral form:
 
 \begin{equation}
-    V(D, G) = \int p_{\text{data}}(\mathbf{x}) \log D(\mathbf{x}) \, d\mathbf{x} + \int p_{\mathbf{z}}(\mathbf{z}) \log (1 - D(G(\mathbf{z}))) \, d\mathbf{z}.
+    V(D, G) = \int p_{\text{data}}(x) \log D(x) \, dx + \int p_{z}(z) \log (1 - D(G(z))) \, dz.
 \end{equation}
 
-By changing variables \(\mathbf{x}' = G(\mathbf{z})\), the second term can be rewritten as an integral over the generated data distribution \( p_g(\mathbf{x}) \):
+By changing variables \(x' = G(z)\), the second term can be rewritten as an integral over the generated data distribution \(p_g(x)\):
 
 \begin{equation}
-    \int p_g(\mathbf{x}) \log (1 - D(\mathbf{x})) \, d\mathbf{x}.
+    \int p_g(x) \log (1 - D(x)) \, dx.
 \end{equation}
 
 Thus, the objective function becomes:
 
 \begin{equation}
-    V(D, G) = \int \left[ p_{\text{data}}(\mathbf{x}) \log D(\mathbf{x}) + p_g(\mathbf{x}) \log (1 - D(\mathbf{x})) \right] d\mathbf{x}.
+    V(D, G) = \int \left[ p_{\text{data}}(x) \log D(x) + p_g(x) \log (1 - D(x)) \right] dx.
 \end{equation}
 
 3. Deriving the Optimal Discriminator
 
-To find the optimal discriminator \( D^* \), it needs to take the derivative of the objective function with respect to \( D(\mathbf{x}) \) and set it to zero.
+To find the optimal discriminator \( D^* \), it needs to take the derivative of the objective function with respect to \( D(x) \) and set it to zero.
 
 Let:
 
 \begin{equation}
-    f(D(\mathbf{x})) = p_{\text{data}}(\mathbf{x}) \log D(\mathbf{x}) + p_g(\mathbf{x}) \log (1 - D(\mathbf{x})).
+    f(D(x)) = p_{\text{data}}(x) \log D(x) + p_g(x) \log (1 - D(x)).
 \end{equation}
 
-Taking the derivative with respect to \( D(\mathbf{x}) \):
+Taking the derivative with respect to \( D(x) \):
 
 \begin{equation}
-    \frac{d}{dD(\mathbf{x})} f(D(\mathbf{x})) = \frac{p_{\text{data}}(\mathbf{x})}{D(\mathbf{x})} - \frac{p_g(\mathbf{x})}{1 - D(\mathbf{x})}.
+    \frac{d}{dD(x)} f(D(x)) = \frac{p_{\text{data}}(x)}{D(x)} - \frac{p_g(x)}{1 - D(x)}.
 \end{equation}
 
 Setting the derivative to zero:
@@ -188,23 +188,29 @@ Setting the derivative to zero:
 Solving this equation:
 
 \begin{equation}
-    p_{\text{data}}(\mathbf{x})(1 - D(\mathbf{x})) = p_g(\mathbf{x})D(\mathbf{x}),
+    \frac{p_{\text{data}}(x)}{D(x)} = \frac{p_g(x)}{1 - D(x)}.
+\end{equation}
+
+Solving this equation:
+
+\begin{equation}
+    p_{\text{data}}(x)(1 - D(x)) = p_g(x)D(x),
 \end{equation}
 
 \begin{equation}
-    p_{\text{data}}(\mathbf{x}) - p_{\text{data}}(\mathbf{x})D(\mathbf{x}) = p_g(\mathbf{x})D(\mathbf{x}),
+    p_{\text{data}}(x) - p_{\text{data}}(x)D(x) = p_g(x)D(x),
 \end{equation}
 
 \begin{equation}
-    p_{\text{data}}(\mathbf{x}) = p_{\text{data}}(\mathbf{x})D(\mathbf{x}) + p_g(\mathbf{x})D(\mathbf{x}),
+    p_{\text{data}}(x) = p_{\text{data}}(x)D(x) + p_g(x)D(x),
 \end{equation}
 
 \begin{equation}
-    p_{\text{data}}(\mathbf{x}) = D(\mathbf{x})(p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})),
+    p_{\text{data}}(x) = D(x)(p_{\text{data}}(x) + p_g(x)),
 \end{equation}
 
 \begin{equation}
-    D(\mathbf{x}) = \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})}.
+    D(x) = \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)}.
 \end{equation}
 
 4. Optimal Discriminator Formula
@@ -212,14 +218,14 @@ Solving this equation:
 Therefore, the optimal discriminator \( D^* \) is given by:
 
 \begin{equation}
-    D^*(\mathbf{x}) = \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})}.
+    D^*(x) = \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)}.
 \end{equation}
 
 
 \begin{itemize}
-    \item When $p_{\text{data}}(x)$ is much larger than $p_g(x), D^*_G(x) \approx 1$, indicating that the data point is almost certainly from the real data.
-    \item When $p_{\text{data}}(x)$ is much smaller than $p_g(x), D^*_G(x) \approx 0$, indicating that the data point is almost certainly from the generated data.
-    \item When $p_{\text{data}}(x)$ is close to $p_g(x), D^*_G(x) \approx 0.5$, indicating that the data point has a 50% chance of coming from the real data and a 50% chance of coming from the generated data.
+    \item When \(p_{\text{data}}(x)\) is much larger than \(p_g(x)\), \(D^*_G(x) \approx 1\), indicating that the data point is almost certainly from the real data.
+    \item When \(p_{\text{data}}(x)\) is much smaller than \(p_g(x)\), \(D^*_G(x) \approx 0\), indicating that the data point is almost certainly from the generated data.
+    \item When \(p_{\text{data}}(x)\) is close to \(p_g(x)\), \(D^*_G(x) \approx 0.5\), indicating that the data point has a 50% chance of coming from the real data and a 50% chance of coming from the generated data.
 \end{itemize}
 
 
@@ -228,32 +234,33 @@ Therefore, the optimal discriminator \( D^* \) is given by:
 To verify that this \( D^* \) maximizes the objective function, substitute \( D^* \) back into the objective function:
 
 \begin{equation}
-    V(D^*, G) = \int \left[ p_{\text{data}}(\mathbf{x}) \log \left( \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})} \right) + p_g(\mathbf{x}) \log \left( 1 - \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})} \right) \right] d\mathbf{x}.
+    V(D^*, G) = \int \left[ p_{\text{data}}(x) \log \left( \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)} \right) + p_g(x) \log \left( 1 - \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)} \right) \right] dx.
 \end{equation}
 
 Since:
 
 \begin{equation}
-    1 - D^*(\mathbf{x}) = 1 - \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})} = \frac{p_g(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})},
+    1 - D^*(x) = 1 - \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)} = \frac{p_g(x)}{p_{\text{data}}(x) + p_g(x)},
 \end{equation}
 
 substituting this in:
 
 \begin{equation}
-    V(D^*, G) = \int \left[ p_{\text{data}}(\mathbf{x}) \log \left( \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})} \right) + p_g(\mathbf{x}) \log \left( \frac{p_g(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})} \right) \right] d\mathbf{x}.
+    V(D^*, G) = \int \left[ p_{\text{data}}(x) \log \left( \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)} \right) + p_g(x) \log \left( \frac{p_g(x)}{p_{\text{data}}(x) + p_g(x)} \right) \right] dx.
 \end{equation}
 
-This objective function represents the negative of the cross-entropy, which is maximized when \( D(\mathbf{x}) = D^*(\mathbf{x}) \). The cross-entropy is minimized by maximizing the similarity between the true distribution and the predicted distribution, so its negative is maximized at the same point.
+This objective function represents the negative of the cross-entropy, which is maximized when \( D(x) = D^*(x) \). The cross-entropy is minimized by maximizing the similarity between the true distribution and the predicted distribution, so its negative is maximized at the same point.
 
 6. Conclusion
 
 Through the above derivation, it has shown that given the generator \( G \), the optimal form of the discriminator \( D \) is:
 
 \begin{equation}
-    D^*(\mathbf{x}) = \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})}.
+    D^*(x) = \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)}.
 \end{equation}
 
-This demonstrates that the optimal discriminator \( D^* \) outputs the probability that the input data comes from the real data distribution. This formula provides a theoretical foundation for training GANs, guiding the updates to the generator \( G \) so that its generated data gradually approaches the real data distribution.
+This demonstrates that the optimal discriminator \( D^* \) outputs the probability that the input data comes from the real data distribution. 
+This formula provides a theoretical foundation for training GANs, guiding the updates to the generator \( G \) so that its generated data gradually approaches the real data distribution.
 
 
 \subsection{Measuring performance of GAN}
@@ -286,14 +293,12 @@ while values between 10 and 50 indicate good quality, and values above 50 sugges
 
 
 \begin{itemize}
-    \item \textbf{ $\mu_r \text{ and } \mu_g$:}  are the feature means of the real and generated images, respectively.
-    \item \textbf{$\Sigma_r \text{ and } \Sigma_g$:}  are the feature covariance matrices of the real and generated images, respectively.
-    \item \textbf{ $\text{Tr}$:}  represents the trace (the sum of the diagonal elements of the matrix).
+    \item $\mu_r \text{ and } \mu_g$: represent the feature means of the real and generated images, respectively.
+    \item $\Sigma_r \text{ and } \Sigma_g$: represent the feature covariance matrices of the real and generated images, respectively.
+    \item $\text{Tr}$: represents the trace (the sum of the diagonal elements of the matrix).
 \end{itemize}
 
-
 \subsection{Why Not Accuracy}
-
 Accuracy is not suitable for evaluating GANs because accuracy is an indicator of classification tasks, 
 which is used to measure the prediction accuracy of the model in classification tasks, and cannot 
 measure the quality and diversity of generated data. In generation tasks, there is no clear 

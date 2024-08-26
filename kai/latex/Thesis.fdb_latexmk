@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Thesis"] 1724683543 "Thesis.aux" "Thesis.bbl" "Thesis" 1724683545 0
+["bibtex Thesis"] 1724684460 "Thesis.aux" "Thesis.bbl" "Thesis" 1724684950 0
   "./References.bib" 1724574142 10605 9f44f5eecdbd5079b3fa164181321ac8 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Thesis.aux" 1724683545 12503 407271852be341c54936d3765b62d995 "pdflatex"
+  "Thesis.aux" 1724684949 12531 5015b26de7d277ffc2cc0906e24bf6ba "pdflatex"
   (generated)
   "Thesis.bbl"
   "Thesis.blg"
   (rewritten before read)
-["pdflatex"] 1724683543 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1724683545 0
+["pdflatex"] 1724684947 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1724684950 0
   "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" 1722597441 2077 90824e4821e788e319273e6bfaecf43c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -36,8 +36,6 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb" 1248133631 32378 2b20eba6bb36c716382b6d96240eaa69 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1248133631 32166 b0c356b15f19587482a9217ce1d8fa67 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
@@ -140,7 +138,7 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "01_Introduction.tex" 1722022399 1691 94141f71ce8035b5eb05acbc968d8b61 ""
   "02_Related_Work.tex" 1724683501 7276 9694f2f4c4f4cb9ffe9276d2eb8b39d3 ""
-  "03_Theoretical_Background.tex" 1724683540 17341 fb593e999fa95afed8cc72fb878e164e ""
+  "03_Theoretical_Background.tex" 1724684947 16599 1cb3ec229c2bcce7cf5de5fa7cfddd5d ""
   "04_Experiments.tex" 1724683244 8870 a8fb7d61d8ba89c745b4714112e2bef2 ""
   "05_Discussion.tex" 1715636041 106 035fd14d57bb9df98b447556bb2f9050 ""
   "Appendix.tex" 1715636041 97 6218c7d8b4b819069d98901d47fd309d ""
@@ -161,12 +159,12 @@
   "Images/standard_GAN_without_data_augementation1.jpg" 1722447309 183755 d2e6d20bcb1bc58042d834d12a3efa5f ""
   "Images/standard_GAN_without_data_augementation2.jpg" 1722447309 177454 607d6b2486afbcbdc046b49dc68e34df ""
   "Images/standard_GAN_without_data_augementation3.jpg" 1722447309 188389 142b7bd96d818300777ee92f15b04d46 ""
-  "Thesis.aux" 1724683545 12503 407271852be341c54936d3765b62d995 "pdflatex"
-  "Thesis.bbl" 1724683543 6825 a0e29b7489b1e7aa11741e13429a18bb "bibtex Thesis"
-  "Thesis.lof" 1724683545 1224 17e2460df5a3c45e7a2255630d6fa5ad "pdflatex"
-  "Thesis.out" 1724683545 2425 bea812fc950cd7806ae21b2c8b160eb7 "pdflatex"
+  "Thesis.aux" 1724684949 12531 5015b26de7d277ffc2cc0906e24bf6ba "pdflatex"
+  "Thesis.bbl" 1724684460 6825 a0e29b7489b1e7aa11741e13429a18bb "bibtex Thesis"
+  "Thesis.lof" 1724684949 1226 49f59dd25e55fabfad02899d869092d2 "pdflatex"
+  "Thesis.out" 1724684949 2557 cccde87e4250227fe91fd599ddab9433 "pdflatex"
   "Thesis.tex" 1722597441 2077 90824e4821e788e319273e6bfaecf43c ""
-  "Thesis.toc" 1724683545 1240 79415ebae330cba431a00de71f8a5746 "pdflatex"
+  "Thesis.toc" 1724684949 1264 d67ffd45b6b062ce7a2ed60b5674a92e "pdflatex"
   (generated)
   "Thesis.aux"
   "Thesis.lof"

@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {3.1}Objective function of GAN}{11}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Training process of GAN}{13}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}The distribution change for GAN's training}{14}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Formula Angle}{15}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}The Formula Change for GAN's Training}{15}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Measuring performance of GAN}{18}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Why Not Accuracy}{19}{subsection.3.2.4}%
 \contentsline {chapter}{\numberline {4}Experiments}{21}{chapter.4}%
