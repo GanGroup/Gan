@@ -819,10 +819,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT ./Thesis.toc
 INPUT Thesis.toc
 INPUT Thesis.toc
-OUTPUT Thesis.toc
-INPUT ./Thesis.lof
-INPUT Thesis.lof
-INPUT Thesis.lof
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -848,6 +844,10 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+OUTPUT Thesis.toc
+INPUT ./Thesis.lof
+INPUT Thesis.lof
+INPUT Thesis.lof
 OUTPUT Thesis.lof
 INPUT ./01_Introduction.tex
 INPUT ./01_Introduction.tex
