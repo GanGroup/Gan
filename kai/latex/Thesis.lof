@@ -7,9 +7,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The structure for generator\relax }}{23}{figure.caption.12}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The structure for discriminator\relax }}{23}{figure.caption.13}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Model performance 1000 epochs\relax }}{24}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The output images for different GAN structure\relax }}{25}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces The FID scores for standard GAN without data augmentation\relax }}{26}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces The FID scores for standard GAN with data augmentation\relax }}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Model performance 3000 epochs\relax }}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces FID score for 3000 epochs\relax }}{24}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The output images for different GAN structure\relax }}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces The FID scores for standard GAN without data augmentation\relax }}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces The FID scores for standard GAN with data augmentation\relax }}{28}{figure.caption.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

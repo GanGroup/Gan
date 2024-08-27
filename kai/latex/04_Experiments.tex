@@ -42,7 +42,7 @@ The following outlines the reasons for this choice.
 In this step, I compared two types of standard GANs. The first model utilized dense layers, while the 
 second model employed convolution layers. The structure of the generator and discriminator was modified 
 accordingly, while all other hyperparameters were kept constant. Both models were trained on the MNIST 
-dataset for 1000 epochs. Upon comparing the generated images, it was observed that the GAN with the convolutional 
+dataset for 3000 epochs. Upon comparing the generated images, it was observed that the GAN with the convolutional 
 neural network (CNN) architecture outperformed the one with the dense layer architecture in terms of image quality. 
 Consequently, I selected the standard GAN model implemented with convolutional layers for further experiments.
 
@@ -58,7 +58,7 @@ Consequently, I selected the standard GAN model implemented with convolutional l
     \begin{subfigure}[b]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{./Images/generator_cnn.jpg}
-        \caption{Generator with convelution layer}
+        \caption{Generator with convolution layer}
         \label{fig:Conv2D Transpose}
     \end{subfigure}
     \caption{The structure for generator}
@@ -78,7 +78,7 @@ Consequently, I selected the standard GAN model implemented with convolutional l
     \begin{subfigure}[b]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{./Images/discriminator_cnn.jpg}
-        \caption{Discriminator with convelution layer}
+        \caption{Discriminator with convolution layer}
         \label{fig:Conv2D Transpose}
     \end{subfigure}
     \caption{The structure for discriminator}
@@ -97,11 +97,30 @@ Consequently, I selected the standard GAN model implemented with convolutional l
     \vspace{0.05\linewidth} 
     \begin{subfigure}[b]{\linewidth}
         \centering
-        \includegraphics[width=0.7\linewidth]{./Images/generate_image_by_Convelution_layer.jpg}
-        \caption{Images generate by convelution structure}
+        \includegraphics[width=0.7\linewidth]{./Images/generate_image_by_Convolution_layer.jpg}
+        \caption{Images generate by convolution structure}
         \label{fig:Conv2DTranspose}
     \end{subfigure}
-    \caption{Model performance 1000 epochs}
+    \caption{Model performance 3000 epochs}
+    \label{fig:combined}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{./Images/fid_score_for_dense_layer.jpg}
+        \caption{FID score for dense layer}
+        \label{fig:Dense}
+    \end{subfigure}
+    \vspace{0.05\linewidth} 
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{./Images/fid_score_for_convolution_layer.jpg}
+        \caption{FID score for convolution layer}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \caption{FID score for 3000 epochs}
     \label{fig:combined}
 \end{figure}
 
@@ -148,7 +167,7 @@ Upon comparing, I found that increasing the number of layers in either the gener
     \centering
     \begin{subfigure}[b]{\linewidth}
         \centering
-        \includegraphics[width=0.7\linewidth]{./Images/generate_image_by_Convelution_layer.jpg}
+        \includegraphics[width=0.7\linewidth]{./Images/generate_image_by_convolution_layer.jpg}
         \caption{Images generate by basic structure}
         \label{fig:Dense}
     \end{subfigure}
