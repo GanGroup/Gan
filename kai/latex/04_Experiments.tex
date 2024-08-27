@@ -2,7 +2,7 @@
 \label{Experiments}
 
 
-\section*{Model select}
+\section{Model select}
 Approximately a decade has passed since Goodfellow introduced Generative Adversarial Networks (GANs), 
 during which numerous variants of GAN models have been developed. For the purpose of this study, 
 I have selected seven distinct GAN models for examination and minimal implementation: Standard GANs, 
@@ -37,7 +37,7 @@ The following outlines the reasons for this choice.
 
 
 
-\section*{Model Structure}
+\section{Model Structure}
 
 In this step, I compared two types of standard GANs. The first model utilized dense layers, while the 
 second model employed convolution layers. The structure of the generator and discriminator was modified 
@@ -125,7 +125,7 @@ Consequently, I selected the standard GAN model implemented with convolutional l
 \end{figure}
 
 
-\section*{Explore More Layers}
+\section{Explore More Layers}
 
 In this section, I explored the impact of changing convolutional layers in the generator and discriminator of a GAN.
 
@@ -183,7 +183,7 @@ Upon comparing, I found that increasing the number of layers in either the gener
 \end{figure}
 
 
-\section*{Data Augmentation}
+\section{Data Augmentation}
 
 I conducted three training runs of the standard GAN model, both with and without data augmentation, 
 and compared the FID scores. The results indicate that data augmentation generally led to lower optimization performance.
