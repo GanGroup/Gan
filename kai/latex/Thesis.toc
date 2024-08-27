@@ -6,10 +6,10 @@
 \contentsline {chapter}{\numberline {3}Theoretical Background}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Objective function of GAN}{11}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Training process of GAN}{13}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}The distribution change for GAN's training}{14}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}The Formula Change for GAN's Training}{15}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Measuring performance of GAN}{18}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Why Not Accuracy}{19}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.1}The distribution change Of GAN's training}{14}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The Formula Change Of GAN's Training}{15}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Measuring performance of GAN}{18}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Why Not Accuracy}{19}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Experiments}{21}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Discussion}{28}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Code}{29}{appendix.A}%
