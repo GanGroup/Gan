@@ -7,8 +7,34 @@ Approximately a decade has passed since Goodfellow introduced Generative Adversa
 during which numerous variants of GAN models have been developed. For the purpose of this study, 
 I have selected seven distinct GAN models for examination and minimal implementation: Standard GANs, 
 Conditional GANs, Auxiliary Classifier GANs, Cycle GANs, Domain Transfer Network GANs, Coupled GANs, 
-and Style GANs. The primary criterion for selection is training time, with only one model chosen for 
-further in-depth analysis. Due to the extensive training time required, I ultimately selected Standard GANs for detailed study.
+and Style GANs. Based on their foundational nature, extensive research and documentation, training and 
+implementation efficiency, and flexibility and versatility, Standard GANs were selected for this study. 
+The following outlines the reasons for this choice.
+
+
+\begin{enumerate}
+    \item Foundational Nature: Standard GANs, introduced by Ian Goodfellow et al. in 2014, serve as the 
+    foundational model for all subsequent GAN variants. Understanding the principles and mechanics of 
+    Standard GANs is crucial for comprehending more complex versions like Conditional GANs, Cycle GANs, 
+    and Style GANs. By focusing on the Standard GAN, this study lays a solid foundation for exploring more advanced models.
+
+    \item Widely Studied and Well-Documented: Standard GANs have been extensively researched, with a 
+    vast amount of literature available. This wealth of resources provides a robust theoretical 
+    background and a variety of implementation strategies, facilitating a more thorough and 
+    well-supported analysis. This also means that there is ample precedent for common challenges 
+    and solutions, making it easier to troubleshoot and refine the model during the study.
+
+    \item Training and Implementation Efficiency: Compared to more complex GAN variants, 
+    Standard GANs typically require less computational power and shorter training times, 
+    making them more accessible for experimentation and analysis. This efficiency allows 
+    for multiple experiments and parameter tuning within the constraints of the study, 
+    leading to more reliable and reproducible results.
+
+    \item Flexibility and Versatility: Standard GANs are highly versatile and can be adapted 
+    to a wide range of tasks and datasets. This flexibility makes them an excellent choice for 
+    a detailed study that may involve exploring various applications or extending the model to new domains.
+\end{enumerate}
+
 
 
 \section*{Model Structure}
