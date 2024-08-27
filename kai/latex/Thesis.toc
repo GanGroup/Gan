@@ -15,5 +15,6 @@
 \contentsline {section}{\numberline {4.2}Model Structure}{22}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Explore More Layers}{25}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Data Augmentation}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Apply New Dataset}{29}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Discussion}{30}{chapter.5}%
 \contentsline {chapter}{\numberline {A}Code}{31}{appendix.A}%
