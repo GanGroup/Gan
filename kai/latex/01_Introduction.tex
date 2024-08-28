@@ -1,5 +1,6 @@
 \chapter{Introduction}
 
+
 Generative Adversarial Networks (GANs) have emerged as a powerful class of generative models that revolutionize 
 generative modeling by framing it as a game between two networks: a generator network that produces synthetic data 
 from noise and a discriminator network that distinguishes between the generated data and real data \citep{10.48550/arxiv.1704.00028}. 
@@ -8,13 +9,26 @@ radiology, and computer vision \citep{10.1002/mgea.30}, \citep{10.1016/j.media.2
 For example, CycleGAN has been effectively applied in the medical field, notably in medical imaging tasks. 
 It has enhanced liver lesion classification through GAN-based synthetic medical image augmentation, surpassing traditional data 
 augmentation methods in sensitivity and specificity \citep{10.1016/j.neucom.2018.09.013}. 
-Abdal et al. (2019) demonstrated the effectiveness of StyleGAN in tasks such as image deformation, style transfer \citep{10.1109/iccv.2019.00453}. 
+Abdal et al. (2019) demonstrated the effectiveness of StyleGAN in tasks such as image deformation and style transfer \citep{10.1109/iccv.2019.00453}. 
 GANs have gained significant attention in the computer vision community due to their ability to generate data without explicitly 
 modeling the probability density function \citep{10.1016/j.media.2019.101552}.
 
-The purpose of this paper is to gain a comprehensive understanding of Generative Adversarial Networks (GANs).
-To achieve this, I will utilize the Animal Faces-HQ dataset, which comprises 16,130 high-quality images with a 
-resolution of 512×512 pixels, to train a standard GAN model specifically designed for generating realistic cat pictures.
+Despite these advances, training GANs remains a challenging task due to issues such as mode collapse, instability during training, 
+and the requirement for substantial computational resources. Additionally, evaluating the performance of GANs is not straightforward, 
+as traditional metrics such as accuracy do not adequately capture the quality or diversity of the generated data. This complexity has 
+led to the development of various GAN architectures and training techniques aimed at improving the stability and quality of generated images.
 
-The Structure of this thesis.
+The purpose of this thesis is to gain a comprehensive understanding of the factors influencing the performance of GANs, 
+particularly in the context of generating realistic images. To achieve this, I will utilize the Animal Faces-HQ (AFHQ) dataset, 
+which comprises 16,130 high-quality images with a resolution of 512×512 pixels, to train a standard GAN model specifically designed 
+for generating realistic cat pictures. The high resolution of these images presents both an opportunity and a challenge, as it requires 
+careful consideration of model structure and training strategies to avoid issues such as overfitting or insufficient model capacity.
+
+This thesis is structured as follows: Chapter 2 provides an overview of historical models of image generation, 
+including Deep Boltzmann Machines, Variational Autoencoders, and Noise Contrastive Estimation. Chapter 3 discusses 
+the theoretical background of GANs, focusing on their objective functions, the training process, and methods 
+for evaluating their performance. Chapter 4 presents the experimental work conducted, including model selection, 
+architecture exploration, and the impact of data augmentation, followed by the application of the GAN model to the 
+AFHQ dataset. Finally, Chapter 5 discusses the results, highlights the implications of the findings, and suggests 
+directions for future research.
 

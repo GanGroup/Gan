@@ -1,4 +1,46 @@
 \chapter{Discussion}
 \label{Discussion}
 
-In this chapter I provide a discussion and concluding remarks...
+\section{Summary of Key Findings}
+In this study, I conducted a series of experiments to evaluate the performance of different 
+GAN architectures and explored various factors influencing the quality of generated images. 
+Specifically, I compared the effects of using dense layers versus convolutional layers in a standard GAN, 
+examined the impact of varying the number of convolutional layers in the generator and discriminator, 
+analyzed the effects of data augmentation on GAN training, and ultimately applied a GAN model to a 
+new dataset to generate high-quality images of cat faces.
+
+\section{Impact of Model Structure}
+My experiments revealed that GAN models utilizing convolutional layers significantly outperformed
+ those using dense layers in terms of image quality. This finding is consistent with the well-known 
+ capability of convolutional layers to capture spatial features in images. Further experiments 
+ demonstrated that increasing the number of layers in the generator or discriminator individually 
+ led to decreased model performance. This imbalance disrupts the dynamic equilibrium between the 
+ generator and discriminator in the GAN framework, underscoring the importance of maintaining this balance during GAN training.
+
+\section{Data Augmentation Effects}
+Regarding data augmentation, my results indicated that it generally led to lower optimization performance. 
+Although data augmentation typically enhances a model's generalization ability, in this study, it might have 
+introduced excessive noise, interfering with the GAN training process. This suggests that careful selection of 
+augmentation methods and parameters is crucial to prevent destabilizing the model and hindering convergence during GAN training.
+
+\section{Performance on New Dataset}
+When applying the model to the high-resolution Animal Faces-HQ dataset, I successfully trained a standard GAN model 
+to generate realistic cat images. This result validates the effectiveness of standard GANs in handling high-resolution 
+images and demonstrates the potential of GANs in generating realistic images. However, due to hardware constraints, 
+I had to downscale the images from 512x512 to 128x128 pixels, which might have limited the final quality of the generated images.
+
+\section{Limitations and Future Work}
+Despite the positive outcomes, this study has some limitations. Firstly, due to limited computational resources, 
+I was unable to train the model on higher-resolution images, which may have affected the quality of the generated 
+images. Secondly, my experiments primarily focused on standard GANs and their simple variants; future research 
+could explore more advanced GAN variants such as StyleGAN or BigGAN. Additionally, in the area of data augmentation, 
+further research is needed to design more effective augmentation strategies that can improve GAN training efficiency and the quality of generated images.
+
+In future work, I plan to optimize the data augmentation strategies and attempt training on higher-resolution images. 
+Furthermore, exploring different types of GAN models, such as Conditional GANs or Adaptive GANs, to enhance the diversity 
+and quality of generated images could be valuable.
+
+\section{Conclusion}
+Overall, this study provides a comprehensive analysis of GAN performance through a series of experiments, demonstrating 
+its potential in generating high-quality images. Despite some challenges, GANs remain a powerful tool in the field of 
+generative models, and future improvements and optimizations are expected to further enhance their applicability.

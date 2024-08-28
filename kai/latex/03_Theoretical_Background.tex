@@ -103,7 +103,7 @@ while the discriminator seeks to more accurately distinguish between real and fa
 To understand how this process works, in the following sections, 
 I will describe the GAN training process from the perspectives of data distribution and mathematical formulation.
 
-\subsection{The Distribution Change For GAN's Training}
+\subsection{Distribution Changes During GAN Training}
 A simaple diagram show how distribution change in GAN training.
 
 
@@ -143,7 +143,7 @@ state to a state that highly coincides with the real distribution, reflecting a 
 the quality of the generated samples.
 
 
-\subsection{The Formula Change For GAN's Training}
+\subsection{Mathematical Formulation Changes During GAN Training}
 
 
 1. Problem Setup
@@ -282,7 +282,7 @@ This formula provides a theoretical foundation for training GANs, guiding the up
 its generated data gradually approaches the real data distribution.
 
 
-\section{Measuring Performance Of GAN}
+\section{Evaluating GAN Performance}
 
 
 Fréchet Inception Distance (FID) is a metric commonly used in Generative Adversarial Network (GAN) models 
@@ -321,7 +321,7 @@ while values between 10 and 50 indicate good quality, and values above 50 sugges
 
 
 
-\section{Why Not Accuracy}
+\section{Limitations of Accuracy in Evaluating GANs}
 Accuracy is not suitable for evaluating GANs because accuracy is an indicator of classification tasks, 
 which is used to measure the prediction accuracy of the model in classification tasks, and cannot 
 measure the quality and diversity of generated data. In generation tasks, there is no clear 

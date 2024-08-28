@@ -1,20 +1,26 @@
-\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
-\contentsline {chapter}{\numberline {2}History Models of Image Generate}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Deep Boltzmann Machines}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Variational Autoencoders}{8}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Noise Contrastive Estimation}{9}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Theoretical Background}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Objective Function Of GAN}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Training Process Of GAN}{13}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}The Distribution Change For GAN's Training}{14}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}The Formula Change For GAN's Training}{15}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Measuring Performance Of GAN}{18}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Why Not Accuracy}{19}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Experiments}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Model select}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Model Structure}{22}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Explore More Layers}{25}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Data Augmentation}{26}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Apply New Dataset}{29}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Discussion}{30}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Code}{31}{appendix.A}%
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Historical Models of Image Generation}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Deep Boltzmann Machines}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Variational Autoencoders}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Noise Contrastive Estimation}{8}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Theoretical Background}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Objective Function Of GAN}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Training Process Of GAN}{12}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Distribution Changes During GAN Training}{13}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Mathematical Formulation Changes During GAN Training}{14}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Evaluating GAN Performance}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Limitations of Accuracy in Evaluating GANs}{18}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Experiments}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Model Selection}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Model Structure}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Exploring Layer Depth}{24}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{25}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{28}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Discussion}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Key Findings}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Impact of Model Structure}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{30}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Performance on New Dataset}{30}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations and Future Work}{30}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Conclusion}{31}{section.5.6}%
+\contentsline {chapter}{\numberline {A}Code}{32}{appendix.A}%

@@ -2,7 +2,7 @@
 \label{Experiments}
 
 
-\section{Model select}
+\section{Model Selection}
 Approximately a decade has passed since Goodfellow introduced Generative Adversarial Networks (GANs), 
 during which numerous variants of GAN models have been developed. For the purpose of this study, 
 I have selected seven distinct GAN models for examination and minimal implementation: Standard GANs, 
@@ -125,7 +125,7 @@ Consequently, I selected the standard GAN model implemented with convolutional l
 \end{figure}
 
 
-\section{Explore More Layers}
+\section{Exploring Layer Depth}
 
 In this section, I explored the impact of changing convolutional layers in the generator and discriminator of a GAN.
 
@@ -183,7 +183,7 @@ Upon comparing, I found that increasing the number of layers in either the gener
 \end{figure}
 
 
-\section{Data Augmentation}
+\section{Impact of Data Augmentation on Model Performance}
 
 I conducted three training runs of the standard GAN model, both with and without data augmentation, 
 and compared the FID scores. The results indicate that data augmentation generally led to lower optimization performance.
@@ -242,7 +242,7 @@ and compared the FID scores. The results indicate that data augmentation general
 
 
 
-\section{Apply New Dataset}
+\section{Applying the Model to a New Dataset}
 In this phase, I utilized the Animal Faces-HQ (AFHQ) dataset, which consists of 16,130 high-quality 
 images at a resolution of 512x512 pixels, to train a standard GAN model focused on generating realistic 
 cat images. Due to the high resolution of the original images, which could potentially cause GPU crashes, 
