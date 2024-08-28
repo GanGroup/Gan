@@ -12,5 +12,6 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces The output images for different GAN structure\relax }}{26}{figure.caption.15}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces The FID scores for standard GAN without data augmentation\relax }}{27}{figure.caption.16}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces The FID scores for standard GAN with data augmentation\relax }}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Cats face generate by generator\relax }}{29}{figure.caption.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
