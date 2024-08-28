@@ -137,31 +137,33 @@ Upon comparing, I found that increasing the number of layers in either the gener
 
 \begin{table}[h]
     \centering
-    \caption{FID Scores for Different GAN Architectures}
+    \caption{FID Scores for Different GAN Architectures (Lower is Better)}
     \begin{tabular}{|l|c|c|c|}
       \hline
-      & 1st training & 2nd training & 3rd training \\
+      \textbf{GAN Architecture} & \textbf{1st Training} & \textbf{2nd Training} & \textbf{3rd Training} \\
       \hline
-      Basic structure & 68.27 & 76.33 & 59.49 \\
+      Basic Structure & 68.27 & 76.33 & 59.49 \\
       \hline
-      Add 1 convolution layer in generator & 77.25 & 81.14 & 78.46 \\
+      Add 1 Convolution Layer in Generator & 77.25 & 81.14 & 78.46 \\
       \hline
-      Add 2 convolution layer in generator & 90.14 & 85.96 & 121.42 \\
+      Add 2 Convolution Layers in Generator & 90.14 & 85.96 & 121.42 \\
       \hline
-      Add 3 convolution layer in generator & 151.55 & 147.53 & 284.91 \\
+      Add 3 Convolution Layers in Generator & 151.55 & 147.53 & 284.91 \\
       \hline
-      \multicolumn{1}{|l|}{Add 3 convolution layer in generator} & 70.72 & 72.97 & 70.93 \\
-      \multicolumn{1}{|l|}{Add 1 convolution layers in discriminator} & & & \\
+      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 70.72 & 72.97 & 70.93 \\
+      \multicolumn{1}{|l|}{Add 1 Convolution Layer in Discriminator} & & & \\
       \hline
-      \multicolumn{1}{|l|}{Add 3 convolution layer in generator} & 37.41 & 42.45 & 31.43 \\
-      \multicolumn{1}{|l|}{Add 2 convolution layers in discriminator} & & & \\
+      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 37.41 & 42.45 & 31.43 \\
+      \multicolumn{1}{|l|}{Add 2 Convolution Layers in Discriminator} & & & \\
       \hline
-      \multicolumn{1}{|l|}{Add 3 convolution layer in generator} & 36.75 & 35.87 & 34.72 \\
-      \multicolumn{1}{|l|}{Add 3 convolution layers in discriminator} & & & \\
+      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 36.75 & 35.87 & 34.72 \\
+      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Discriminator} & & & \\
       \hline
     \end{tabular}
+    \vspace{2mm}
+    \caption*{\textit{Note}: A FID value below 10 is considered to represent very high-quality generated images, 
+    while values between 10 and 50 indicate good quality, and values above 50 suggest average or poor quality.}
 \end{table}
-
 
 \begin{figure}[H]
     \centering

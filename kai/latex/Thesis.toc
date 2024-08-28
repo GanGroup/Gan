@@ -15,12 +15,12 @@
 \contentsline {section}{\numberline {4.2}Model Structure}{21}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Exploring Layer Depth}{24}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{25}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{28}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Discussion}{29}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of Key Findings}{29}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Impact of Model Structure}{29}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{30}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Performance on New Dataset}{30}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Limitations and Future Work}{30}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Conclusion}{31}{section.5.6}%
-\contentsline {chapter}{\numberline {A}Code}{32}{appendix.A}%
+\contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{29}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Discussion}{30}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Key Findings}{30}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Impact of Model Structure}{30}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{31}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Performance on New Dataset}{31}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations and Future Work}{31}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Conclusion}{32}{section.5.6}%
+\contentsline {chapter}{\numberline {A}Code}{33}{appendix.A}%
