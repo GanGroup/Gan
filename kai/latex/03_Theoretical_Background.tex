@@ -1,7 +1,12 @@
 \chapter{Theoretical Background}
 \label{Theoretical Background for GAN}
+This chapter covers the theoretical foundations of Generative Adversarial Networks (GANs),
+including their objective function, the training dynamics between the generator and discriminator, 
+and the use of metrics like Fréchet Inception Distance (FID) to evaluate performance. 
 
-\section{Objective Function Of GAN}
+
+
+\section{Objective Function of GAN}
 
 Generative Adversarial Networks (GANs) consist of a generator G and a discriminator D, 
 both implemented using artificial neural networks. The parametrization of GANs involves 
@@ -13,6 +18,7 @@ The training process involves iteratively updating the weights and biases of the
 adversarial training, where the generator tries to deceive the discriminator, and the discriminator 
 aims to accurately classify samples \citep{10.48550/arxiv.1802.05637}.
 The objective function for GAN has the following form:
+
 
 \begin{equation}
     \label{eq:min & max}
@@ -95,7 +101,7 @@ guiding the $G$ towards producing more realistic samples \citep{10.48550/arxiv.1
 
 
 
-\section{Training Process Of GAN}
+\section{Training Process of GAN}
 
 The training process of Generative Adversarial Networks (GANs) is inherently adversarial. 
 The generator endeavors to create increasingly realistic fake samples to deceive the discriminator, 

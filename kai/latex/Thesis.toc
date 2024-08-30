@@ -4,23 +4,23 @@
 \contentsline {section}{\numberline {2.2}Variational Autoencoders}{7}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Noise Contrastive Estimation}{8}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Theoretical Background}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Objective Function Of GAN}{10}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Training Process Of GAN}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.1}Objective Function of GAN}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Training Process of GAN}{13}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Distribution Changes During GAN Training}{13}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Mathematical Formulation Changes During GAN Training}{14}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Evaluating GAN Performance}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Limitations of Accuracy in Evaluating GANs}{18}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Experiments}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Model Selection}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Model Structure}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Exploring Layer Depth}{24}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{25}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{29}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Discussion}{30}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of Key Findings}{30}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Impact of Model Structure}{30}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{31}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Performance on New Dataset}{31}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Limitations and Future Work}{31}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Conclusion}{32}{section.5.6}%
-\contentsline {chapter}{\numberline {A}Code}{33}{appendix.A}%
+\contentsline {section}{\numberline {3.4}Limitations of Accuracy in Evaluating GANs}{19}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Experiments}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Model Selection}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Model Structure}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Exploring Layer Depth}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{30}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Discussion}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Key Findings}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Impact of Model Structure}{31}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{32}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Performance on New Dataset}{32}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations and Future Work}{32}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Conclusion}{33}{section.5.6}%
+\contentsline {chapter}{\numberline {A}Code}{34}{appendix.A}%
