@@ -248,6 +248,14 @@ and compared the FID scores. The results indicate that data augmentation general
     \label{fig:combined}
 \end{figure}
 
+As per usual, the model with data augmentation should performance better then the model without data augmentation.
+For why I got this, I think it because of some augmentation technich will disturb the distribution of real image,
+this change will mislead the generator to train in the wrong direction.
+
+base on my assumption, I went back to check the code. I have used 4 parameter in data augementation, rotation range, width shift range,
+height shift range and horizontal flip.
+
+
 
 
 \section{Applying the Model to a New Dataset}
