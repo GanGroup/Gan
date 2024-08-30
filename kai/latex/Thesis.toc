@@ -10,9 +10,9 @@
 \contentsline {subsection}{\numberline {3.2.2}Mathematical Formulation Changes During GAN Training}{14}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Evaluating GAN Performance}{17}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Limitations of Accuracy in Evaluating GANs}{19}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Experiments}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Model Selection}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Model Structure}{22}{section.4.2}%
+\contentsline {chapter}{\numberline {4}The Results}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Standard GAN Versus Other GAN Realizations}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}GAN With Convolutional or Dense layers}{22}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Exploring Layer Depth}{25}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{26}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{30}{section.4.5}%
