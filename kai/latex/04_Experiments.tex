@@ -141,35 +141,55 @@ Finally, using the base GAN with three additional convolutional layers in the ge
 
 Upon comparing, I found that increasing the number of layers in either the generator or the discriminator alone worsened the model’s performance. This imbalance disrupts the dynamic equilibrium between the generator and discriminator in the GAN framework. However, simultaneously increasing the layers in both the generator and the discriminator improved the model’s performance. This finding aligns with the concept of maintaining a balance between the generator and discriminator during training, as highlighted in the literature \citep{10.48550/arxiv.1703.10717}. The importance of this balance is crucial for the effective operation of GANs, ensuring stable learning and improved image quality \citep{10.48550/arxiv.2002.02112}.    
 
-\begin{table}[h]
+
+\begin{table}[h!]
     \centering
-    \caption{FID Scores for Different GAN Architectures (Lower is Better)}
-    \begin{tabular}{|l|c|c|c|}
-      \hline
-      \textbf{GAN Architecture} & \textbf{1st Training} & \textbf{2nd Training} & \textbf{3rd Training} \\
-      \hline
-      Basic Structure & 68.27 & 76.33 & 59.49 \\
-      \hline
-      Add 1 Convolution Layer in Generator & 77.25 & 81.14 & 78.46 \\
-      \hline
-      Add 2 Convolution Layers in Generator & 90.14 & 85.96 & 121.42 \\
-      \hline
-      Add 3 Convolution Layers in Generator & 151.55 & 147.53 & 284.91 \\
-      \hline
-      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 70.72 & 72.97 & 70.93 \\
-      \multicolumn{1}{|l|}{Add 1 Convolution Layer in Discriminator} & & & \\
-      \hline
-      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 37.41 & 42.45 & 31.43 \\
-      \multicolumn{1}{|l|}{Add 2 Convolution Layers in Discriminator} & & & \\
-      \hline
-      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 36.75 & 35.87 & 34.72 \\
-      \multicolumn{1}{|l|}{Add 3 Convolution Layers in Discriminator} & & & \\
-      \hline
+    \caption{Averate FID Scores for Different GAN Architectures (Lower is Better)}
+    \vspace{2mm}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \diagbox{Layers in G}{Layers in D} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} \\ \hline
+    \textbf{3} & \cellcolor{green!50} 68.03 & 72.45 & 78.56 & 85.67 \\ \hline
+    \textbf{4} & 78.95 & \cellcolor{green!50} 70.89 & 74.23 & 79.45 \\ \hline
+    \textbf{5} & 99.17 & 85.36 & \cellcolor{green!50} 55.21 & 65.54 \\ \hline
+    \textbf{6} & 194.66 & 71.54 & 37.09 & \cellcolor{green!50} 35.78 \\ \hline
     \end{tabular}
     \vspace{2mm}
     \caption*{\textit{Note}: A FID value below 10 is considered to represent very high-quality generated images, 
     while values between 10 and 50 indicate good quality, and values above 50 suggest average or poor quality.}
 \end{table}
+
+% \begin{table}[h]
+%     \centering
+%     \caption{FID Scores for Different GAN Architectures (Lower is Better)}
+%     \begin{tabular}{|l|c|c|c|}
+%       \hline
+%       \textbf{GAN Architecture} & \textbf{1st Training} & \textbf{2nd Training} & \textbf{3rd Training} \\
+%       \hline
+%       Basic Structure & 68.27 & 76.33 & 59.49 \\
+%       \hline
+%       Add 1 Convolution Layer in Generator & 77.25 & 81.14 & 78.46 \\
+%       \hline
+%       Add 2 Convolution Layers in Generator & 90.14 & 85.96 & 121.42 \\
+%       \hline
+%       Add 3 Convolution Layers in Generator & 151.55 & 147.53 & 284.91 \\
+%       \hline
+%       \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 70.72 & 72.97 & 70.93 \\
+%       \multicolumn{1}{|l|}{Add 1 Convolution Layer in Discriminator} & & & \\
+%       \hline
+%       \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 37.41 & 42.45 & 31.43 \\
+%       \multicolumn{1}{|l|}{Add 2 Convolution Layers in Discriminator} & & & \\
+%       \hline
+%       \multicolumn{1}{|l|}{Add 3 Convolution Layers in Generator} & 36.75 & 35.87 & 34.72 \\
+%       \multicolumn{1}{|l|}{Add 3 Convolution Layers in Discriminator} & & & \\
+%       \hline
+%     \end{tabular}
+%     \vspace{2mm}
+%     \caption*{v\textit{Note}: A FID value below 10 is considered to represent very high-quality generated images, 
+%     while values between 10 and 50 indicate good quality, and values above 50 suggest average or poor quality.}
+% \end{table}
+
+
 
 \begin{figure}[H]
     \centering
