@@ -268,14 +268,40 @@ and compared the FID scores. The results indicate that data augmentation general
     \label{fig:combined}
 \end{figure}
 
-As per usual, the model with data augmentation should performance better then the model without data augmentation.
+As per usual, the model with data augmentation should performance better then the model without data augmentation, 
+but the results are Different.
 For why I got this, I think it because of some augmentation technich will disturb the distribution of real image,
 this change will mislead the generator to train in the wrong direction.
 
-base on my assumption, I went back to check the code. I have used 4 parameter in data augementation, rotation range, width shift range,
+base on my assumption, I went back to check the code. I found have used 4 parameter in data augementation, rotation range, width shift range,
 height shift range and horizontal flip.
 
+Firstly, I remove the horizontal flip, the FID score is better then the model with data augementation but still worse than the score that I got from the model without data augmentaion.
 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.84\linewidth]{./Images/data_augementation_remove_flip1.jpg}
+        \caption{Standard GAN with data augmentation but remove flip}
+        \label{fig:Dense}
+    \end{subfigure}
+    \vspace{0.05\linewidth} 
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/data_augementation_remove_flip2.jpg}
+        \caption{Standard GAN with data augmentation but remove flip 2}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/data_augementation_remove_flip3.jpg}
+        \caption{Standard GAN with data augmentation but remove flip 3}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \caption{The FID scores for standard GAN with data augmentation but remove flip}
+    \label{fig:combined}
+\end{figure}
 
 
 \section{Applying the Model to a New Dataset}
