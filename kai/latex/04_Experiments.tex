@@ -268,22 +268,33 @@ and compared the FID scores. The results indicate that data augmentation general
     \label{fig:combined}
 \end{figure}
 
-As per usual, the model with data augmentation should performance better then the model without data augmentation, 
-but the results are Different.
-For why I got this, I think it because of some augmentation technich will disturb the distribution of real image,
-this change will mislead the generator to train in the wrong direction.
+Typically, a model with data augmentation is expected to perform better than one without it. However, 
+in my experiments, the results were different from what I anticipated.
 
-base on my assumption, I went back to check the code. I found have used 4 parameter in data augementation, rotation range, width shift range,
-height shift range and horizontal flip.
+I believe this discrepancy might be due to the fact that certain data augmentation techniques disturb the 
+distribution of the real dataset, which in turn misleads the generator to train in the wrong direction.
 
-Firstly, I remove the horizontal flip, the FID score is better then the model with data augementation but still worse than the score that I got from the model without data augmentaion.
+Based on this assumption, I revisited the code and found that I had used four parameters in the data augmentation 
+process: rotation range, width shift range, height shift range, and horizontal flip.
+
+First, I removed the horizontal flip. The results showed that the FID score improved compared to the model 
+with all augmentations but was still worse than the model without any data augmentation.
+
+Next, I removed the rotation augmentation. The FID score dropped slightly compared to the model that only had the horizontal flip removed.
+
+Since width shift and height shift are very similar operations, I did not explore them separately.
+
+In conclusion, the results indicate that data augmentation techniques such as rotation range, width shift range, height 
+shift range, and horizontal flip can disturb the distribution of the real dataset, leading to a decline in model 
+performance. This suggests that while data augmentation typically enhances a model’s generalization capabilities, 
+if not carefully chosen or if overused, it can have a detrimental effect on model training.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{\linewidth}
         \centering
         \includegraphics[width=0.84\linewidth]{./Images/data_augementation_remove_flip1.jpg}
-        \caption{Standard GAN with data augmentation but remove flip}
+        \caption{Standard GAN with data augmentation but remove flip 1}
         \label{fig:Dense}
     \end{subfigure}
     \vspace{0.05\linewidth} 
@@ -300,6 +311,32 @@ Firstly, I remove the horizontal flip, the FID score is better then the model wi
         \label{fig:Conv2DTranspose}
     \end{subfigure}
     \caption{The FID scores for standard GAN with data augmentation but remove flip}
+    \label{fig:combined}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.84\linewidth]{./Images/data_augementation_remove_rotation1.jpg}
+        \caption{Standard GAN with data augmentation but remove flip and rotation 1}
+        \label{fig:Dense}
+    \end{subfigure}
+    \vspace{0.05\linewidth} 
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/data_augementation_remove_rotation2.jpg}
+        \caption{Standard GAN with data augmentation but remove flip and rotation 2}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{./Images/data_augementation_remove_rotation3.jpg}
+        \caption{Standard GAN with data augmentation but remove flip and rotation 3}
+        \label{fig:Conv2DTranspose}
+    \end{subfigure}
+    \caption{The FID scores for standard GAN with data augmentation but remove flip and rotation}
     \label{fig:combined}
 \end{figure}
 

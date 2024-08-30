@@ -15,12 +15,12 @@
 \contentsline {section}{\numberline {4.2}GAN With Convolutional or Dense layers}{22}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Exploring Layer Depth}{25}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{26}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{31}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Discussion}{32}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of Key Findings}{32}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Impact of Model Structure}{32}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{33}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Performance on New Dataset}{33}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Limitations and Future Work}{33}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Conclusion}{34}{section.5.6}%
-\contentsline {chapter}{\numberline {A}Code}{35}{appendix.A}%
+\contentsline {section}{\numberline {4.5}Applying the Model to a New Dataset}{32}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Discussion}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Key Findings}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Impact of Model Structure}{33}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{34}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Performance on New Dataset}{34}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations and Future Work}{34}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Conclusion}{35}{section.5.6}%
+\contentsline {chapter}{\numberline {A}Code}{36}{appendix.A}%

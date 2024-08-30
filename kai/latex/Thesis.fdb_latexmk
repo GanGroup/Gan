@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Thesis"] 1725045040 "Thesis.aux" "Thesis.bbl" "Thesis" 1725046622 0
+["bibtex Thesis"] 1725048230 "Thesis.aux" "Thesis.bbl" "Thesis" 1725048597 0
   "./References.bib" 1724574142 10605 9f44f5eecdbd5079b3fa164181321ac8 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Thesis.aux" 1725046622 16237 459da0210fa92dc77f27bb31c0562a86 "pdflatex"
+  "Thesis.aux" 1725048596 17421 d3af3462bfdc10eb2ea7954169f35e92 "pdflatex"
   (generated)
   "Thesis.bbl"
   "Thesis.blg"
   (rewritten before read)
-["pdflatex"] 1725046619 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1725046622 0
+["pdflatex"] 1725048594 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1725048597 0
   "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" 1725030970 4353 e15f6696b591b6aea04435fbba75e7f1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -146,8 +146,8 @@
   "01_Introduction.tex" 1724855793 3235 cc015f5ffadc7557eb1f9abbd59948af ""
   "02_Related_Work.tex" 1725003339 7612 0b09778cc352b0041dcd374ee848b18f ""
   "03_Theoretical_Background.tex" 1725003728 17074 2ae609781ac5fc4bcbc57304d9299509 ""
-  "04_Experiments.tex" 1725046619 15461 083173db152565aa3a7ad2418b0890ca ""
-  "05_Discussion.tex" 1724854936 3625 adcc9d3c841647522bafc6fb7dc007ab ""
+  "04_Experiments.tex" 1725048224 17301 7ef4879a24f031d0cd1d2843be967de9 ""
+  "05_Discussion.tex" 1725048594 3745 0c983759fefc3e8bdcd2f549afe45a42 ""
   "Appendix.tex" 1715636041 97 6218c7d8b4b819069d98901d47fd309d ""
   "Images/UCC_logo.png" 1715636041 211008 0f70c5e117d99f913efac02b464a1857 ""
   "Images/apply_new_dataset.jpg" 1724837507 1915835 33e082d414ceb5ae8cd8930a76c3875c ""
@@ -155,6 +155,9 @@
   "Images/data_augementation_remove_flip1.jpg" 1725044863 63899 3153d690d9ee40146f6d55e9d92aaf10 ""
   "Images/data_augementation_remove_flip2.jpg" 1725044863 65567 359c7cf22c131583bc6a9a16c23c2248 ""
   "Images/data_augementation_remove_flip3.jpg" 1725046580 76232 f179f02be6e467d978c6339b405c2957 ""
+  "Images/data_augementation_remove_rotation1.jpg" 1725047626 116658 bbcfaabd17c4c82c77d8de7ed777bbef ""
+  "Images/data_augementation_remove_rotation2.jpg" 1725047626 124359 b8aa20216057a65a444148ed8370bd61 ""
+  "Images/data_augementation_remove_rotation3.jpg" 1725048171 76405 60d19e49316470e5845b1370660bd3fa ""
   "Images/data_distribution.jpg" 1722171549 73133 1e9fb8b00a3dfe25d38414f387ed8c9f ""
   "Images/discriminator_cnn.jpg" 1722431916 151911 eceba0ac8283b69c768a766534af5b4f ""
   "Images/discriminator_dense.jpg" 1722431916 143266 5dd8606fa3923aa1233d6fff1dbaa611 ""
@@ -173,12 +176,12 @@
   "Images/standard_GAN_without_data_augementation1.jpg" 1725044692 63776 cff4677b35ac0e9dcade6069be1c1a15 ""
   "Images/standard_GAN_without_data_augementation2.jpg" 1725046190 46093 10791ae4326001d344820aae0d182734 ""
   "Images/standard_GAN_without_data_augementation3.jpg" 1725044692 62640 1ed139561899f7ba570e21888549bff4 ""
-  "Thesis.aux" 1725046622 16237 459da0210fa92dc77f27bb31c0562a86 "pdflatex"
-  "Thesis.bbl" 1725045040 6825 a0e29b7489b1e7aa11741e13429a18bb "bibtex Thesis"
-  "Thesis.lof" 1725046622 1724 23241936201af4004dc30a24068712a9 "pdflatex"
-  "Thesis.out" 1725046622 5078 7ce688f47d6ec4f07e9dc55f2acd4462 "pdflatex"
+  "Thesis.aux" 1725048596 17421 d3af3462bfdc10eb2ea7954169f35e92 "pdflatex"
+  "Thesis.bbl" 1725048230 6825 a0e29b7489b1e7aa11741e13429a18bb "bibtex Thesis"
+  "Thesis.lof" 1725048596 1897 9f2890e9bfb93b11babe8f4c3f9ff8d7 "pdflatex"
+  "Thesis.out" 1725048596 5078 7ce688f47d6ec4f07e9dc55f2acd4462 "pdflatex"
   "Thesis.tex" 1725030970 4353 e15f6696b591b6aea04435fbba75e7f1 ""
-  "Thesis.toc" 1725046622 2277 b2669e05681d74c4b00f1435598b5613 "pdflatex"
+  "Thesis.toc" 1725048596 2277 04868cb28264cce60f8c7461a7ed7236 "pdflatex"
   (generated)
   "Thesis.aux"
   "Thesis.lof"
