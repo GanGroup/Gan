@@ -1,7 +1,3 @@
-当然！以下是你的GAN项目的**英文版README文档**模板，你可以根据具体情况进行调整并添加到你的项目中（例如GitHub上的README文件）。
-
----
-
 # **GAN for High-Resolution Animal Face Generation**
 
 This project uses a **Generative Adversarial Network (GAN)** to generate high-quality, high-resolution images of animal faces. The model is trained on the **Animal Faces-HQ (AFHQ)** dataset and uses a **Deep Convolutional GAN (DCGAN)** architecture to create realistic images. The project explores different model architectures and data augmentation techniques to improve image quality.
@@ -120,7 +116,3 @@ python evaluate_fid.py
 If you have any questions or suggestions, feel free to contact:
 - **Author**: Kai Deng
 - **Email**: kai.deng.job@outlook.com
-
----
-
-This README file provides a clear and concise description of the GAN project, including the technical details and results. You can adjust the sections and content based on your specific implementation and goals. Let me know if you'd like further adjustments!
