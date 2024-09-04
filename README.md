@@ -62,6 +62,8 @@ The project uses a **Deep Convolutional GAN (DCGAN)** architecture, with separat
 - The model successfully generated realistic animal faces at a resolution of 128x128 pixels.
 - **FID score** significantly improved from over 100 to below 50, indicating better image quality and diversity after training.
 - Generated images showed significant diversity in animal face features and appearance.
+![apply_new_dataset](https://github.com/user-attachments/assets/0d764986-d3a7-4aba-a3a3-e1691218b3ed)
+
 
 ## **Technologies Used**
 - **Programming Language**: Python
@@ -73,37 +75,6 @@ The project uses a **Deep Convolutional GAN (DCGAN)** architecture, with separat
   
 - **Evaluation Metrics**:
   - **Frechet Inception Distance (FID)**
-
-## **How to Run the Project**
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/gan-animal-faces.git
-cd gan-animal-faces
-```
-
-### 2. Install Dependencies
-Ensure you have Python installed. Then install the required libraries using `requirements.txt`:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Train the GAN Model
-To train the model, simply run the following command:
-```bash
-python train_gan.py
-```
-
-### 4. Generate Images
-After training, you can generate new images using:
-```bash
-python generate_images.py
-```
-
-### 5. Evaluate the Model
-To compute the FID score:
-```bash
-python evaluate_fid.py
-```
 
 ## **Future Work**
 - **Higher Resolution**: The current model was trained on 128x128 images. Future work will involve training on the full 512x512 resolution images to improve image quality.
