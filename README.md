@@ -11,7 +11,6 @@ This project uses a **Generative Adversarial Network (GAN)** to generate high-qu
 - [Challenges and Solutions](#challenges-and-solutions)
 - [Results](#results)
 - [Technologies Used](#technologies-used)
-- [How to Run the Project](#how-to-run-the-project)
 - [Future Work](#future-work)
 
 ## **Project Overview**
@@ -81,9 +80,3 @@ The project uses a **Deep Convolutional GAN (DCGAN)** architecture, with separat
 - **Explore Advanced GANs**: Investigate more advanced GAN architectures such as **StyleGAN** or **BigGAN** to generate higher-quality images.
 - **Different Datasets**: Apply the model to different datasets to explore broader applications of GANs in image generation.
 
----
-
-### **Contact**
-If you have any questions or suggestions, feel free to contact:
-- **Author**: Kai Deng
-- **Email**: kai.deng.job@outlook.com
