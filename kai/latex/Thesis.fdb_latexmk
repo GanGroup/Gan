@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Thesis"] 1725739127 "Thesis.aux" "Thesis.bbl" "Thesis" 1725739131 0
+["bibtex Thesis"] 1725824105 "Thesis.aux" "Thesis.bbl" "Thesis" 1725824253 0
   "./References.bib" 1725732437 10605 9f44f5eecdbd5079b3fa164181321ac8 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Thesis.aux" 1725739131 19344 0017096cc70ab8f39e8748f44a6a69fd "pdflatex"
+  "Thesis.aux" 1725824253 19455 5ae80a140ac729cc5f4e07e31797bea0 "pdflatex"
   (generated)
   "Thesis.bbl"
   "Thesis.blg"
   (rewritten before read)
-["pdflatex"] 1725739128 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1725739131 0
+["pdflatex"] 1725824250 "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" "Thesis.pdf" "Thesis" 1725824253 0
   "/Users/dengkai/workspace/ucc/course/ucc/dissertation/Gan/kai/latex/Thesis.tex" 1725737944 4671 4adf0de94f2a657d51f572983a92fd0c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -149,7 +149,7 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "01_Introduction.tex" 1725736814 3237 2be18420439efaeac972e3ae95c8b4c8 ""
   "02_Related_Work.tex" 1725732437 7612 0b09778cc352b0041dcd374ee848b18f ""
-  "03_Theoretical_Background.tex" 1725739131 17180 b7d4eec565246f8bf9e2ef9662627b6c ""
+  "03_Theoretical_Background.tex" 1725824250 18046 93adc2ced276c702fac97ebd802d4fe7 ""
   "04_Experiments.tex" 1725736632 17309 47e75e6c10fbf2080f232cbb7c1d8941 ""
   "05_Discussion.tex" 1725732437 3745 0c983759fefc3e8bdcd2f549afe45a42 ""
   "Appendix.tex" 1725732437 66517 6b4a9c92a04a5366ceacb31145c025ed ""
@@ -173,6 +173,7 @@
   "Images/generate_images.jpg" 1725732437 358511 5679f3b3369195195d77ed6baafea2a8 ""
   "Images/generator_cnn.jpg" 1725732437 238897 6fc3e7733b8f0dde22ecc4fa0b5f2b3f ""
   "Images/generator_dense.jpg" 1725732437 216163 ac47ae09e0a60bd59139ca8a0ce20c75 ""
+  "Images/log_gunction.jpg" 1725789837 127691 36d68908e32da01ac6793b5fa5d1929d ""
   "Images/model_accuracy.jpg" 1725732437 158957 081b3125c8f0d04ee6265f033ae71a0c ""
   "Images/standard_GAN_with_data_augementation1.jpg" 1725732437 65872 e76b99d011b4ce0629852796a171c3b8 ""
   "Images/standard_GAN_with_data_augementation2.jpg" 1725732437 66768 b4db10b42e5ecad8615b67e563360112 ""
@@ -180,12 +181,12 @@
   "Images/standard_GAN_without_data_augementation1.jpg" 1725732437 63776 cff4677b35ac0e9dcade6069be1c1a15 ""
   "Images/standard_GAN_without_data_augementation2.jpg" 1725732437 46093 10791ae4326001d344820aae0d182734 ""
   "Images/standard_GAN_without_data_augementation3.jpg" 1725732437 62640 1ed139561899f7ba570e21888549bff4 ""
-  "Thesis.aux" 1725739131 19344 0017096cc70ab8f39e8748f44a6a69fd "pdflatex"
-  "Thesis.bbl" 1725739128 6825 a0e29b7489b1e7aa11741e13429a18bb "bibtex Thesis"
-  "Thesis.lof" 1725739131 1897 9f2890e9bfb93b11babe8f4c3f9ff8d7 "pdflatex"
-  "Thesis.out" 1725739131 5110 70fec704cc28f5c265b25290ad448a08 "pdflatex"
+  "Thesis.aux" 1725824253 19455 5ae80a140ac729cc5f4e07e31797bea0 "pdflatex"
+  "Thesis.bbl" 1725824105 6334 b33b2c3a0b58b444d29b71f07619f040 "bibtex Thesis"
+  "Thesis.lof" 1725824253 2031 36a397adad3ac37c05f36cb6cc8871ef "pdflatex"
+  "Thesis.out" 1725824253 5110 70fec704cc28f5c265b25290ad448a08 "pdflatex"
   "Thesis.tex" 1725737944 4671 4adf0de94f2a657d51f572983a92fd0c ""
-  "Thesis.toc" 1725739131 2284 4d5af07652b0b9be7a350bef56a2c394 "pdflatex"
+  "Thesis.toc" 1725824253 2284 a197ba528bbf0a70fc2a927e77da7ebc "pdflatex"
   (generated)
   "Thesis.aux"
   "Thesis.lof"

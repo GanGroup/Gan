@@ -21,45 +21,45 @@ Warning--empty journal in 10.48550/arxiv.2203.06026
 Warning--empty journal in 10.1117/12.2673366
 Warning--empty journal in 10.48550/arxiv.1703.10717
 Warning--empty journal in 10.48550/arxiv.2002.02112
-You've used 33 entries,
+You've used 31 entries,
             1791 wiz_defined-function locations,
-            596 strings with 9063 characters,
-and the built_in function-call counts, 6698 in all, are:
-= -- 501
-> -- 429
+            584 strings with 8662 characters,
+and the built_in function-call counts, 6178 in all, are:
+= -- 456
+> -- 405
 < -- 1
-+ -- 156
-- -- 123
-* -- 441
-:= -- 1183
-add.period$ -- 99
-call.type$ -- 33
-change.case$ -- 33
++ -- 147
+- -- 116
+* -- 400
+:= -- 1098
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 31
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 287
-empty$ -- 590
-format.name$ -- 123
-if$ -- 1418
+cite$ -- 49
+duplicate$ -- 269
+empty$ -- 540
+format.name$ -- 116
+if$ -- 1304
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 33
-newline$ -- 168
-num.names$ -- 33
-pop$ -- 107
+int.to.str$ -- 31
+missing$ -- 31
+newline$ -- 158
+num.names$ -- 31
+pop$ -- 105
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 114
+skip$ -- 108
 stack$ -- 0
-substring$ -- 286
-swap$ -- 24
+substring$ -- 232
+swap$ -- 22
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 18
-while$ -- 48
-width$ -- 35
-write$ -- 329
+while$ -- 44
+width$ -- 33
+write$ -- 307
 (There were 18 warnings)

@@ -125,16 +125,6 @@ T.~Miyato.
 \newblock Cgans with projection discriminator.
 \newblock 2018.
 
-\bibitem{10.1007/s11263-019-01265-2}
-G.~Qi.
-\newblock Loss-sensitive generative adversarial networks on lipschitz densities.
-\newblock {\em International Journal of Computer Vision}, 128:1118--1140, 2019.
-
-\bibitem{10.1109/tpami.2018.2872043}
-X.~Mao, Q.~Li, H.~Xie, R.~Y.~K. Lau, Z.~Wang, and S.~P. Smolley.
-\newblock On the effectiveness of least squares generative adversarial networks.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 41:2947--2960, 2019.
-
 \bibitem{goodfellow2014generative}
 Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
 \newblock Generative adversarial networks.

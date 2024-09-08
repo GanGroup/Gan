@@ -931,6 +931,11 @@ INPUT 03_Theoretical_Background.tex
 INPUT ./03_Theoretical_Background.tex
 INPUT ./03_Theoretical_Background.tex
 INPUT 03_Theoretical_Background.tex
+INPUT ./Images/log_gunction.jpg
+INPUT ./Images/log_gunction.jpg
+INPUT ./Images/log_gunction.jpg
+INPUT ./Images/log_gunction.jpg
+INPUT ./Images/log_gunction.jpg
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./Images/data_distribution.jpg
