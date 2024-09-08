@@ -169,7 +169,7 @@ First, the objective function is rewritten in integral form:
     V(D, G) = \int p_{\text{data}}(x) \log D(x) \, dx + \int p_{z}(z) \log (1 - D(G(z))) \, dz.
 \end{equation}
 
-By changing variables \(x' = G(z)\), the second term can be rewritten as an integral over the generated data distribution \(p_g(x)\):
+By changing variables $x' = G(z)$, the generated data is represented as $x'$, which corresponds to samples produced by the generator $G$. This allows the second term to be rewritten as an integral over the generated data distribution $p_g(x)$. The integral now reflects the contribution of the generated samples to the objective function.
 
 \begin{equation}
     \int p_g(x) \log (1 - D(x)) \, dx.
@@ -200,32 +200,11 @@ Taking the derivative with respect to \( D(x) \):
 Setting the derivative to zero:
 
 \begin{equation}
-    \frac{p_{\text{data}}(\mathbf{x})}{D(\mathbf{x})} = \frac{p_g(\mathbf{x})}{1 - D(\mathbf{x})}.
+    \frac{p_{\text{data}}(x)}{D(x)} = \frac{p_g(x)}{1 - D(x)}
+    \label{eq:derivative_to_zero}
 \end{equation}
 
-Solving this equation:
-
-\begin{equation}
-    \frac{p_{\text{data}}(x)}{D(x)} = \frac{p_g(x)}{1 - D(x)}.
-\end{equation}
-
-Solving this equation:
-
-\begin{equation}
-    p_{\text{data}}(x)(1 - D(x)) = p_g(x)D(x),
-\end{equation}
-
-\begin{equation}
-    p_{\text{data}}(x) - p_{\text{data}}(x)D(x) = p_g(x)D(x),
-\end{equation}
-
-\begin{equation}
-    p_{\text{data}}(x) = p_{\text{data}}(x)D(x) + p_g(x)D(x),
-\end{equation}
-
-\begin{equation}
-    p_{\text{data}}(x) = D(x)(p_{\text{data}}(x) + p_g(x)),
-\end{equation}
+Solving equation \eqref{eq:derivative_to_zero}:
 
 \begin{equation}
     D(x) = \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)}.
@@ -241,14 +220,12 @@ Therefore, the optimal discriminator \( D^* \) is given by:
 
 
 \begin{itemize}
-    \item When \(p_{\text{data}}(x)\) is much larger than \(p_g(x)\), \(D^*_G(x) \approx 1\), indicating 
-    that the data point is almost certainly from the real data.
-    \item When \(p_{\text{data}}(x)\) is much smaller than \(p_g(x)\), \(D^*_G(x) \approx 0\), indicating 
-    that the data point is almost certainly from the generated data.
-    \item When \(p_{\text{data}}(x)\) is close to \(p_g(x)\), \(D^*_G(x) \approx 0.5\), indicating that the 
-    data point has a 50% chance of coming from the real data and a 50% chance of coming from the generated data.
+    \item When $p_{\text{data}}(x)$ is much larger than $p_g(x)$, $D^*(x) \approx 1$, indicating that the data point is almost certainly from the real data.
+    
+    \item When $p_{\text{data}}(x)$ is much smaller than $p_g(x)$, $D^*(x) \approx 0$, indicating that the data point is almost certainly from the generated data.
+    
+    \item When $p_{\text{data}}(x)$ is close to $p_g(x)$, $D^*(x) \approx 0.5$, indicating that the discriminator cannot confidently determine whether the data point is real or generated, giving each a 50\% probability.
 \end{itemize}
-
 
 5. Verifying the Optimal Discriminator
 
@@ -270,9 +247,7 @@ substituting this in:
     V(D^*, G) = \int \left[ p_{\text{data}}(x) \log \left( \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_g(x)} \right) + p_g(x) \log \left( \frac{p_g(x)}{p_{\text{data}}(x) + p_g(x)} \right) \right] dx.
 \end{equation}
 
-This objective function represents the negative of the cross-entropy, which is maximized when \( D(x) = D^*(x) \).
-The cross-entropy is minimized by maximizing the similarity between the true distribution and the predicted distribution, 
-so its negative is maximized at the same point.
+This objective function represents the negative of the cross-entropy, which is maximized when $D(x) = D^*(x)$. When $D(x) = 0.5$, the discriminator cannot distinguish between real and generated data, indicating that the generator has produced samples that closely resemble the real data. Maximizing the negative cross-entropy aligns the generated data distribution with the real data distribution.
 
 6. Conclusion
 
@@ -296,7 +271,7 @@ to quantify the dissimilarity between two image distributions \citep{10.48550/ar
 It measures the distance between the distributions of real images and generated images, providing 
 a numerical assessment of the quality of generated images. FID has gained prominence in evaluating 
 the performance of GANs due to its ability to capture both the quality and diversity of generated images \citep{10.3390/app12157599}.
-The following is the object function for FID:
+The following is the objective function for FID:
 
 
 \begin{equation}
@@ -314,9 +289,10 @@ The following is the object function for FID:
 
 
 \begin{itemize}
-    \item $\mu_r \text{ and } \mu_g$: Represent the feature means of the real and generated images, respectively.
-    \item $\Sigma_r \text{ and } \Sigma_g$: Represent the feature covariance matrices of the real and generated images, respectively.
-    \item $\text{Tr}$: Represents the trace (the sum of the diagonal elements of the matrix).
+    \item $\mu_r \text{ and } \mu_g$ represent the feature means of the real and generated images, respectively.
+    \item $\Sigma_r \text{ and } \Sigma_g$ represent the feature covariance matrices of the real and generated images, respectively.
+    \item $\text{Tr}$ represents the trace (the sum of the diagonal elements of the matrix).
+    \item $f$ represents the feature extraction function, which extracts feature vectors from images using the Inception network. These feature vectors are used to compute the mean and covariance for both real and generated images.
 \end{itemize}
 
 

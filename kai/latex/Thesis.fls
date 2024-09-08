@@ -944,8 +944,6 @@ INPUT ./Images/data_distribution.jpg
 INPUT ./Images/data_distribution.jpg
 INPUT ./Images/data_distribution.jpg
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT ./Images/model_accuracy.jpg
 INPUT ./Images/model_accuracy.jpg
 INPUT ./Images/model_accuracy.jpg
