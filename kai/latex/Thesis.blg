@@ -3,52 +3,63 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Thesis.aux
 The style file: unsrt.bst
 Database file #1: References.bib
+Warning--I didn't find a database entry for "ho2020denoising"
+Warning--I didn't find a database entry for "nichol2021improved"
+Warning--I didn't find a database entry for "chen2020wavegrad"
 Warning--empty journal in 10.48550/arxiv.1704.00028
+Warning--empty journal in 10.48550/arxiv.1711.00658
+Warning--empty journal in 10.48550/arxiv.2110.11271
+Warning--empty journal in 10.18653/v1/e17-2003
+Warning--empty journal in 10.21437/interspeech.2016-1295
+Warning--empty journal in 10.48550/arxiv.2101.03288
+Warning--empty journal in 10.48550/arxiv.2002.10464
+Warning--empty journal in 10.48550/arxiv.1909.13062
+Warning--empty journal in 10.48550/arxiv.2106.06500
 Warning--empty journal in 10.48550/arxiv.1802.05637
 Warning--empty journal in goodfellow2014generative
 Warning--empty journal in 10.48550/arxiv.2203.06026
 Warning--empty journal in 10.1117/12.2673366
 Warning--empty journal in 10.48550/arxiv.1703.10717
 Warning--empty journal in 10.48550/arxiv.2002.02112
-You've used 15 entries,
+You've used 27 entries,
             1791 wiz_defined-function locations,
-            519 strings with 6279 characters,
-and the built_in function-call counts, 3073 in all, are:
-= -- 214
-> -- 229
+            569 strings with 8161 characters,
+and the built_in function-call counts, 5276 in all, are:
+= -- 380
+> -- 362
 < -- 0
-+ -- 82
-- -- 67
-* -- 216
-:= -- 566
-add.period$ -- 45
-call.type$ -- 15
-change.case$ -- 15
++ -- 131
+- -- 104
+* -- 348
+:= -- 955
+add.period$ -- 81
+call.type$ -- 27
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 126
-empty$ -- 256
-format.name$ -- 67
-if$ -- 635
+cite$ -- 42
+duplicate$ -- 226
+empty$ -- 458
+format.name$ -- 104
+if$ -- 1101
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 15
-newline$ -- 78
-num.names$ -- 15
-pop$ -- 45
+int.to.str$ -- 27
+missing$ -- 27
+newline$ -- 138
+num.names$ -- 27
+pop$ -- 89
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 45
+skip$ -- 83
 stack$ -- 0
-substring$ -- 99
-swap$ -- 8
+substring$ -- 177
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 21
-width$ -- 17
-write$ -- 152
-(There were 7 warnings)
+warning$ -- 15
+while$ -- 37
+width$ -- 29
+write$ -- 268
+(There were 18 warnings)
