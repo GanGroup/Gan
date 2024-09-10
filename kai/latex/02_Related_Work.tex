@@ -1,67 +1,118 @@
-\chapter{Historical Models of Image Generation}
-\label{Related Work}
+\chapter{Model Overview}
+
+In this chapter, I will discuss two generative models in the order of their development: Variational Autoencoders (VAEs) and Diffusion Models. These models represent key milestones in the evolution of generative modeling techniques.
+
+\section{Variational Autoencoders (VAEs)}
+
+Variational Autoencoders (VAEs) were introduced in 2013 and are one of the earliest forms of generative models. VAEs aim to model the underlying distribution of data by learning a compressed representation, or latent vector, \(z\), of the input data \(x\).
+
+The VAE architecture consists of two main components, as shown in Figure~\ref{fig:VAE_structure}:
+\begin{itemize}
+  \item \textbf{Encoder} \( q_\phi(z|x) \): The encoder compresses the input data \(x\) into a latent vector \(z\). The encoder is parameterized by \(\phi\), which represents the parameters of the encoding neural network.
+  \item \textbf{Decoder} \( p_\theta(x|z) \): The decoder takes the latent vector \(z\) and attempts to reconstruct the original data \(x'\) that resembles the input \(x\). The decoder is parameterized by \(\theta\), representing the parameters of the decoding neural network.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{./Images/VAE_structure.jpg}
+    \caption{VAE structure showing the encoder and decoder processes.}
+    \label{fig:VAE_structure}
+\end{figure}
+
+The training objective of VAEs is to maximize the \textit{variational lower bound}, which involves balancing two terms: the reconstruction error and the regularization term (Kullback-Leibler divergence). This ensures that the model learns meaningful latent representations that allow it to generate new data.
+
+The loss function for VAE is defined as:
+
+\begin{equation}
+\mathcal{L} = \mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] - D_{KL}(q_\phi(z|x) \| p(z))
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item \(\mathcal{L}\): The total loss that the model aims to minimize.
+    \item \(\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)]\): The expected log-likelihood of reconstructing the data \(x'\) from the latent variable \(z\). The distribution \(q_\phi(z|x)\) represents the encoder, while \(p_\theta(x|z)\) represents the decoder's attempt to reconstruct the input data.
+    \item \(D_{KL}(q_\phi(z|x) \| p(z))\): The Kullback-Leibler (KL) divergence, which measures the difference between the encoder's latent distribution \(q_\phi(z|x)\) and the prior distribution \(p(z)\), typically assumed to be Gaussian.
+\end{itemize}
+
+Visualizing the Process:
+1. **Encoding Step**: The input data \(x\) is passed through the encoder, which compresses it into the latent representation \(z\). This process is modeled by the distribution \(q_\phi(z|x)\), as seen on the left side of Figure~\ref{fig:VAE_structure}.
+2. **Latent Representation**: The latent variable \(z\) is sampled from the encoder's distribution. It serves as a more compact representation of the original data.
+3. **Decoding Step**: The decoder \(p_\theta(x|z)\) takes the latent representation \(z\) and attempts to reconstruct the original data \(x'\), as seen on the right side of the figure.
+
+In simple terms, the encoder learns to compress the data into a lower-dimensional space, while the decoder learns to reconstruct the original data from this compact representation. VAEs are commonly used in tasks such as image generation, where the goal is to create new images that resemble the input data.
 
 
-This chapter reviews key historical models of image generation, including Deep Boltzmann Machines (DBMs), 
-Variational Autoencoders (VAEs), and Noise Contrastive Estimation (NCE). Each of these models has contributed 
-to the development of generative modeling by introducing different approaches to learning data distributions. 
 
-\section{Deep Boltzmann Machines}
+\section{Diffusion Models}
 
-Deep Boltzmann Machines (DBMs) are sophisticated generative models that excel in learning intricate data representations 
-in an unsupervised manner. Unlike traditional feedforward networks, DBMs are structured with multiple layers of stochastic, 
-binary latent variables, where each layer captures progressively abstract features of the input data. This architecture is 
-characterized by fully connected layers, with no direct connections between units within the same layer, which enables DBMs 
-to effectively model complex dependencies inherent in the data \citep{10.1007/978-3-642-40728-4_14}. The undirected nature 
-of the connections in DBMs allows for the propagation of uncertainties across layers, enhancing their capability in feature 
-learning and unsupervised pre-training \citep{10.1007/978-3-642-40728-4_14}\citep{10.48550/arxiv.1203.3783}.
+Diffusion models are the most recent advancement in generative models, first introduced in the early 2020s. These models take a different approach by progressively adding noise to data and then learning to reverse the process, effectively "denoising" the noisy data back into its original form.
 
-However, the training of DBMs presents significant challenges, primarily due to their reliance on Markov Chain Monte Carlo (MCMC) methods, 
-such as Gibbs sampling, for approximate inference. These methods are essential for estimating gradients and the intractable partition 
-function, which is vital for updating model parameters. The computational overhead introduced by MCMC methods often results in 
-slow convergence and increased complexity, particularly when applied to large-scale datasets \citep{10.48550/arxiv.2303.10728}. 
-The requirement for numerous sampling steps to achieve equilibrium further complicates the training process, making DBMs less 
-accessible compared to other generative models, such as Variational Autoencoders (VAEs).
+The process involves two key steps, as shown in Figure~\ref{fig:Diffusion_structure}:
+\begin{itemize}
+  \item \textbf{Forward Process}: Gradually adds Gaussian noise to data \(x_0\), creating noisy versions of the data \(x_1, x_2, \dots, x_T\). Each step increases the level of noise, eventually leading to a completely noisy version \(z\).
+  \item \textbf{Reverse Process}: The model learns to reverse the noise addition process, starting from the fully noisy version \(z\), and progressively denoising it to recover data that resembles the original input \(x_0\).
+\end{itemize}
 
-To mitigate these training difficulties, DBMs often utilize layer-wise pre-training, which initializes model parameters 
-before the entire network is fine-tuned. This approach has been shown to enhance the efficiency of the learning process
-by providing a sensible initialization for the weights and variational inference \citep{10.1162/neco_a_00311}. Despite 
-these strategies, the inherent complexity associated with MCMC methods continues to pose challenges in scaling DBMs 
-effectively, particularly in comparison to more straightforward generative models like VAEs \citep{10.48550/arxiv.2303.10728}. 
-Recent advancements have explored alternative training methodologies, including the use of specialized hardware systems to improve 
-the efficiency of sampling tasks, thereby addressing some of the computational hurdles associated with traditional training approaches \citep{10.48550/arxiv.2303.10728}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{./Images/Disffusion_structure.jpg}
+    \caption{Diffusion model structure showing the forward and reverse processes.}
+    \label{fig:Diffusion_structure}
+\end{figure}
 
+Forward Process:
+In the forward process, starting from the original data \(x_0\), Gaussian noise is added step-by-step to generate increasingly noisy versions of the data. Mathematically, the forward process is described as:
 
+\begin{equation}
+q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, \beta_t I)
+\end{equation}
 
-\section{Variational Autoencoders}
-Variational Autoencoders (VAEs) are generative models in machine learning that excel in tasks like image generation and data 
-representation by learning the underlying structure of data through a latent space. 
+Where:
+\begin{itemize}
+    \item \(x_0\), \(x_1\), \(x_2\), \dots, \(x_T\): The sequence of noisy data at each time step.
+    \item \(\alpha_t\): The scaling factor applied to the data at each step.
+    \item \(\beta_t\): The variance of the Gaussian noise added at each step \(t\).
+    \item \(\mathcal{N}(x; \mu, \sigma^2)\): A Gaussian distribution with mean \(\mu\) and variance \(\sigma^2\).
+\end{itemize}
 
-The architecture of VAEs consists of an encoder that maps input data into a latent space, where the latent variables are 
-typically assumed to follow a Gaussian distribution. This assumption simplifies the learning process, as it allows for 
-the use of techniques such as the reparameterization trick, which enables backpropagation through stochastic layers \citep{10.1561/2200000056}. 
-The decoder then reconstructs the input data from the latent variables, ensuring that the model captures the essential 
-features of the data distribution. The loss function of a VAE combines reconstruction loss with a Kullback-Leibler (KL) 
-divergence term, which regularizes the latent space and encourages the model to learn a smooth and continuous representation \citep{10.3390/jimaging4020036}.
+The process continues until we reach the final state \(z\), which is almost entirely noise.
 
-In comparison to DBMs, VAEs offer several advantages, including simpler training dynamics and better scalability. DBMs 
-often require complex sampling methods, such as Gibbs sampling, which can be computationally intensive and slow to converge. 
-In contrast, VAEs can be trained using standard gradient descent methods, making them more accessible for 
-practitioners \citep{10.1561/2200000056}\citep{10.1109/access.2020.2977671}. Furthermore, the structured latent space of 
-VAEs not only allows for efficient sampling but also supports various applications, such as image generation, anomaly detection, 
-and data imputation, where the ability to interpolate between data points is crucial \citep{10.1088/2632-2153/ab80b7}\citep{10.48550/arxiv.2002.10464}.
+Reverse Process:
+Once the noisy data is generated, the reverse process begins. The model learns to reverse the noise addition process to gradually recover the original data. The reverse process is defined as:
 
-However, VAEs face limitations in modeling discrete data as they require back-propagation through hidden units, which poses challenges 
-in handling such data types effectively \citep{10.48550/arxiv.1909.13062}. Despite this limitation, VAEs have been extensively used to 
-represent high-dimensional complex data by learning a low-dimensional latent space in an unsupervised manner \citep{10.48550/arxiv.2106.06500}.
+\begin{equation}
+p_\theta(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(x_t, t))
+\end{equation}
 
+Where:
+\begin{itemize}
+    \item \(x_t\): The noisy data at time step \(t\).
+    \item \(\mu_\theta(x_t, t)\): The model's predicted mean at step \(t\), parameterized by \(\theta\).
+    \item \(\Sigma_\theta(x_t, t)\): The model's predicted variance at step \(t\), parameterized by \(\theta\).
+    \item \(\mathcal{N}(x; \mu, \sigma^2)\): A Gaussian distribution with mean \(\mu\) and variance \(\sigma^2\).
+\end{itemize}
 
-\section{Noise Contrastive Estimation}
+The reverse process progressively reduces the noise added in the forward process, resulting in data that closely resembles the original input.
 
+Loss Function:
+The training objective for diffusion models is to minimize the difference between the real data distribution and the distribution of generated data across all time steps:
 
-Noise-Contrastive Estimation (NCE) is a statistical method employed in machine learning, particularly for estimating parameters of unnormalized probabilistic models. The fundamental principle of NCE is to recast the maximum likelihood estimation problem into a binary classification task. In this framework, the model is trained to differentiate between actual data samples and artificially generated noise samples, which are drawn from a known distribution \citep{10.48550/arxiv.1711.00658}. This transformation simplifies the estimation process and circumvents the computational challenges associated with calculating the intractable partition function, a common hurdle in traditional maximum likelihood estimation methods for unnormalized models \citep{10.48550/arxiv.2110.11271}.
+\begin{equation}
+L = \sum_{t=1}^{T} \mathbb{E}_{x_0, \epsilon} [\|\epsilon - \epsilon_\theta(x_t, t)\|^2]
+\end{equation}
 
-The methodology of NCE involves the introduction of noise samples, which serve as a baseline for comparison against real data. The model is trained to assign higher probabilities to genuine data samples while assigning lower probabilities to noise samples. This approach effectively enables the model to learn the underlying data distribution without the necessity of explicit normalization \citep{10.21437/interspeech.2016-1295}. The binary classification framework utilized in NCE allows for the application of standard logistic regression techniques, enhancing both the tractability and computational efficiency of the training process \citep{10.18653/v1/e17-2003}. Moreover, NCE has been shown to be particularly advantageous in large-scale models, such as energy-based models and word embeddings, where the computational burden of normalization can be substantial \citep{10.48550/arxiv.2101.03288}.
+Where:
+\begin{itemize}
+    \item \(L\): The loss function to be minimized.
+    \item \(T\): The total number of time steps in the diffusion process.
+    \item \(x_0\): The original data sample.
+    \item \(x_t\): The data at time step \(t\), after adding noise.
+    \item \(\epsilon\): The noise added to the data at each step.
+    \item \(\epsilon_\theta(x_t, t)\): The model's estimate of the noise at time step \(t\).
+\end{itemize}
 
-Despite its advantages, NCE is not without limitations. The choice of noise distribution is critical to the performance of the model; poorly selected noise distributions can lead to suboptimal parameter estimates and slow convergence rates \citep{10.48550/arxiv.2110.11271}. Additionally, while NCE simplifies the training of unnormalized models, it may not perform as effectively in scenarios where the noise distribution is challenging to define or when dealing with highly complex data distributions. The empirical observations regarding the importance of noise distribution have been formalized in various studies, underscoring the need for careful consideration in its selection \citep{10.48550/arxiv.2110.11271}.
+Visualizing the Process:
+1. **Forward Process**: As shown in Figure~\ref{fig:Diffusion_structure}, the original data \(x_0\) is progressively corrupted by adding noise step-by-step to generate noisy versions \(x_1, x_2\), and so on, until reaching \(z\), which is almost pure noise.
+2. **Reverse Process**: The reverse process starts with the noisy data \(z\) and progressively removes noise to reconstruct the original data \(x_0\).
 
+This iterative denoising approach has proven effective in generating photorealistic images and other complex data types. Diffusion models are particularly stable to train, and their ability to generate high-quality samples has made them a powerful tool in generative modeling.
