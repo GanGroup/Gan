@@ -35,9 +35,12 @@ Where:
 \end{itemize}
 
 Visualizing the Process:
-1. **Encoding Step**: The input data \(x\) is passed through the encoder, which compresses it into the latent representation \(z\). This process is modeled by the distribution \(q_\phi(z|x)\), as seen on the left side of Figure~\ref{fig:VAE_structure}.
-2. **Latent Representation**: The latent variable \(z\) is sampled from the encoder's distribution. It serves as a more compact representation of the original data.
-3. **Decoding Step**: The decoder \(p_\theta(x|z)\) takes the latent representation \(z\) and attempts to reconstruct the original data \(x'\), as seen on the right side of the figure.
+
+1. Encoding Step: The input data \(x\) is passed through the encoder, which compresses it into the latent representation \(z\). This process is modeled by the distribution \(q_\phi(z|x)\), as seen on the left side of Figure~\ref{fig:VAE_structure}.
+
+2. Latent Representation: The latent variable \(z\) is sampled from the encoder's distribution. It serves as a more compact representation of the original data.
+
+3. Decoding Step: The decoder \(p_\theta(x|z)\) takes the latent representation \(z\) and attempts to reconstruct the original data \(x'\), as seen on the right side of the figure.
 
 In simple terms, the encoder learns to compress the data into a lower-dimensional space, while the decoder learns to reconstruct the original data from this compact representation. VAEs are commonly used in tasks such as image generation, where the goal is to create new images that resemble the input data.
 
@@ -112,7 +115,9 @@ Where:
 \end{itemize}
 
 Visualizing the Process:
-1. **Forward Process**: As shown in Figure~\ref{fig:Diffusion_structure}, the original data \(x_0\) is progressively corrupted by adding noise step-by-step to generate noisy versions \(x_1, x_2\), and so on, until reaching \(z\), which is almost pure noise.
-2. **Reverse Process**: The reverse process starts with the noisy data \(z\) and progressively removes noise to reconstruct the original data \(x_0\).
+
+1. Forward Process: As shown in Figure~\ref{fig:Diffusion_structure}, the original data \(x_0\) is progressively corrupted by adding noise step-by-step to generate noisy versions \(x_1, x_2\), and so on, until reaching \(z\), which is almost pure noise.
+
+2. Reverse Process: The reverse process starts with the noisy data \(z\) and progressively removes noise to reconstruct the original data \(x_0\).
 
 This iterative denoising approach has proven effective in generating photorealistic images and other complex data types. Diffusion models are particularly stable to train, and their ability to generate high-quality samples has made them a powerful tool in generative modeling.
