@@ -1002,16 +1002,6 @@ INPUT ./Images/fid_score_for_convolution_layer.jpg
 INPUT ./Images/fid_score_for_convolution_layer.jpg
 INPUT ./Images/fid_score_for_convolution_layer.jpg
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-INPUT ./Images/generate_image_by_convolution_layer.jpg
-INPUT ./Images/generate_image_by_convolution_layer.jpg
-INPUT ./Images/generate_image_by_convolution_layer.jpg
-INPUT ./Images/generate_image_by_convolution_layer.jpg
-INPUT ./Images/generate_image_by_convolution_layer.jpg
-INPUT ./Images/both_generator_and_discrimminator_are_add_3_layers.jpg
-INPUT ./Images/both_generator_and_discrimminator_are_add_3_layers.jpg
-INPUT ./Images/both_generator_and_discrimminator_are_add_3_layers.jpg
-INPUT ./Images/both_generator_and_discrimminator_are_add_3_layers.jpg
-INPUT ./Images/both_generator_and_discrimminator_are_add_3_layers.jpg
 INPUT ./Images/standard_GAN_without_data_augementation1.jpg
 INPUT ./Images/standard_GAN_without_data_augementation1.jpg
 INPUT ./Images/standard_GAN_without_data_augementation1.jpg
