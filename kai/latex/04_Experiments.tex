@@ -1,7 +1,7 @@
 \chapter{Results}
 \label{Experiments}
 
-This chapter details the experimental processes undertaken to evaluate the performance of various GAN 
+This chapter details the numerical processes undertaken to evaluate the performance of various GAN 
 architectures. It includes model selection, structural adjustments, exploration of layer depth, and the 
 impact of data augmentation on model performance. Additionally, the chapter discusses the application of 
 the chosen model to a new dataset, providing insights into the practical effectiveness of the models 
@@ -45,12 +45,9 @@ The following outlines the reasons for this choice.
 
 \section{GAN With Convolutional or Dense layers}
 
-In this step, I compared two types of standard GANs. The first model utilized dense layers, while the 
-second model employed convolution layers. The structure of the generator and discriminator was modified 
-accordingly, while all other hyperparameters were kept constant. Both models were trained on the MNIST 
-dataset for 3000 epochs. Upon comparing the generated images, it was observed that the GAN with the convolutional 
-neural network (CNN) architecture outperformed the one with the dense layer architecture in terms of image quality. 
-Consequently, I selected the standard GAN model implemented with convolutional layers for further experiments.
+On the MNIST dataset for 3000 epochs, I compared the generated images from two GAN architectures: one using dense layers and the other using convolutional layers (CNN). It was observed that the GAN with the CNN architecture outperformed the dense layer architecture in terms of image quality, producing clearer and more realistic images.
+
+As shown in Figures \ref{fig:gen_architecture} and \ref{fig:disc_architecture}, the generator and discriminator architectures for both dense and convolutional layers are compared. Figure \ref{fig:gen_dense} illustrates the generator with dense layers, which consists of a series of fully connected layers, while Figure \ref{fig:gen_conv} shows the generator with convolutional layers, where convolutional and transpose convolutional layers are used to capture spatial features more effectively. The same comparison applies to the discriminator architectures shown in Figure \ref{fig:disc_architecture}. The dense-layer discriminator (Figure \ref{fig:disc_dense}) is built with fully connected layers, whereas the convolutional discriminator (Figure \ref{fig:disc_conv}) leverages convolutional layers to better identify patterns in the data.
 
 \begin{figure}[H]
     \centering
@@ -58,17 +55,17 @@ Consequently, I selected the standard GAN model implemented with convolutional l
         \centering
         \includegraphics[width=\linewidth]{./Images/generator_dense.jpg}
         \caption{Generator with dense layer}
-        \label{fig:Dense}
+        \label{fig:gen_dense}
     \end{subfigure}
     \hspace{0.05\linewidth}
     \begin{subfigure}[b]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{./Images/generator_cnn.jpg}
         \caption{Generator with convolution layer}
-        \label{fig:Conv2D Transpose}
+        \label{fig:gen_conv}
     \end{subfigure}
     \caption{Generator Architecture with Dense and Convolutional Layers}
-    \label{fig:combined}
+    \label{fig:gen_architecture}
 \end{figure}
 
 
@@ -78,18 +75,21 @@ Consequently, I selected the standard GAN model implemented with convolutional l
         \centering
         \includegraphics[width=\linewidth]{./Images/discriminator_dense.jpg}
         \caption{Discriminator with dense layer}
-        \label{fig:Dense}
+        \label{fig:disc_dense}
     \end{subfigure}
     \hspace{0.05\linewidth}
     \begin{subfigure}[b]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{./Images/discriminator_cnn.jpg}
         \caption{Discriminator with convolution layer}
-        \label{fig:Conv2D Transpose}
+        \label{fig:disc_conv}
     \end{subfigure}
     \caption{Discriminator Architecture with Dense and Convolutional Layers}
-    \label{fig:combined}
+    \label{fig:disc_architecture}
 \end{figure}
+
+
+Notably, the dense-layer models contain significantly more parameters compared to the convolutional models. The generator with dense layers has approximately 1.5 million parameters, whereas the convolutional generator has only about 1 million parameters. Similarly, the dense-layer discriminator has over 500,000 parameters, while the convolutional discriminator has only 80,000. Despite the larger parameter size, the dense-layer architectures were less effective in producing high-quality images, highlighting the advantage of convolutional layers in capturing spatial dependencies in the data.
 
 
 \begin{figure}[H]
@@ -97,18 +97,18 @@ Consequently, I selected the standard GAN model implemented with convolutional l
     \begin{subfigure}[b]{\linewidth}
         \centering
         \includegraphics[width=0.7\linewidth]{./Images/generate_image_by_dense_layer.jpg}
-        \caption{Images generate by GAN with dense layers}
-        \label{fig:Dense}
+        \caption{Images generated by GAN with dense layers}
+        \label{fig:generated_dense}
     \end{subfigure}
     \vspace{0.05\linewidth} 
     \begin{subfigure}[b]{\linewidth}
         \centering
         \includegraphics[width=0.7\linewidth]{./Images/generate_image_by_Convolution_layer.jpg}
         \caption{Images generated by GAN with convolution layers}
-        \label{fig:Conv2DTranspose}
+        \label{fig:generated_conv}
     \end{subfigure}
     \caption{Comparison of GAN Performance at 3000 Epochs}
-    \label{fig:combined}
+    \label{fig:generated_images}
 \end{figure}
 
 \begin{figure}[H]
@@ -117,20 +117,22 @@ Consequently, I selected the standard GAN model implemented with convolutional l
         \centering
         \includegraphics[width=0.7\linewidth]{./Images/fid_score_for_dense_layer.jpg}
         \caption{FID score for dense layer}
-        \label{fig:Dense}
+        \label{fig:fid_dense}
     \end{subfigure}
     \vspace{0.05\linewidth} 
     \begin{subfigure}[b]{\linewidth}
         \centering
         \includegraphics[width=0.7\linewidth]{./Images/fid_score_for_convolution_layer.jpg}
         \caption{FID score for convolutional layer}
-        \label{fig:Conv2DTranspose}
+        \label{fig:fid_conv}
     \end{subfigure}
     \caption{FID Scores Across 3000 Epochs}
-    \label{fig:combined}
+    \label{fig:fid_scores}
 \end{figure}
 
+Based on the results, the GAN model with convolutional layers demonstrated superior performance in generating high-quality images compared to the dense layer model. As shown in the generated images (Figure \ref{fig:generated_images}), the convolutional GAN produced more coherent and realistic outputs, whereas the dense layer GAN struggled to generate clear and recognizable digits. Additionally, the FID scores, which measure the dissimilarity between generated and real images, further validate this observation. The FID scores for the convolutional GAN (Figure \ref{fig:fid_conv}) are consistently lower across training epochs compared to the dense layer model (Figure \ref{fig:fid_dense}), indicating better quality in the generated images.
 
+Given these results, I selected the standard GAN model with convolutional layers for further experiments, as it not only generated higher-quality images but also used fewer parameters, making it a more efficient and effective choice.
 \section{Exploring Layer Depth}
 
 In this section, I explored the impact of changing convolutional layers in the generator and discriminator of a GAN.
