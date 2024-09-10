@@ -15,13 +15,14 @@
 \contentsline {section}{\numberline {4.2}GAN With Convolutional or Dense layers}{23}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Exploring Layer Depth}{27}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{28}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Impact of Data Augmentation on Model Performance}{28}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Applying the Model Animal Faces-HQ Dataset}{34}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Discussion}{35}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of Key Findings}{35}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Impact of Model Structure}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{36}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Performance on New Dataset}{36}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Limitations and Future Work}{36}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Conclusion}{37}{section.5.6}%
-\contentsline {chapter}{\numberline {A}Code}{38}{appendix.A}%
+\contentsline {section}{\numberline {4.5}Applying the Model to the Animal Faces-HQ Dataset}{29}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Model Structure and Training}{29}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Generated Results}{32}{subsection.4.5.2}%
+\contentsline {chapter}{\numberline {5}Discussion}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Key Findings}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Impact of Model Structure}{34}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Data Augmentation Effects}{35}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Performance on New Dataset}{35}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Limitations and Future Work}{35}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Conclusion}{36}{section.5.6}%
+\contentsline {chapter}{\numberline {A}Code}{37}{appendix.A}%
