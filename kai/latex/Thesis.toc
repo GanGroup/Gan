@@ -2,11 +2,10 @@
 \contentsline {chapter}{\numberline {2}Historical Models of Image Generation}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Noise Contrastive Estimation}{7}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Principles of NCE}{7}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Principles of NCE}{8}{subsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.1}NCE Architecture and Process}{8}{subsubsection.2.1.2.1}%
-\contentsline {subsection}{\numberline {2.1.3}Comparison with GANs}{11}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Limitations of NCE}{12}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Applications of NCE}{13}{subsection.2.1.5}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}NCE Architecture and Process}{8}{subsubsection.2.1.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Comparison with GANs}{11}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Applications of NCE}{12}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Limitations of NCE}{13}{subsection.2.1.4}%
 \contentsline {section}{\numberline {2.2}Variational Autoencoders (VAEs)}{13}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}VAE Architecture and Training}{13}{subsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.1}VAE Structure}{13}{subsubsection.2.2.1.1}%

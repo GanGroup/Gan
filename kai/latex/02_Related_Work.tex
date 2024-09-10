@@ -9,7 +9,7 @@ In this chapter, I will explore three key generative modeling techniques: Variat
 Noise Contrastive Estimation (NCE) was introduced in 2010 by Gutmann and Hyvärinen as a method for estimating parameters of unnormalized probabilistic models. It offers an alternative to Maximum Likelihood Estimation (MLE), which can be computationally expensive for large-scale models. NCE reframes the complex task of normalizing probability distributions into a more tractable binary classification problem \citep{10.48550/arxiv.1711.00658}.
 
 In traditional MLE, training models for unnormalized probability distributions involves calculating the partition function, which is often computationally intractable. NCE avoids this issue by introducing noise samples drawn from a known distribution. The model is then trained to discriminate between real data samples and noise samples. Specifically, the model assigns higher probabilities to real data and lower probabilities to noise, indirectly learning the data distribution without requiring normalization \citep{10.48550/arxiv.2110.11271}.
-\subsection{Principles of NCE}
+
 \subsubsection{NCE Architecture and Process}
 
 At the core of Noise Contrastive Estimation is the idea of reframing MLE as a binary classification task. In traditional MLE, training models for unnormalized probability distributions involves calculating the partition function, which is computationally intractable in large-scale models. NCE avoids this issue by introducing noise samples drawn from a known distribution. The model is then trained to discriminate between real data samples and noise samples. Specifically, the model assigns higher probabilities to real data and lower probabilities to noise, thus indirectly learning the data distribution without requiring normalization \citep{10.48550/arxiv.2110.11271}.
@@ -73,17 +73,6 @@ Noise Contrastive Estimation (NCE) and Generative Adversarial Networks (GANs) ar
     \item \textbf{Use in Language Models and Word Embeddings}: NCE is particularly advantageous in applications such as word embeddings and large-scale language models, where normalizing the likelihood function over a large vocabulary is computationally prohibitive. While GANs have been explored in text generation tasks, NCE's efficiency in handling large vocabulary sizes makes it a more suitable choice for these types of problems \citep{10.48550/arxiv.2101.03288}.
 \end{itemize}
 
-\subsection{Limitations of NCE}
-
-While Noise Contrastive Estimation has proven to be an effective technique, it is not without limitations. One of the primary challenges lies in selecting an appropriate noise distribution. The choice of noise distribution is critical to the model's success; a poorly chosen noise distribution can lead to inaccurate parameter estimates and slower convergence during training \citep{10.48550/arxiv.2110.11271}.
-
-\begin{itemize}
-    \item \textbf{Noise Distribution Sensitivity}: NCE relies heavily on the assumption that the noise distribution is sufficiently different from the true data distribution. If the noise distribution is not carefully selected, the model may fail to accurately distinguish between real and noise samples \citep{10.48550/arxiv.2110.11271}.
-    \item \textbf{Complex Data Distributions}: NCE may struggle with highly complex data distributions, especially in cases where defining an appropriate noise distribution is difficult \citep{10.48550/arxiv.2110.11271}.
-\end{itemize}
-
-Despite these limitations, NCE remains a popular technique for training large-scale models, especially in cases where traditional MLE is impractical due to the computational cost of normalizing the probability distribution.
-
 \subsection{Applications of NCE}
 
 The utility of Noise Contrastive Estimation extends to various machine learning tasks. It is particularly effective in scenarios involving large datasets and unnormalized probabilistic models:
@@ -95,6 +84,16 @@ The utility of Noise Contrastive Estimation extends to various machine learning 
 
 By leveraging NCE, models can scale efficiently, making it a useful tool in a wide range of applications, from natural language processing to computer vision.
 
+\subsection{Limitations of NCE}
+
+While Noise Contrastive Estimation has proven to be an effective technique, it is not without limitations. One of the primary challenges lies in selecting an appropriate noise distribution. The choice of noise distribution is critical to the model's success; a poorly chosen noise distribution can lead to inaccurate parameter estimates and slower convergence during training \citep{10.48550/arxiv.2110.11271}.
+
+\begin{itemize}
+    \item \textbf{Noise Distribution Sensitivity}: NCE relies heavily on the assumption that the noise distribution is sufficiently different from the true data distribution. If the noise distribution is not carefully selected, the model may fail to accurately distinguish between real and noise samples \citep{10.48550/arxiv.2110.11271}.
+    \item \textbf{Complex Data Distributions}: NCE may struggle with highly complex data distributions, especially in cases where defining an appropriate noise distribution is difficult \citep{10.48550/arxiv.2110.11271}.
+\end{itemize}
+
+Despite these limitations, NCE remains a popular technique for training large-scale models, especially in cases where traditional MLE is impractical due to the computational cost of normalizing the probability distribution.
 
 \section{Variational Autoencoders (VAEs)}
 
