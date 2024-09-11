@@ -1,6 +1,6 @@
 \chapter{Historical Models of Image Generation}
 
-In this chapter, I will explore three key generative modeling techniques: Variational Autoencoders (VAEs), Diffusion Models, and Noise Contrastive Estimation (NCE). These models represent significant milestones in the development of generative modeling approaches, each with its unique advantages and limitations. 
+In this chapter, I will explore three key generative modeling techniques: Noise Contrastive Estimation (NCE), Variational Autoencoders (VAEs), and Diffusion Models. These models represent significant milestones in the development of generative modeling approaches, each with its unique advantages and limitations. 
 
 \section{Noise Contrastive Estimation}
 
@@ -41,7 +41,7 @@ The NCE objective then maximizes the log-probabilities of real data and noise da
 
 This reformulation circumvents the need to compute the partition function, which makes NCE particularly effective for large-scale models.
 
-As shown in Figure~\ref{fig:NCE_structure}, the architecture of a typical NCE model includes an input layer, hidden layer, and output layer. The input layer takes in data samples (both real and noise), while the hidden layer learns a representation \(h_i\) of these samples. The output layer, modeled as a binary classification task, outputs probabilities \(y_j\) indicating whether a given sample is real or noise.
+As shown in Figure~\ref{fig:NCE_structure}, the architecture of a typical NCE model includes an input layer, hidden layer, and output layer. The input layer takes in data samples (both real and noise), while the hidden layer learns a representation of these samples. The output layer, modeled as a binary classification task, outputs is a probabilities indicating whether a given sample is real or noise.
 
 \begin{figure}[H]
     \centering
