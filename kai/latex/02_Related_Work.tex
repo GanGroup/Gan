@@ -8,17 +8,17 @@ In this chapter, I will explore three key generative modeling techniques: Noise 
 
 Noise Contrastive Estimation (NCE) was introduced in 2010 by Gutmann and Hyvärinen as a method for estimating parameters of unnormalized probabilistic models. It offers an alternative to Maximum Likelihood Estimation (MLE), which can be computationally expensive for large-scale models. NCE reframes the complex task of normalizing probability distributions into a more tractable binary classification problem \citep{10.48550/arxiv.1711.00658}.
 
-In traditional MLE, training models for unnormalized probability distributions involves calculating the partition function, which is often computationally intractable. NCE avoids this issue by introducing noise samples drawn from a known distribution. The model is then trained to discriminate between real data samples and noise samples. Specifically, the model assigns higher probabilities to real data and lower probabilities to noise, indirectly learning the data distribution without requiring normalization \citep{10.48550/arxiv.2110.11271}.
+At the core of Noise Contrastive Estimation is the idea of reframing MLE as a binary classification task. In traditional MLE, training models for unnormalized probability distributions involves calculating the partition function, which is computationally intractable in large-scale models. NCE avoids this issue by introducing noise samples drawn from a known distribution. The model is then trained to discriminate between real data samples and noise samples. Specifically, the model assigns higher probabilities to real data and lower probabilities to noise, thus indirectly learning the data distribution without requiring normalization \citep{10.48550/arxiv.2110.11271}.
 
 \subsubsection{NCE Architecture and Process}
 
-At the core of Noise Contrastive Estimation is the idea of reframing MLE as a binary classification task. In traditional MLE, training models for unnormalized probability distributions involves calculating the partition function, which is computationally intractable in large-scale models. NCE avoids this issue by introducing noise samples drawn from a known distribution. The model is then trained to discriminate between real data samples and noise samples. Specifically, the model assigns higher probabilities to real data and lower probabilities to noise, thus indirectly learning the data distribution without requiring normalization \citep{10.48550/arxiv.2110.11271}.
-
-The objective function in NCE is derived by reformulating the likelihood of a data point \( x \) as the probability that it is real, rather than noise. Given a dataset \( D \) with real samples \( x_i \) and noise samples \( x_j \), the probability \( P(y = 1 | x) \), where \( y = 1 \) indicates a real sample and \( y = 0 \) indicates a noise sample, is given by:
+The objective function in NCE is derived by reformulating the likelihood of a data point \( x \) as the probability that it comes from the real data distribution, rather than from the noise distribution. Given a dataset \( D \) with real samples \( x_i \) and noise samples \( x_j \), the probability \( P(y = 1 | x) \), where \( y = 1 \) indicates a real sample is given by:
 
 \begin{equation}
 P(y = 1 | x) = \frac{p_{\theta}(x)}{p_{\theta}(x) + k p_{\text{noise}}(x)}
 \end{equation}
+
+Where \( p_{\theta}(x) \) is the unnormalized probability assigned to the sample \( x \) by the model, \( p_{\text{noise}}(x) \) is the probability assigned to the noise sample, and \( k \) is the ratio of noise samples to real samples.
 
 Where:
 \begin{itemize}
@@ -27,7 +27,7 @@ Where:
     \item \( k \) is the ratio of noise samples to real samples.
 \end{itemize}
 
-The corresponding probability for a noise sample is given by:
+The corresponding probability that a sample \( x \) is from the noise distribution is given by:
 
 \begin{equation}
 P(y = 0 | x) = \frac{k p_{\text{noise}}(x)}{p_{\theta}(x) + k p_{\text{noise}}(x)}
