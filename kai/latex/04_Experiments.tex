@@ -240,7 +240,8 @@ The discriminator processes the generated images through a series of convolution
 def build_discriminator():
     model = Sequential()
 
-    model.add(Conv2D(64, kernel_size=3, strides=2, input_shape=(128, 128, 3), padding='same'))
+    model.add(Conv2D(64, kernel_size=3, strides=2, 
+    input_shape=(128, 128, 3), padding='same'))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dropout(0.25))
 
