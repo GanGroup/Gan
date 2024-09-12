@@ -1,47 +1,17 @@
 \chapter{Historical Models of Image Generation}
 
-In this chapter, I will explore three key generative modeling techniques: Noise Contrastive Estimation (NCE), Variational Autoencoders (VAEs), and Diffusion Models. These models represent significant milestones in the development of generative modeling approaches, each with its unique advantages and limitations. 
+\chapter{Historical Models of Image Generation}
 
-\section{Noise Contrastive Estimation}
+In this chapter, I aim to provide an overview of three important generative modeling techniques: Noise Contrastive Estimation (NCE), Variational Autoencoders (VAEs), and Diffusion Models. These models have each played a significant role in the evolution of generative modeling and continue to influence modern approaches in the field. 
 
-\subsection{Principles of NCE}
+\section{Noise Contrastive Estimation (NCEs)}
 
-Noise Contrastive Estimation (NCE) was introduced in 2010 by Gutmann and Hyvärinen as a method for estimating parameters of unnormalized probabilistic models. It offers an alternative to Maximum Likelihood Estimation (MLE), which can be computationally expensive for large-scale models. NCE reframes the complex task of normalizing probability distributions into a more tractable binary classification problem \citep{10.48550/arxiv.1711.00658}.
+Noise Contrastive Estimation (NCE) was introduced in 2010 by Gutmann and Hyvärinen as a method for estimating parameters in unnormalized probabilistic models. It offers an efficient alternative to Maximum Likelihood Estimation (MLE), particularly in cases where MLE can become computationally expensive, especially with large-scale models. NCE reframes the challenge of normalizing probability distributions into a more manageable binary classification problem \citep{10.48550/arxiv.1711.00658}. 
 
-At the core of Noise Contrastive Estimation is the idea of reframing MLE as a binary classification task. In traditional MLE, training models for unnormalized probability distributions involves calculating the partition function, which is computationally intractable in large-scale models. NCE avoids this issue by introducing noise samples drawn from a known distribution. The model is then trained to discriminate between real data samples and noise samples. Specifically, the model assigns higher probabilities to real data and lower probabilities to noise, thus indirectly learning the data distribution without requiring normalization \citep{10.48550/arxiv.2110.11271}.
+The core idea behind NCE is to treat MLE as a binary classification task. Traditionally, training models for unnormalized probability distributions using MLE involves calculating the partition function, which can be computationally infeasible for large datasets. NCE mitigates this difficulty by incorporating noise samples drawn from a known distribution. The model is then trained to differentiate between real data and noise samples, with higher probabilities assigned to real data and lower probabilities to noise. This approach allows the model to learn the data distribution without the need for explicit normalization \citep{10.48550/arxiv.2110.11271}.
 
-\subsubsection{NCE Architecture and Process}
-
-The objective function in NCE is derived by reformulating the likelihood of a data point \( x \) as the probability that it comes from the real data distribution, rather than from the noise distribution. Given a dataset \( D \) with real samples \( x_i \) and noise samples \( x_j \), the probability \( P(y = 1 | x) \), where \( y = 1 \) indicates a real sample is given by:
-
-\begin{equation}
-P(y = 1 | x) = \frac{p_{\theta}(x)}{p_{\theta}(x) + k p_{\text{noise}}(x)}
-\end{equation}
-
-Where \( p_{\theta}(x) \) is the unnormalized probability assigned to the sample \( x \) by the model, \( p_{\text{noise}}(x) \) is the probability assigned to the noise sample, and \( k \) is the ratio of noise samples to real samples.
-
-Where:
-\begin{itemize}
-    \item \( p_{\theta}(x) \) is the unnormalized model probability assigned to the data sample \( x \).
-    \item \( p_{\text{noise}}(x) \) is the known probability of the noise sample.
-    \item \( k \) is the ratio of noise samples to real samples.
-\end{itemize}
-
-The corresponding probability that a sample \( x \) is from the noise distribution is given by:
-
-\begin{equation}
-P(y = 0 | x) = \frac{k p_{\text{noise}}(x)}{p_{\theta}(x) + k p_{\text{noise}}(x)}
-\end{equation}
-
-The NCE objective then maximizes the log-probabilities of real data and noise data being correctly classified:
-
-\begin{equation}
-\mathcal{L}_{NCE} = \sum_{i=1}^{N} \left[ \log P(y=1 | x_i) + \sum_{j=1}^{k} \log P(y=0 | x_j) \right]
-\end{equation}
-
-This reformulation circumvents the need to compute the partition function, which makes NCE particularly effective for large-scale models.
-
-As shown in Figure~\ref{fig:NCE_structure}, the architecture of a typical NCE model includes an input layer, hidden layer, and output layer. The input layer takes in data samples (both real and noise), while the hidden layer learns a representation of these samples. The output layer, modeled as a binary classification task, outputs is a probabilities indicating whether a given sample is real or noise.
+\subsection{NCE Structure}
+In NCE, the likelihood of a data point \( x \) is reformulated as the probability that it comes from the real data distribution rather than from the noise distribution. As depicted in Figure~\ref{fig:NCE_structure}, the architecture of a typical NCE model includes an input layer, a hidden layer, and an output layer. The input layer receives both real and noise samples, while the hidden layer learns representations of these samples. The output layer functions as a binary classifier, producing probabilities that indicate whether a given sample is real or noise.
 
 \begin{figure}[H]
     \centering
@@ -51,79 +21,95 @@ As shown in Figure~\ref{fig:NCE_structure}, the architecture of a typical NCE mo
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Data and Noise Samples}: NCE introduces noise samples from a known distribution to compare with the actual data. These noise samples serve as negative examples in the binary classification task, while real data serves as positive examples \citep{10.48550/arxiv.1711.00658}.
-    \item \textbf{Binary Classification}: The task of differentiating between real and noise samples is formalized as a binary classification problem, which can be optimized using standard logistic regression techniques \citep{10.18653/v1/e17-2003}.
+    \item \textbf{Data and Noise Samples}: NCE introduces noise samples from a known distribution to compare with actual data. These noise samples act as negative examples in the classification task, while the real data serves as positive examples \citep{10.48550/arxiv.1711.00658}.
+    \item \textbf{Binary Classification}: The task of differentiating between real and noise samples is framed as a binary classification problem, which can be optimized using standard logistic regression techniques \citep{10.18653/v1/e17-2003}.
 \end{itemize}
 
-By transforming the estimation problem in this way, NCE simplifies the computation and circumvents the need for calculating the partition function, which is often the bottleneck in MLE for large-scale models.
+\subsection{NCE Objective Function}
+In NCE, the probability \( P(y = 1 | x) \), where \( y = 1 \) indicates that \( x \) is a real sample, is defined as:
 
+\begin{equation}
+P(y = 1 | x) = \frac{p_{\theta}(x)}{p_{\theta}(x) + k p_{\text{noise}}(x)}
+\end{equation}
+
+Where \( p_{\theta}(x) \) is the unnormalized probability assigned to the sample \( x \) by the model, \( p_{\text{noise}}(x) \) is the probability assigned to the noise sample, and \( k \) is the ratio of noise samples to real samples.
+
+The corresponding probability that a sample \( x \) is from the noise distribution is given by:
+
+\begin{equation}
+P(y = 0 | x) = \frac{k p_{\text{noise}}(x)}{p_{\theta}(x) + k p_{\text{noise}}(x)}
+\end{equation}
+
+The NCE objective then seeks to maximize the log-probabilities of correctly classifying real and noise samples:
+
+\begin{equation}
+\mathcal{L}_{NCE} = \sum_{i=1}^{N} \left[ \log P(y=1 | x_i) + \sum_{j=1}^{k} \log P(y=0 | x_j) \right]
+\end{equation}
+
+This method circumvents the need for computing the partition function, which is typically required in Maximum Likelihood Estimation (MLE), making NCE particularly useful for large-scale models \citep{10.48550/arxiv.2110.11271}.
 \subsection{Comparison with GANs}
 
-Noise Contrastive Estimation (NCE) and Generative Adversarial Networks (GANs) are both prominent techniques used in machine learning, but they differ significantly in their approach to model training and estimation.
+Noise Contrastive Estimation (NCE) and Generative Adversarial Networks (GANs) are both prominent methods in generative modeling, but they take different approaches to training and model estimation.
 
 \begin{itemize}
-    \item \textbf{Training Stability}: One of the primary advantages of NCE over GANs is its stability during training. GANs often face challenges such as mode collapse and unstable training dynamics due to the adversarial nature of the training process, where the generator and discriminator are pitted against each other. In contrast, NCE transforms the model training process into a binary classification problem, which is generally more stable and can be optimized using standard logistic regression techniques \citep{10.18653/v1/e17-2003}.
+    \item \textbf{Training Stability}: One of NCE’s key advantages over GANs is the stability it provides during training. GANs frequently suffer from challenges such as mode collapse and instability due to the adversarial nature of the training process, where the generator and discriminator are pitted against each other. NCE, by contrast, frames the training process as a straightforward binary classification task, which tends to be more stable and can be optimized with logistic regression \citep{10.18653/v1/e17-2003}.
     
-    \item \textbf{Computational Efficiency}: GANs require training two models (generator and discriminator) simultaneously, which can lead to higher computational costs, particularly when tuning their interactions for optimal performance. NCE, on the other hand, simplifies the problem by reducing it to a comparison between real data and noise samples. This avoids the adversarial framework and allows for more efficient training, especially in large-scale models \citep{10.21437/interspeech.2016-1295}.
+    \item \textbf{Computational Efficiency}: Training GANs requires simultaneously optimizing two models—the generator and the discriminator—which can lead to higher computational costs, particularly when tuning their interactions for better performance. NCE, on the other hand, simplifies the problem by reducing it to a comparison between real data and noise samples, avoiding the adversarial framework and offering a more computationally efficient solution, especially for large-scale models \citep{10.21437/interspeech.2016-1295}.
     
-    \item \textbf{Handling Unnormalized Models}: NCE is particularly effective for training unnormalized probabilistic models, where the partition function is difficult or impossible to compute directly. GANs, however, are typically used for generating realistic data samples, and while they do not require explicit normalization, they do not address the estimation of unnormalized probabilistic models as NCE does \citep{10.48550/arxiv.2101.03288}.
+    \item \textbf{Handling Unnormalized Models}: NCE is particularly suited for training unnormalized probabilistic models, where computing the partition function is impractical or impossible. GANs, however, are focused on generating realistic samples and, while they do not require explicit normalization, they do not address the problem of unnormalized models as directly as NCE does \citep{10.48550/arxiv.2101.03288}.
     
-    \item \textbf{Model Interpretability}: In NCE, the model explicitly learns to estimate the probability of data samples relative to noise, which can provide insights into the underlying data distribution. In contrast, GANs focus primarily on generating realistic samples, and their internal workings (particularly the latent space) can be less interpretable compared to NCE-based models.
+    \item \textbf{Model Interpretability}: In NCE, the model explicitly learns to estimate the probability of real data versus noise, providing insights into the data distribution. In comparison, GANs focus on generating realistic samples without explicitly modeling probabilities, which can make their internal latent space less interpretable than that of NCE-based models.
     
-    \item \textbf{Use in Language Models and Word Embeddings}: NCE is particularly advantageous in applications such as word embeddings and large-scale language models, where normalizing the likelihood function over a large vocabulary is computationally prohibitive. While GANs have been explored in text generation tasks, NCE's efficiency in handling large vocabulary sizes makes it a more suitable choice for these types of problems \citep{10.48550/arxiv.2101.03288}.
+    \item \textbf{Applications in Language Models and Word Embeddings}: NCE is particularly beneficial in tasks such as word embeddings and large-scale language models, where normalizing the likelihood function over vast vocabularies is computationally prohibitive. GANs have been applied in text generation, but NCE’s efficiency in handling large-scale vocabulary models makes it more suitable for these problems \citep{10.48550/arxiv.2101.03288}.
 \end{itemize}
 
 \subsection{Applications of NCE}
 
-The utility of Noise Contrastive Estimation extends to various machine learning tasks. It is particularly effective in scenarios involving large datasets and unnormalized probabilistic models:
+NCE is highly effective in a variety of machine learning tasks, particularly those that involve large datasets and unnormalized models:
 \begin{itemize}
-    \item \textbf{Word Embeddings}: NCE is widely used in training word embeddings in natural language processing, where the vocabulary size makes exact normalization computationally infeasible.
-    \item \textbf{Language Models}: In addition to word embeddings, NCE has been applied to train large-scale language models where traditional likelihood-based methods may become computationally prohibitive.
-    \item \textbf{Energy-Based Models}: As mentioned earlier, NCE is effective in training energy-based models, where the partition function is challenging to compute directly.
+    \item \textbf{Word Embeddings}: NCE is widely used in training word embeddings, where the size of the vocabulary makes normalization computationally infeasible.
+    \item \textbf{Language Models}: Beyond word embeddings, NCE has been applied to training large-scale language models, where traditional likelihood-based methods may become computationally expensive.
+    \item \textbf{Energy-Based Models}: NCE is also effective in training energy-based models, which typically require an intractable partition function for normalization.
 \end{itemize}
 
-By leveraging NCE, models can scale efficiently, making it a useful tool in a wide range of applications, from natural language processing to computer vision.
+NCE allows models to scale efficiently, making it an invaluable tool in areas ranging from natural language processing to computer vision.
 
 \subsection{Limitations of NCE}
 
-While Noise Contrastive Estimation has proven to be an effective technique, it is not without limitations. One of the primary challenges lies in selecting an appropriate noise distribution. The choice of noise distribution is critical to the model's success; a poorly chosen noise distribution can lead to inaccurate parameter estimates and slower convergence during training \citep{10.48550/arxiv.2110.11271}.
+While NCE has proven to be a powerful estimation technique, it is not without limitations. A key challenge lies in selecting an appropriate noise distribution. Poor choices in this regard can lead to suboptimal parameter estimates and slower convergence during training \citep{10.48550/arxiv.2110.11271}.
 
 \begin{itemize}
-    \item \textbf{Noise Distribution Sensitivity}: NCE relies heavily on the assumption that the noise distribution is sufficiently different from the true data distribution. If the noise distribution is not carefully selected, the model may fail to accurately distinguish between real and noise samples \citep{10.48550/arxiv.2110.11271}.
-    \item \textbf{Complex Data Distributions}: NCE may struggle with highly complex data distributions, especially in cases where defining an appropriate noise distribution is difficult \citep{10.48550/arxiv.2110.11271}.
+    \item \textbf{Noise Distribution Sensitivity}: The success of NCE relies heavily on choosing a noise distribution that is sufficiently different from the real data distribution. If the noise distribution is poorly chosen, the model may struggle to differentiate between real and noise samples \citep{10.48550/arxiv.2110.11271}.
+    \item \textbf{Handling Complex Data Distributions}: NCE may encounter difficulties with highly complex data distributions, particularly in cases where defining an appropriate noise distribution is challenging \citep{10.48550/arxiv.2110.11271}.
 \end{itemize}
 
-Despite these limitations, NCE remains a popular technique for training large-scale models, especially in cases where traditional MLE is impractical due to the computational cost of normalizing the probability distribution.
 
 \section{Variational Autoencoders (VAEs)}
 
-Variational Autoencoders (VAEs) were introduced in 2013 and are one of the earliest forms of generative models. VAEs aim to model the underlying distribution of data by learning a compressed representation, or latent vector, \(z\), of the input data \(x\).
+Variational Autoencoders (VAEs), introduced in 2013, represent one of the foundational approaches to generative modeling. The primary goal of VAEs is to model the underlying distribution of data by learning a compressed latent representation, denoted as \(z\), from the input data \(x\).
 
-\subsection{VAE Architecture and Training}
+\subsection{VAE Structure}
+VAEs consist of two main components: an encoder and a decoder. The encoder maps input data into a latent space, where the latent variables are generally assumed to follow a Gaussian distribution. This assumption simplifies the training process and enables techniques such as the reparameterization trick, which facilitates backpropagation through stochastic layers \citep{10.1561/2200000056}. The decoder then reconstructs the input data from the latent variables, ensuring that the essential characteristics of the data distribution are captured.
 
-\subsubsection{VAE Structure}
-The architecture of VAEs consists of an encoder that maps input data into a latent space, where the latent variables are typically assumed to follow a Gaussian distribution. This assumption simplifies the learning process, as it allows for the use of techniques such as the reparameterization trick, which enables backpropagation through stochastic layers \citep{10.1561/2200000056}. The decoder then reconstructs the input data from the latent variables, ensuring that the model captures the essential features of the data distribution.
-
-As shown in Figure~\ref{fig:VAE_structure}, the VAE architecture consists of two main components:
+As illustrated in Figure~\ref{fig:VAE_structure}, the VAE architecture comprises:
 \begin{itemize}
-    \item \textbf{Encoder}: The encoder takes the input data \(x\) and compresses it into a latent representation \(z\). The latent variables are sampled from a Gaussian distribution, which simplifies optimization.
-    \item \textbf{Decoder}: The decoder takes the latent variable \(z\) and attempts to reconstruct the original data \(x'\), aiming to generate data that resembles the input.
+    \item \textbf{Encoder}: The encoder takes the input data \(x\) and compresses it into a latent representation \(z\). The latent variables are sampled from a Gaussian distribution, which aids in simplifying the optimization process.
+    \item \textbf{Decoder}: The decoder reconstructs the original data \(x'\) from the latent representation \(z\), aiming to produce data that closely resembles the input.
 \end{itemize}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{./Images/VAE_structure.jpg}
-    \caption{VAE structure showing the encoder and decoder processes.}
+    \caption{VAE structure, showing the encoder and decoder processes.}
     \label{fig:VAE_structure}
 \end{figure}
 
+\subsection{VAE Objective Function}
+The VAE loss function is designed to balance two objectives: accurate data reconstruction and regularization of the latent space. The total loss combines a reconstruction loss with a Kullback-Leibler (KL) divergence term, which helps the model learn a smooth, continuous representation of the latent space \citep{10.3390/jimaging4020036}.
 
-\subsubsection{VAE Loss Function}
-The loss function of a VAE combines reconstruction loss with a Kullback-Leibler (KL) divergence term, which regularizes the latent space and encourages the model to learn a smooth and continuous representation \citep{10.3390/jimaging4020036}.
+The VAE aims to maximize the variational lower bound, encouraging both accurate reconstruction and a well-structured latent space. This, in turn, enables the model to generate new data by sampling from the latent space and reconstructing it using the decoder.
 
-VAEs are trained to maximize the variational lower bound, which balances the accuracy of the reconstruction and ensures that the latent space is smooth and continuous. This allows the model to generate new data by sampling from the learned latent space and reconstructing the data using the decoder.
-
-The loss function of VAE is as follows:
+The loss function of a VAE is expressed as follows:
 
 \begin{equation}
 \mathcal{L} = \mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] - D_{KL}(q_\phi(z|x) \| p(z))
@@ -131,42 +117,50 @@ The loss function of VAE is as follows:
 
 Where:
 \begin{itemize}
-    \item \(\mathcal{L}\): The total loss that the model aims to minimize.
-    \item \(\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)]\): The expected log-likelihood of the reconstructed data \(x\) given the latent variable \(z\). The distribution \(q_\phi(z|x)\) represents the approximate posterior distribution (the encoder), and \(p_\theta(x|z)\) represents the likelihood of the data given the latent variable (the decoder's attempt to reconstruct the input data).
-    \item \(D_{KL}(q_\phi(z|x) \| p(z))\): The Kullback-Leibler (KL) divergence, which measures the difference between the encoder's latent distribution \(q_\phi(z|x)\) and the prior distribution \(p(z)\), typically assumed to be Gaussian.
+    \item \(\mathcal{L}\): The total loss that the model seeks to minimize.
+    \item \(\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)]\): This term represents the expected log-likelihood of the reconstructed data \(x'\) given the latent variable \(z\). The distribution \(q_\phi(z|x)\) corresponds to the encoder's approximation of the posterior, while \(p_\theta(x|z)\) represents the decoder's likelihood of reconstructing the input data.
+    \item \(D_{KL}(q_\phi(z|x) \| p(z))\): The KL divergence measures the difference between the encoder's learned latent distribution \(q_\phi(z|x)\) and the prior distribution \(p(z)\), which is typically Gaussian.
 \end{itemize}
 
 \subsection{Comparison with GANs}
 
-In comparison to Generative Adversarial Networks (GANs), VAEs offer several key advantages. One of the primary benefits of VAEs is their simpler and more stable training process. GANs involve training two models simultaneously—a generator and a discriminator—which can result in unstable convergence and issues like mode collapse, where the generator fails to capture the diversity of the data. In contrast, VAEs have a single objective function that combines reconstruction loss and KL divergence, making the optimization process more straightforward \citep{10.1561/2200000056}.
+When compared to Generative Adversarial Networks (GANs), VAEs exhibit several advantages. One of the most notable strengths of VAEs is their training stability. In contrast to GANs, which involve training both a generator and a discriminator—a process that can lead to issues such as mode collapse—VAEs have a single objective function. This objective combines reconstruction loss and KL divergence, making the training process more straightforward and less prone to instability \citep{10.1561/2200000056}.
 
-Furthermore, the structured latent space of VAEs allows for meaningful interpolation between latent variables, enabling smooth transitions between generated data points. This makes VAEs particularly useful for tasks such as image generation, anomaly detection, and data imputation, where the ability to smoothly interpolate between data points is crucial \citep{10.1088/2632-2153/ab80b7}\citep{10.48550/arxiv.2002.10464}. GANs, on the other hand, do not explicitly model the latent space, which can limit their interpretability and ability to interpolate between generated samples.
+Another key strength of VAEs is their ability to generate smooth transitions between data points. This capability is particularly valuable for applications that require meaningful interpolation in the latent space, such as image generation, anomaly detection, and data imputation \citep{10.1088/2632-2153/ab80b7}\citep{10.48550/arxiv.2002.10464}. GANs, on the other hand, do not explicitly model the latent space, which can limit their interpretability and flexibility in certain tasks.
 
-However, GANs are known for producing sharper and more realistic images compared to VAEs, especially in high-resolution image generation tasks. This is because the adversarial loss in GANs encourages the generator to produce outputs that closely resemble real data, whereas VAEs tend to produce blurrier images due to the use of a Gaussian prior in the latent space \citep{10.1109/access.2020.2977671}. Despite this, VAEs are more flexible and scalable, as they can be trained with standard gradient descent methods and do not require the complex adversarial setup that GANs use.
+However, GANs are often favored for generating sharper and more realistic images, particularly in high-resolution tasks. The adversarial loss in GANs encourages the generator to produce outputs that closely resemble real data, while VAEs, due to their reliance on Gaussian priors, tend to generate slightly blurrier images \citep{10.1109/access.2020.2977671}. Nonetheless, VAEs offer greater flexibility and scalability, as they can be trained using standard gradient descent methods and do not require the complex adversarial framework inherent to GANs.
 
 \subsection{Applications of VAEs}
 
-The structured latent space of VAEs not only allows for efficient sampling but also supports various applications. These include:
+The versatility of VAEs extends to a wide range of applications, many of which benefit from the structured latent space that VAEs provide:
 \begin{itemize}
-    \item \textbf{Image Generation}: VAEs are capable of generating new images by sampling from the latent space and decoding them to the image space.
-    \item \textbf{Anomaly Detection}: VAEs can identify outliers by measuring the reconstruction error, where high reconstruction loss may indicate anomalous data points.
-    \item \textbf{Data Imputation}: VAEs can be used to fill in missing data by sampling from the latent space and reconstructing the missing portions of the data.
+    \item \textbf{Image Generation}: VAEs can generate new images by sampling from the latent space and decoding the latent vectors into realistic image representations.
+    \item \textbf{Anomaly Detection}: VAEs are often used to identify outliers in data by examining reconstruction errors. Data points with high reconstruction loss may be flagged as anomalies.
+    \item \textbf{Data Imputation}: VAEs are capable of filling in missing data by reconstructing the incomplete data from latent representations, making them useful for handling datasets with gaps or missing values.
 \end{itemize}
 
 \subsection{Limitations of VAEs}
 
-One notable limitation of VAEs is their difficulty in modeling discrete data. Since VAEs rely on backpropagation through continuous latent variables, handling discrete data types effectively poses a challenge \citep{10.48550/arxiv.1909.13062}. Additionally, the Gaussian assumption in the latent space can sometimes lead to less sharp or less diverse outputs compared to GANs. Despite these limitations, VAEs remain a powerful tool for representing high-dimensional complex data by learning a low-dimensional latent space in an unsupervised manner \citep{10.48550/arxiv.2106.06500}.
+While VAEs have proven effective in many applications, they also have certain limitations:
+\begin{itemize}
+    \item \textbf{Blurred Outputs}: Due to the Gaussian prior assumption in the latent space, VAEs often generate blurrier outputs compared to GANs, which may affect performance in tasks requiring high-resolution and sharp images \citep{10.1109/access.2020.2977671}.
+    \item \textbf{Difficulty with Discrete Data}: VAEs struggle to effectively model discrete data, as backpropagation through continuous latent variables is not well-suited to handle discrete structures \citep{10.48550/arxiv.1909.13062}.
+    \item \textbf{Limited Diversity}: VAEs may not capture the full complexity and diversity of the data distribution as effectively as GANs, particularly when generating high-resolution images \citep{10.48550/arxiv.2106.06500}.
+\end{itemize}
 
+Despite these challenges, VAEs remain a foundational tool in generative modeling and continue to be widely used in unsupervised learning tasks, especially for applications requiring low-dimensional latent representations.
 
 \section{Diffusion Models}
 
-Diffusion models, emerging in the early 2020s, offer a significant advancement in generative modeling. These models add noise to data in a progressive manner and then learn to reverse this process, effectively "denoising" it back to its original form. This iterative process distinguishes diffusion models from traditional approaches like GANs and VAEs \citep{10.48550/arxiv.2105.05233}.
+Diffusion models, emerging in the early 2020s, represent a significant advancement in generative modeling. These models progressively add noise to data and then learn to reverse this process, effectively "denoising" it back to its original form. This iterative process distinguishes diffusion models from traditional approaches like GANs and VAEs \citep{10.48550/arxiv.2105.05233}.
 
-The core idea relies on a Markov chain, where noise is added in the forward process, starting from a simple distribution (e.g., Gaussian), and reversed through a learned denoising mechanism \citep{10.48550/arxiv.2009.09761}\citep{10.48550/arxiv.2206.05564}. This method has proven effective in generating high-quality samples across domains such as image synthesis, audio generation, and medical imaging \citep{10.48550/arxiv.2201.11972}\citep{10.48550/arxiv.2211.00611}, often surpassing GANs in benchmarks \citep{10.48550/arxiv.2105.05233}\citep{10.48550/arxiv.2201.00308}.
+\subsection{Diffusion Model Structure}
+
+The core idea behind diffusion models relies on a Markov chain where noise is added in the forward process, starting from a simple distribution (e.g., Gaussian), and reversed through a learned denoising mechanism \citep{10.48550/arxiv.2009.09761}, \citep{10.48550/arxiv.2206.05564}. This approach has proven effective in generating high-quality samples across various domains, such as image synthesis, audio generation, and medical imaging \citep{10.48550/arxiv.2201.11972}, \citep{10.48550/arxiv.2211.00611}. In several benchmarks, diffusion models have outperformed GANs \citep{10.48550/arxiv.2105.05233}, \citep{10.48550/arxiv.2201.00308}.
 
 The process involves two key steps, as shown in Figure~\ref{fig:Diffusion_structure}:
 \begin{itemize}
-  \item \textbf{Forward Process}: Gradually adds Gaussian noise to data \(x_0\), creating noisy versions of the data \(x_1, x_2, \dots, x_T\). Each step increases the level of noise, eventually leading to a completely noisy version \(z\).
+  \item \textbf{Forward Process}: Gradually adds Gaussian noise to data \(x_0\), creating noisy versions of the data \(x_1, x_2, \dots, x_T\). Each step increases the noise level, leading to a completely noisy version \(z\).
   \item \textbf{Reverse Process}: The model learns to reverse the noise addition process, starting from the fully noisy version \(z\), and progressively denoising it to recover data that resembles the original input \(x_0\).
 \end{itemize}
 
@@ -177,45 +171,12 @@ The process involves two key steps, as shown in Figure~\ref{fig:Diffusion_struct
     \label{fig:Diffusion_structure}
 \end{figure}
 
-\subsection{Forward Process}
-In the forward process, starting from the original data \(x_0\), Gaussian noise is added step-by-step to generate increasingly noisy versions of the data. Mathematically, the forward process is described as:
+\subsection{Diffusion Model Objective Function}
 
-\begin{equation}
-q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{\alpha_t} x_{t-1}, \beta_t I)
-\end{equation}
-
-Where:
-\begin{itemize}
-    \item \(x_0\), \(x_1\), \(x_2\), \dots, \(x_T\): The sequence of noisy data at each time step.
-    \item \(\alpha_t\): The scaling factor applied to the data at each step.
-    \item \(\beta_t\): The variance of the Gaussian noise added at each step \(t\).
-    \item \(\mathcal{N}(x; \mu, \sigma^2)\): A Gaussian distribution with mean \(\mu\) and variance \(\sigma^2\).
-\end{itemize}
-
-The process continues until it reach the final state \(z\), which is almost entirely noise.
-
-\subsection{Reverse Process}
-Once the noisy data is generated, the reverse process begins. The model learns to reverse the noise addition process to gradually recover the original data. The reverse process is defined as:
-
-\begin{equation}
-p_\theta(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(x_t, t))
-\end{equation}
-
-Where:
-\begin{itemize}
-    \item \(x_t\): The noisy data at time step \(t\).
-    \item \(\mu_\theta(x_t, t)\): The model's predicted mean at step \(t\), parameterized by \(\theta\).
-    \item \(\Sigma_\theta(x_t, t)\): The model's predicted variance at step \(t\), parameterized by \(\theta\).
-    \item \(\mathcal{N}(x; \mu, \sigma^2)\): A Gaussian distribution with mean \(\mu\) and variance \(\sigma^2\).
-\end{itemize}
-
-The reverse process progressively reduces the noise added in the forward process, resulting in data that closely resembles the original input.
-
-\subsection{Loss Function}
 The training objective for diffusion models is to minimize the difference between the real data distribution and the distribution of generated data across all time steps:
 
 \begin{equation}
-L = \sum_{t=1}^{T} \mathbb{E}_{x_0, \epsilon} [\|\epsilon - \epsilon_\theta(x_t, t)\|^2]
+L = \sum_{t=1}^{T} \mathbb{E}_{x_0, \epsilon} \left[ \|\epsilon - \epsilon_\theta(x_t, t)\|^2 \right]
 \end{equation}
 
 Where:
@@ -235,28 +196,27 @@ Diffusion models and Generative Adversarial Networks (GANs) represent two distin
 Diffusion models also excel in generating diverse, high-quality samples through a gradual denoising process, allowing for controlled generation \citep{10.1117/1.jei.32.4.043029}. In contrast, GANs tend to produce sharper but less diverse images, often overfitting to specific modes of the data \citep{10.48550/arxiv.1910.04302}, \citep{10.48550/arxiv.2207.01561}. This trade-off between sharpness and diversity is a known limitation of GANs \citep{10.1111/rssb.12476}.
 
 However, GANs remain preferred for tasks requiring extremely high-resolution and photorealistic images, such as human face generation, where they outperform diffusion models in terms of detail and realism \citep{10.54254/2755-2721/18/20230984}, \citep{10.3390/e22091055}.
+
 \subsection{Applications of Diffusion Models}
 
 Diffusion models have found a wide range of applications, especially in fields where stability and quality of generation are important. Some notable applications include:
 \begin{itemize}
     \item \textbf{Image Generation}: Diffusion models have proven effective in generating photorealistic images, similar to GANs, but with more stable training dynamics. Recent innovations, such as classifier-free guidance, have further enhanced the quality of generated samples by allowing the model to generate data without relying on an explicit classifier \citep{10.48550/arxiv.2207.12598}.
-    \item \textbf{Text-to-Image Generation}: Advancements in diffusion models have also been applied to text-to-image synthesis, where a text prompt is converted into a corresponding image. These models can produce diverse outputs based on input descriptions. Additionally, techniques like Denoising Diffusion Implicit Models (DDIMs) have accelerated the sampling process, making diffusion models more practical for real-time applications \citep{10.48550/arxiv.2010.02502}\citep{10.48550/arxiv.2111.15640}.
-    \item \textbf{Speech Synthesis}: Diffusion models have been applied to generating high-quality audio data. For example, they are used in text-to-speech systems to generate realistic human speech. These models have demonstrated remarkable performance in generating high-fidelity audio outputs \citep{10.48550/arxiv.2201.11972}\citep{10.48550/arxiv.2009.09761}.
+    \item \textbf{Text-to-Image Generation}: Advancements in diffusion models have also been applied to text-to-image synthesis, where a text prompt is converted into a corresponding image. These models can produce diverse outputs based on input descriptions. Additionally, techniques like Denoising Diffusion Implicit Models (DDIMs) have accelerated the sampling process, making diffusion models more practical for real-time applications \citep{10.48550/arxiv.2010.02502}, \citep{10.48550/arxiv.2111.15640}.
+    \item \textbf{Speech Synthesis}: Diffusion models have been applied to generating high-quality audio data. For example, they are used in text-to-speech systems to generate realistic human speech. These models have demonstrated remarkable performance in generating high-fidelity audio outputs \citep{10.48550/arxiv.2201.11972}, \citep{10.48550/arxiv.2009.09761}.
     \item \textbf{Anomaly Detection and Medical Imaging}: Similar to VAEs, diffusion models can be used to detect anomalies by evaluating how well a noisy sample can be denoised. Poor reconstructions may indicate that the input is anomalous or different from the training data. Diffusion models have also been applied in medical image segmentation tasks, such as the MedSegDiff model, which enhances segmentation by leveraging diffusion processes \citep{10.48550/arxiv.2211.00611}. These models have shown their ability to handle complex data structures, proving their versatility across different domains.
 \end{itemize}
 
 Recent innovations in diffusion models have further enhanced their applicability and efficiency. By reducing the computational burden associated with the iterative sampling process, models like DDIMs maintain the generative capabilities of traditional diffusion models while improving their practicality for real-time applications \citep{10.48550/arxiv.2101.02388}.
+
 \subsection{Limitations of Diffusion Models}
 
 Despite the significant advancements that diffusion models have brought to generative modeling, they are not without limitations, which can be categorized into three primary areas: computational intensity, generation speed, and sample sharpness.
 
 \begin{itemize}
-    \item \textbf{Computationally Intensive}: Diffusion models are computationally expensive due to their iterative nature, which involves progressively adding and removing noise from data. This process requires significantly more computational resources compared to GANs, which generate data in a single forward pass through the generator \citep{10.1109/msp.2017.2765202}\citep{10.1145/3422622}. This computational burden can limit their practical use, especially in scenarios requiring rapid generation \citep{10.48550/arxiv.2211.07804}.
+    \item \textbf{Computationally Intensive}: Diffusion models are computationally expensive due to their iterative nature, which involves progressively adding and removing noise from data. This process requires significantly more computational resources compared to GANs, which generate data in a single forward pass through the generator \citep{10.1109/msp.2017.2765202}, \citep{10.1145/3422622}. This computational burden can limit their practical use, especially in scenarios requiring rapid generation \citep{10.48550/arxiv.2211.07804}.
     
-    \item \textbf{Generation Speed}: Diffusion models are slower than GANs in terms of sample generation. Producing a single sample often requires hundreds or even thousands of time steps, significantly increasing the generation time compared to the near-instantaneous output of GANs \citep{10.48550/arxiv.2011.13456}\citep{10.48550/arxiv.2010.02502}. This can be a critical drawback in real-time applications.
+    \item \textbf{Generation Speed}: Diffusion models are slower than GANs in terms of sample generation. Producing a single sample often requires hundreds or even thousands of time steps, significantly increasing the generation time compared to the near-instantaneous output of GANs \citep{10.48550/arxiv.2011.13456}, \citep{10.48550/arxiv.2010.02502}. This can be a critical drawback in real-time applications.
     
-    \item \textbf{Sample Sharpness}: While diffusion models generate diverse outputs, they may not always match the photorealism and fine detail achieved by GANs, especially in tasks requiring intricate details \citep{10.48550/arxiv.2105.05233}\citep{10.1109/cvpr52688.2022.01117}. This can affect their suitability for applications such as high-resolution image generation or medical imaging \citep{10.48550/arxiv.2211.07804}.
+    \item \textbf{Sample Sharpness}: While diffusion models generate diverse outputs, they may not always match the photorealism and fine detail achieved by GANs, especially in tasks requiring intricate details \citep{10.48550/arxiv.2105.05233}, \citep{10.1109/cvpr52688.2022.01117}. This can affect their suitability for applications such as high-resolution image generation or medical imaging \citep{10.48550/arxiv.2211.07804}.
 \end{itemize}
-
-
-

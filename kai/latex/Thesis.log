@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  12 SEP 2024 09:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  12 SEP 2024 10:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -513,7 +513,7 @@ Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
-<Images/UCC_logo.png, id=160, 196.0926pt x 211.2693pt>
+<Images/UCC_logo.png, id=156, 196.0926pt x 211.2693pt>
 File: Images/UCC_logo.png Graphic file (type png)
 <use Images/UCC_logo.png>
 Package pdftex.def Info: Images/UCC_logo.png  used on input line 56.
@@ -535,22 +535,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.106 \end{abstract}
                      [1] (./Thesis.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 ...}Training Process of GAN}{25}{section.3.2}
+l.24 ...}Training Process of GAN}{25}{section.4.2}
                                                   % [1
 
 ]
-Overfull \hbox (5.96825pt too wide) in paragraph at lines 27--27
+Overfull \hbox (5.96825pt too wide) in paragraph at lines 26--26
  [][] [][]\OT1/cmr/m/n/12 Mathematical For-mu-la-tion Changes Dur-ing GAN Train- 
  []
 
@@ -582,41 +582,45 @@ Overfull \hbox (0.28578pt too wide) in paragraph at lines 6--7
 Chapter 2.
 [7
 
-] [8]
-<./Images/NCE_structure.jpg, id=328, 465.74pt x 423.5825pt>
+]
+Chapter 3.
+[8
+
+]
+<./Images/NCE_structure.jpg, id=317, 465.74pt x 423.5825pt>
 File: ./Images/NCE_structure.jpg Graphic file (type jpg)
 <use ./Images/NCE_structure.jpg>
-Package pdftex.def Info: ./Images/NCE_structure.jpg  used on input line 48.
+Package pdftex.def Info: ./Images/NCE_structure.jpg  used on input line 18.
 (pdftex.def)             Requested size: 350.99762pt x 319.23729pt.
- [9 <./Images/NCE_structure.jpg>] [10]
-Overfull \hbox (4.07785pt too wide) in paragraph at lines 81--82
-\OT1/cmr/m/n/12 ap-plied to train large-scale lan-guage mod-els where tra-di-tional likelihood-
+ [9] [10 <./Images/NCE_structure.jpg>] [11]
+Overfull \hbox (0.38135pt too wide) in paragraph at lines 63--64
+[]\OT1/cmr/bx/n/12 Applications in Lan-guage Mod-els and Word Em-bed-dings\OT1/cmr/m/n/12 : NCE
  []
 
-[11] [12]
+[12] [13]
 <./Images/VAE_structure.jpg, id=363, 591.20876pt x 163.61125pt>
 File: ./Images/VAE_structure.jpg Graphic file (type jpg)
 <use ./Images/VAE_structure.jpg>
-Package pdftex.def Info: ./Images/VAE_structure.jpg  used on input line 115.
+Package pdftex.def Info: ./Images/VAE_structure.jpg  used on input line 102.
 (pdftex.def)             Requested size: 350.99762pt x 97.13644pt.
- [13 <./Images/VAE_structure.jpg>] [14] [15]
-<./Images/Diffusion_structure.jpg, id=403, 794.97pt x 242.9075pt>
+ [14 <./Images/VAE_structure.jpg>] [15] [16] [17]
+<./Images/Diffusion_structure.jpg, id=415, 794.97pt x 242.9075pt>
 File: ./Images/Diffusion_structure.jpg Graphic file (type jpg)
 <use ./Images/Diffusion_structure.jpg>
-Package pdftex.def Info: ./Images/Diffusion_structure.jpg  used on input line 175.
+Package pdftex.def Info: ./Images/Diffusion_structure.jpg  used on input line 169.
 (pdftex.def)             Requested size: 350.99762pt x 107.25026pt.
- [16] [17 <./Images/Diffusion_structure.jpg>] [18] [19] [20]) [21] (./03_Theoretical_Background.tex
-Chapter 3.
+ [18 <./Images/Diffusion_structure.jpg>] [19] [20]) [21] (./03_Theoretical_Background.tex
+Chapter 4.
 [22
 
 ] [23]
-<./Images/log_gunction.jpg, id=505, 876.27374pt x 547.04375pt>
+<./Images/log_gunction.jpg, id=500, 876.27374pt x 547.04375pt>
 File: ./Images/log_gunction.jpg Graphic file (type jpg)
 <use ./Images/log_gunction.jpg>
 Package pdftex.def Info: ./Images/log_gunction.jpg  used on input line 98.
 (pdftex.def)             Requested size: 312.00119pt x 194.78201pt.
  [24]
-<./Images/data_distribution.jpg, id=516, 1025.8325pt x 332.24126pt>
+<./Images/data_distribution.jpg, id=511, 1025.8325pt x 332.24126pt>
 File: ./Images/data_distribution.jpg Graphic file (type jpg)
 <use ./Images/data_distribution.jpg>
 Package pdftex.def Info: ./Images/data_distribution.jpg  used on input line 128.
@@ -646,7 +650,7 @@ Overfull \hbox (26.97583pt too wide) in paragraph at lines 307--307
 []\OT1/cmr/bx/n/17.28 Limitations of Ac-cu-racy in Eval-u-at-ing GANs 
  []
 
-<./Images/model_accuracy.jpg, id=570, 1089.06876pt x 369.38pt>
+<./Images/model_accuracy.jpg, id=565, 1089.06876pt x 369.38pt>
 File: ./Images/model_accuracy.jpg Graphic file (type jpg)
 <use ./Images/model_accuracy.jpg>
 Package pdftex.def Info: ./Images/model_accuracy.jpg  used on input line 319.
@@ -656,7 +660,7 @@ Overfull \hbox (77.99881pt too wide) in paragraph at lines 319--320
  [][] 
  []
 
-<./Images/generate_images.jpg, id=571, 920.43875pt x 250.9375pt>
+<./Images/generate_images.jpg, id=566, 920.43875pt x 250.9375pt>
 File: ./Images/generate_images.jpg Graphic file (type jpg)
 <use ./Images/generate_images.jpg>
 Package pdftex.def Info: ./Images/generate_images.jpg  used on input line 326.
@@ -667,47 +671,47 @@ Overfull \hbox (77.99881pt too wide) in paragraph at lines 326--327
  []
 
 [31 <./Images/model_accuracy.jpg>]) [32 <./Images/generate_images.jpg>] (./04_Experiments.tex
-Chapter 4.
+Chapter 5.
 [33
 
 ] [34]
-<./Images/generator_dense.jpg, id=604, 725.71124pt x 689.57625pt>
+<./Images/generator_dense.jpg, id=599, 725.71124pt x 689.57625pt>
 File: ./Images/generator_dense.jpg Graphic file (type jpg)
 <use ./Images/generator_dense.jpg>
 Package pdftex.def Info: ./Images/generator_dense.jpg  used on input line 56.
 (pdftex.def)             Requested size: 175.49881pt x 166.7538pt.
-<./Images/generator_cnn.jpg, id=605, 746.79pt x 735.74875pt>
+<./Images/generator_cnn.jpg, id=600, 746.79pt x 735.74875pt>
 File: ./Images/generator_cnn.jpg Graphic file (type jpg)
 <use ./Images/generator_cnn.jpg>
 Package pdftex.def Info: ./Images/generator_cnn.jpg  used on input line 63.
 (pdftex.def)             Requested size: 175.49881pt x 172.90097pt.
-<./Images/discriminator_dense.jpg, id=606, 749.80125pt x 495.8525pt>
+<./Images/discriminator_dense.jpg, id=601, 749.80125pt x 495.8525pt>
 File: ./Images/discriminator_dense.jpg Graphic file (type jpg)
 <use ./Images/discriminator_dense.jpg>
 Package pdftex.def Info: ./Images/discriminator_dense.jpg  used on input line 76.
 (pdftex.def)             Requested size: 175.49881pt x 116.05624pt.
-<./Images/discriminator_cnn.jpg, id=607, 728.7225pt x 489.83pt>
+<./Images/discriminator_cnn.jpg, id=602, 728.7225pt x 489.83pt>
 File: ./Images/discriminator_cnn.jpg Graphic file (type jpg)
 <use ./Images/discriminator_cnn.jpg>
 Package pdftex.def Info: ./Images/discriminator_cnn.jpg  used on input line 83.
 (pdftex.def)             Requested size: 175.49881pt x 117.9652pt.
  [35 <./Images/generator_dense.jpg> <./Images/generator_cnn.jpg>]
-<./Images/generate_image_by_dense_layer.jpg, id=614, 612.2875pt x 121.45375pt>
+<./Images/generate_image_by_dense_layer.jpg, id=609, 612.2875pt x 121.45375pt>
 File: ./Images/generate_image_by_dense_layer.jpg Graphic file (type jpg)
 <use ./Images/generate_image_by_dense_layer.jpg>
 Package pdftex.def Info: ./Images/generate_image_by_dense_layer.jpg  used on input line 99.
 (pdftex.def)             Requested size: 272.99881pt x 54.15144pt.
-<./Images/generate_image_by_Convolution_layer.jpg, id=615, 615.29875pt x 134.5025pt>
+<./Images/generate_image_by_Convolution_layer.jpg, id=610, 615.29875pt x 134.5025pt>
 File: ./Images/generate_image_by_Convolution_layer.jpg Graphic file (type jpg)
 <use ./Images/generate_image_by_Convolution_layer.jpg>
 Package pdftex.def Info: ./Images/generate_image_by_Convolution_layer.jpg  used on input line 106.
 (pdftex.def)             Requested size: 272.99881pt x 59.67793pt.
-<./Images/fid_score_for_dense_layer.jpg, id=616, 1132.23pt x 563.10374pt>
+<./Images/fid_score_for_dense_layer.jpg, id=611, 1132.23pt x 563.10374pt>
 File: ./Images/fid_score_for_dense_layer.jpg Graphic file (type jpg)
 <use ./Images/fid_score_for_dense_layer.jpg>
 Package pdftex.def Info: ./Images/fid_score_for_dense_layer.jpg  used on input line 118.
 (pdftex.def)             Requested size: 272.99881pt x 135.7663pt.
-<./Images/fid_score_for_convolution_layer.jpg, id=617, 1117.17375pt x 570.13pt>
+<./Images/fid_score_for_convolution_layer.jpg, id=612, 1117.17375pt x 570.13pt>
 File: ./Images/fid_score_for_convolution_layer.jpg Graphic file (type jpg)
 <use ./Images/fid_score_for_convolution_layer.jpg>
 Package pdftex.def Info: ./Images/fid_score_for_convolution_layer.jpg  used on input line 125.
@@ -767,7 +771,7 @@ Overfull \hbox (17.5502pt too wide) in paragraph at lines 296--296
 []        \OT1/cmtt/m/n/12 d_loss_fake = discriminator.train_on_batch(gen_imgs, fake)[] 
  []
 
-<./Images/apply_new_dataset.jpg, id=668, 1086.0575pt x 1081.03876pt>
+<./Images/apply_new_dataset.jpg, id=663, 1086.0575pt x 1081.03876pt>
 File: ./Images/apply_new_dataset.jpg Graphic file (type jpg)
 <use ./Images/apply_new_dataset.jpg>
 Package pdftex.def Info: ./Images/apply_new_dataset.jpg  used on input line 304.
@@ -787,21 +791,21 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 962CAF31686A574295009286A2986B95;7370.
+(rerunfilecheck)             Checksum: 0403C31373D08968CD43A07528BCEF9B;7402.
  ) 
 Here is how much of TeX's memory you used:
- 18401 strings out of 476025
- 297181 string characters out of 5790017
+ 18396 strings out of 476025
+ 297059 string characters out of 5790017
  2110388 words of memory out of 5000000
- 36501 multiletter control sequences out of 15000+600000
+ 36499 multiletter control sequences out of 15000+600000
  521053 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,100p,1404b,2250s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Thesis.pdf (110 pages, 4787798 bytes).
+Output written on Thesis.pdf (110 pages, 4784860 bytes).
 PDF statistics:
- 3275 PDF objects out of 3580 (max. 8388607)
- 3062 compressed objects within 31 object streams
- 2060 named destinations out of 2073 (max. 500000)
- 398 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3269 PDF objects out of 3580 (max. 8388607)
+ 3056 compressed objects within 31 object streams
+ 2057 named destinations out of 2073 (max. 500000)
+ 390 words of extra memory for PDF output out of 10000 (max. 10000000)
 
