@@ -6,7 +6,7 @@ This chapter provides an overview of Generative Adversarial Networks (GANs), foc
 
 \section{Generative Adversarial Networks (GANs)}
 
-Generative Adversarial Networks (GANs) were introduced by Goodfellow et al. in 2014 and have become a widely used approach in generative modeling. GANs consist of two neural networks: a generator (G) and a discriminator (D), trained simultaneously through an adversarial process. The generator is tasked with producing synthetic data samples, while the discriminator tries to distinguish between real and generated samples. This architecture leads to a game-like dynamic between the two networks, where the generator improves its ability to create realistic data while the discriminator becomes better at distinguishing real from fake data \citep{10.1109/taslp.2017.2761547}, \citep{10.1007/s10928-021-09787-4}.
+Generative Adversarial Networks (GANs) were introduced by Goodfellow et al. in 2014 and have become a widely used approach in generative modeling. GANs consist of two neural networks: a generator (G) and a discriminator (D), trained simultaneously through an adversarial process. The generator is tasked with producing synthetic data samples, while the discriminator tries to distinguish between real and generated samples. This architecture leads to a game-like dynamic between the two networks, where the generator improves its ability to create realistic data while the discriminator becomes better at distinguishing real from fake data \citep{10.1109/taslp.2017.2761547}, \citep{10.1007/s10928-021-09787-4} and provide feedback to the generator, helping it to improve and generate more realistic samples over time \citep{10.48550/arxiv.1802.05637}.
 
 \section{GAN Architecture}
 
@@ -25,6 +25,7 @@ The following figure illustrates the GAN architecture, where the generator produ
     \label{fig:GAN_structure}
 \end{figure}
 
+
 \section{Objective Function of GAN}
 
 The training of GANs involves optimizing two neural networks simultaneously through a minimax game. The objective function is defined as follows:
@@ -32,24 +33,48 @@ The training of GANs involves optimizing two neural networks simultaneously thro
 \begin{equation}
     \min_{G} \max_{D} V(D, G) = \mathbb{E}_{x \sim p_{data}(x)} [\log D(x)] + \mathbb{E}_{z \sim p_{z}(z)} [\log(1 - D(G(z)))].
 \end{equation}
-
-Where:
+where :
 \begin{itemize}
-    \item \(z \sim p_z(z)\): A noise vector sampled from a predefined distribution, often Gaussian or uniform.
-    \item \(x \sim p_{data}(x)\): A sample drawn from the real data distribution.
-    \item \(D(x)\): The discriminator’s prediction that the input \(x\) is real.
-    \item \(D(G(z))\): The discriminator’s prediction that the generated data \(G(z)\) is real.
+    \item \(z \sim p_z(z)\): The distribution from which the noise \(z\) is sampled. The generator transforms this noise into complex, high-dimensional data.
+    \item \(x \sim p_{data}(x)\): A sample \(x\) drawn from the true data distribution \(p_{data}(x)\).
+    \item \(D(G(z))\): The discriminator's prediction for generated data \(G(z)\).
+    \item \(D(x)\): The discriminator's prediction for real data \(x\).
+    \item \(\mathbb{E}_{x \sim p_{data}(x)}[\log D(x)]\): The expectation of \(\log D(x)\) over the real data distribution.
+    \item \(\mathbb{E}_{z \sim p_z(z)}[\log(1 - D(G(z)))]\): The expectation of \(\log(1 - D(G(z)))\) over the noise distribution.
 \end{itemize}
 
-The discriminator’s goal is to maximize the objective function, thereby improving its ability to classify real data as real and generated data as fake \citep{10.1109/taslp.2017.2761547}. Conversely, the generator seeks to minimize the same function, aiming to produce synthetic data \(G(z)\) that fools the discriminator into classifying it as real \citep{10.48550/arxiv.1802.05637}.
+\subsection{Discriminator's Loss Function}
 
-In practice, a modified version of the generator’s objective is often used to address the vanishing gradient problem, leading to the following alternative objective function for the generator \citep{10.48550/arxiv.1802.05637}:
+The discriminator’s loss function measures its ability to distinguish between real and generated data. It is expressed as:
 
 \begin{equation}
-    \min_{G} V(G) = \mathbb{E}_{z \sim p_z(z)} [-\log D(G(z))].
+    \label{eq:discriminator_loss}
+    \mathcal{L}_D = -\mathbb{E}_{x \sim p_{\text{data}}(x)} [\log D(x)] - \mathbb{E}_{z \sim p_z(z)} [\log(1 - D(G(z)))].
 \end{equation}
 
-This alternative formulation ensures that the generator continues to receive meaningful gradient updates, even when the discriminator becomes highly accurate. This allows for more stable training of the generator during adversarial training \citep{10.1007/s10928-021-09787-4}.
+The discriminator minimizes this loss function to improve its ability to classify real and generated data correctly.
+
+\subsection{Generator's Loss Function}
+
+The generator’s loss function is designed to encourage it to generate data that can fool the discriminator. It is given by:
+
+\begin{equation}
+    \label{eq:generator_loss}
+    \mathcal{L}_G = -\mathbb{E}_{z \sim p_z(z)} [\log D(G(z))].
+\end{equation}
+
+The generator minimizes this loss function to produce data that the discriminator classifies as real.
+
+\subsection{Modification for Vanishing Gradient Problem}
+
+To address the vanishing gradient problem during GAN training, the generator’s loss is often modified. The original form \(\log(1 - D(G(z)))\) can result in small gradients when the discriminator accurately identifies fake data. Therefore, the alternative loss function for the generator is:
+
+\begin{equation}
+    \label{eq:new_generator_loss}
+    \mathcal{L}_G = \mathbb{E}_{z \sim p_z(z)} [-\log(D(G(z)))].
+\end{equation}
+
+This modification ensures larger gradients and more stable training.
 
 \begin{figure}[H]
     \centering
@@ -58,7 +83,6 @@ This alternative formulation ensures that the generator continues to receive mea
     \label{fig:log_function}
 \end{figure}
 
-The replacement of $\log(1 - D(G(z)))$ with $-\log(D(G(z)))$ is crucial for addressing the vanishing gradient problem during GAN training \citep{10.1007/s10928-021-09787-4}.
 
 
 \section{GAN Training Process}
