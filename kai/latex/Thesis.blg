@@ -3,9 +3,6 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Thesis.aux
 The style file: unsrt.bst
 Database file #1: References.bib
-Warning--I didn't find a database entry for "ho2020denoising"
-Warning--I didn't find a database entry for "nichol2021improved"
-Warning--I didn't find a database entry for "chen2020wavegrad"
 Warning--empty journal in 10.48550/arxiv.1704.00028
 Warning--empty journal in 10.48550/arxiv.1711.00658
 Warning--empty journal in 10.48550/arxiv.2110.11271
@@ -15,51 +12,66 @@ Warning--empty journal in 10.48550/arxiv.2101.03288
 Warning--empty journal in 10.48550/arxiv.2002.10464
 Warning--empty journal in 10.48550/arxiv.1909.13062
 Warning--empty journal in 10.48550/arxiv.2106.06500
+Warning--empty journal in 10.48550/arxiv.2105.05233
+Warning--empty journal in 10.48550/arxiv.2009.09761
+Warning--empty journal in 10.48550/arxiv.2206.05564
+Warning--empty journal in 10.48550/arxiv.2201.11972
+Warning--empty journal in 10.48550/arxiv.2211.00611
+Warning--empty journal in 10.48550/arxiv.2201.00308
+Warning--empty journal in 10.48550/arxiv.1910.04302
+Warning--empty journal in 10.48550/arxiv.2207.01561
+Warning--empty journal in 10.48550/arxiv.2207.12598
+Warning--empty journal in 10.48550/arxiv.2010.02502
+Warning--empty journal in 10.48550/arxiv.2111.15640
+Warning--empty journal in 10.48550/arxiv.2101.02388
+Warning--empty journal in 10.48550/arxiv.2211.07804
+Warning--empty journal in 10.48550/arxiv.2011.13456
+Warning--empty journal in 10.1109/cvpr52688.2022.01117
 Warning--empty journal in 10.48550/arxiv.1802.05637
 Warning--empty journal in goodfellow2014generative
 Warning--empty journal in 10.48550/arxiv.2203.06026
 Warning--empty journal in 10.1117/12.2673366
 Warning--empty journal in 10.48550/arxiv.1703.10717
 Warning--empty journal in 10.48550/arxiv.2002.02112
-You've used 27 entries,
+You've used 51 entries,
             1791 wiz_defined-function locations,
-            569 strings with 8161 characters,
-and the built_in function-call counts, 5276 in all, are:
-= -- 380
-> -- 362
+            661 strings with 11709 characters,
+and the built_in function-call counts, 9791 in all, are:
+= -- 714
+> -- 649
 < -- 0
-+ -- 131
-- -- 104
-* -- 348
-:= -- 955
-add.period$ -- 81
-call.type$ -- 27
-change.case$ -- 27
++ -- 237
+- -- 186
+* -- 630
+:= -- 1760
+add.period$ -- 153
+call.type$ -- 51
+change.case$ -- 51
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 226
-empty$ -- 458
-format.name$ -- 104
-if$ -- 1101
+cite$ -- 81
+duplicate$ -- 426
+empty$ -- 863
+format.name$ -- 186
+if$ -- 2051
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 27
-newline$ -- 138
-num.names$ -- 27
-pop$ -- 89
+int.to.str$ -- 51
+missing$ -- 51
+newline$ -- 258
+num.names$ -- 51
+pop$ -- 173
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 83
+skip$ -- 157
 stack$ -- 0
-substring$ -- 177
-swap$ -- 12
+substring$ -- 336
+swap$ -- 21
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 15
-while$ -- 37
-width$ -- 29
-write$ -- 268
-(There were 18 warnings)
+warning$ -- 30
+while$ -- 69
+width$ -- 53
+write$ -- 502
+(There were 30 warnings)

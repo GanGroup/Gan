@@ -160,7 +160,9 @@ One notable limitation of VAEs is their difficulty in modeling discrete data. Si
 
 \section{Diffusion Models}
 
-Diffusion models are the most recent advancement in generative models, first introduced in the early 2020s. These models take a different approach by progressively adding noise to data and then learning to reverse the process, effectively "denoising" the noisy data back into its original form.
+Diffusion models, emerging in the early 2020s, offer a significant advancement in generative modeling. These models add noise to data in a progressive manner and then learn to reverse this process, effectively "denoising" it back to its original form. This iterative process distinguishes diffusion models from traditional approaches like GANs and VAEs \citep{10.48550/arxiv.2105.05233}.
+
+The core idea relies on a Markov chain, where noise is added in the forward process, starting from a simple distribution (e.g., Gaussian), and reversed through a learned denoising mechanism \citep{10.48550/arxiv.2009.09761}\citep{10.48550/arxiv.2206.05564}. This method has proven effective in generating high-quality samples across domains such as image synthesis, audio generation, and medical imaging \citep{10.48550/arxiv.2201.11972}\citep{10.48550/arxiv.2211.00611}, often surpassing GANs in benchmarks \citep{10.48550/arxiv.2105.05233}\citep{10.48550/arxiv.2201.00308}.
 
 The process involves two key steps, as shown in Figure~\ref{fig:Diffusion_structure}:
 \begin{itemize}
@@ -228,28 +230,33 @@ Where:
 
 \subsection{Comparison with GANs}
 
-Diffusion models differ significantly from Generative Adversarial Networks (GANs) in both training dynamics and generated data quality. One of the key advantages of diffusion models is their training stability. While GANs often suffer from issues like mode collapse and unstable training due to the adversarial nature of training two competing networks (generator and discriminator), diffusion models employ a simpler training process by learning to reverse the noise addition without requiring a discriminator \citep{ho2020denoising}.
+Diffusion models and Generative Adversarial Networks (GANs) represent two distinct approaches in generative modeling, each with its strengths and weaknesses. A key advantage of diffusion models is their training stability. Unlike GANs, which often suffer from unstable dynamics due to the adversarial competition between the generator and discriminator, diffusion models follow a simpler, noise-reversal process that avoids these issues \citep{10.1109/access.2023.3272032}. This stability helps diffusion models avoid problems like mode collapse, where GANs fail to capture the diversity of the data distribution \citep{10.1049/ipr2.12487}, \citep{10.3390/e25121657}.
 
-Furthermore, diffusion models can generate high-quality and diverse samples by progressively denoising data, allowing for more controlled sample generation. In contrast, GANs tend to generate sharper but sometimes less diverse images due to the tendency of the generator to overfit to certain modes of the data distribution. Diffusion models, by their nature, ensure a gradual reconstruction from noise, which can avoid some of the issues of GANs \citep{nichol2021improved}.
+Diffusion models also excel in generating diverse, high-quality samples through a gradual denoising process, allowing for controlled generation \citep{10.1117/1.jei.32.4.043029}. In contrast, GANs tend to produce sharper but less diverse images, often overfitting to specific modes of the data \citep{10.48550/arxiv.1910.04302}, \citep{10.48550/arxiv.2207.01561}. This trade-off between sharpness and diversity is a known limitation of GANs \citep{10.1111/rssb.12476}.
 
-However, GANs are often preferred for tasks requiring very sharp and realistic images, especially in high-resolution image synthesis. Diffusion models, while generally producing realistic images, may not always match the sharpness achieved by GANs in certain domains, particularly in tasks like photorealistic image generation.
-
+However, GANs remain preferred for tasks requiring extremely high-resolution and photorealistic images, such as human face generation, where they outperform diffusion models in terms of detail and realism \citep{10.54254/2755-2721/18/20230984}, \citep{10.3390/e22091055}.
 \subsection{Applications of Diffusion Models}
 
 Diffusion models have found a wide range of applications, especially in fields where stability and quality of generation are important. Some notable applications include:
 \begin{itemize}
-    \item \textbf{Image Generation}: Diffusion models have proven effective in generating photorealistic images, similar to GANs, but with more stable training dynamics.
-    \item \textbf{Text-to-Image Generation}: Recent advancements have applied diffusion models to text-to-image synthesis, where a text prompt is converted into a corresponding image. These models can produce diverse outputs based on input descriptions.
-    \item \textbf{Speech Synthesis}: Diffusion models have also been applied to generating high-quality audio data. For example, they are used in text-to-speech systems to generate realistic human speech \citep{chen2020wavegrad}.
-    \item \textbf{Anomaly Detection}: Similar to VAEs, diffusion models can be used to detect anomalies by evaluating how well a noisy sample can be denoised. Poor reconstructions may indicate that the input is anomalous or different from the training data.
+    \item \textbf{Image Generation}: Diffusion models have proven effective in generating photorealistic images, similar to GANs, but with more stable training dynamics. Recent innovations, such as classifier-free guidance, have further enhanced the quality of generated samples by allowing the model to generate data without relying on an explicit classifier \citep{10.48550/arxiv.2207.12598}.
+    \item \textbf{Text-to-Image Generation}: Advancements in diffusion models have also been applied to text-to-image synthesis, where a text prompt is converted into a corresponding image. These models can produce diverse outputs based on input descriptions. Additionally, techniques like Denoising Diffusion Implicit Models (DDIMs) have accelerated the sampling process, making diffusion models more practical for real-time applications \citep{10.48550/arxiv.2010.02502}\citep{10.48550/arxiv.2111.15640}.
+    \item \textbf{Speech Synthesis}: Diffusion models have been applied to generating high-quality audio data. For example, they are used in text-to-speech systems to generate realistic human speech. These models have demonstrated remarkable performance in generating high-fidelity audio outputs \citep{10.48550/arxiv.2201.11972}\citep{10.48550/arxiv.2009.09761}.
+    \item \textbf{Anomaly Detection and Medical Imaging}: Similar to VAEs, diffusion models can be used to detect anomalies by evaluating how well a noisy sample can be denoised. Poor reconstructions may indicate that the input is anomalous or different from the training data. Diffusion models have also been applied in medical image segmentation tasks, such as the MedSegDiff model, which enhances segmentation by leveraging diffusion processes \citep{10.48550/arxiv.2211.00611}. These models have shown their ability to handle complex data structures, proving their versatility across different domains.
 \end{itemize}
 
+Recent innovations in diffusion models have further enhanced their applicability and efficiency. By reducing the computational burden associated with the iterative sampling process, models like DDIMs maintain the generative capabilities of traditional diffusion models while improving their practicality for real-time applications \citep{10.48550/arxiv.2101.02388}.
 \subsection{Limitations of Diffusion Models}
 
-Despite their advantages, diffusion models have several limitations:
+Despite the significant advancements that diffusion models have brought to generative modeling, they are not without limitations, which can be categorized into three primary areas: computational intensity, generation speed, and sample sharpness.
+
 \begin{itemize}
-    \item \textbf{Computationally Intensive}: One of the primary drawbacks of diffusion models is that they are computationally expensive. The iterative process of adding and removing noise requires significantly more computation compared to GANs, which generate data in a single forward pass through the generator \citep{ho2020denoising}.
-    \item \textbf{Generation Speed}: Diffusion models are slower than GANs in terms of sample generation. Since the process involves multiple time steps (often hundreds or even thousands), generating a single sample can take much longer compared to GANs, which generate samples almost instantaneously.
-    \item \textbf{Sample Sharpness}: Although diffusion models tend to produce more diverse outputs compared to GANs, the sharpness of the generated images may not always match the high-quality, photorealistic outputs that GANs can achieve, especially in tasks that require very fine details.
+    \item \textbf{Computationally Intensive}: Diffusion models are computationally expensive due to their iterative nature, which involves progressively adding and removing noise from data. This process requires significantly more computational resources compared to GANs, which generate data in a single forward pass through the generator \citep{10.1109/msp.2017.2765202}\citep{10.1145/3422622}. This computational burden can limit their practical use, especially in scenarios requiring rapid generation \citep{10.48550/arxiv.2211.07804}.
+    
+    \item \textbf{Generation Speed}: Diffusion models are slower than GANs in terms of sample generation. Producing a single sample often requires hundreds or even thousands of time steps, significantly increasing the generation time compared to the near-instantaneous output of GANs \citep{10.48550/arxiv.2011.13456}\citep{10.48550/arxiv.2010.02502}. This can be a critical drawback in real-time applications.
+    
+    \item \textbf{Sample Sharpness}: While diffusion models generate diverse outputs, they may not always match the photorealism and fine detail achieved by GANs, especially in tasks requiring intricate details \citep{10.48550/arxiv.2105.05233}\citep{10.1109/cvpr52688.2022.01117}. This can affect their suitability for applications such as high-resolution image generation or medical imaging \citep{10.48550/arxiv.2211.07804}.
 \end{itemize}
+
+
 

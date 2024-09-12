@@ -90,6 +90,126 @@ X.~Bie, L.~Girin, S.~Leglaive, T.~Hueber, and X.~Alameda-Pineda.
 \newblock A benchmark of dynamical variational autoencoders applied to speech spectrogram modeling.
 \newblock 2021.
 
+\bibitem{10.48550/arxiv.2105.05233}
+P.~Dhariwal.
+\newblock Diffusion models beat gans on image synthesis.
+\newblock 2021.
+
+\bibitem{10.48550/arxiv.2009.09761}
+Z.~Kong.
+\newblock Diffwave: a versatile diffusion model for audio synthesis.
+\newblock 2020.
+
+\bibitem{10.48550/arxiv.2206.05564}
+Q.~Zhang, M.~Tao, and Y.~Chen.
+\newblock Gddim: generalized denoising diffusion implicit models.
+\newblock 2022.
+
+\bibitem{10.48550/arxiv.2201.11972}
+S.~Liu, D.~Su, and D.~Yu.
+\newblock Diffgan-tts: high-fidelity and efficient text-to-speech with denoising diffusion gans.
+\newblock 2022.
+
+\bibitem{10.48550/arxiv.2211.00611}
+J.~Wu, H.~Fang, Y.~Yang, and Y.~Xu.
+\newblock Medsegdiff: medical image segmentation with diffusion probabilistic model.
+\newblock 2022.
+
+\bibitem{10.48550/arxiv.2201.00308}
+K.~Pandey, A.~Mukherjee, P.~Rai, and A.~Kumar.
+\newblock Diffusevae: efficient, controllable and high-fidelity generation from low-dimensional latents.
+\newblock 2022.
+
+\bibitem{10.1109/access.2023.3272032}
+M.~Fathallah, M.~Sakr, and S.~El-etriby.
+\newblock Stabilizing and improving training of generative adversarial networks through identity blocks and modified loss function.
+\newblock {\em Ieee Access}, 11:43276--43285, 2023.
+
+\bibitem{10.1049/ipr2.12487}
+J.~Mu, C.~Chen, W.~Zhu, S.~Li, and Y.~Zhou.
+\newblock Taming mode collapse in generative adversarial networks using cooperative realness discriminators.
+\newblock {\em Iet Image Processing}, 16:2240--2262, 2022.
+
+\bibitem{10.3390/e25121657}
+Y.~Zou.
+\newblock Auto-encoding generative adversarial networks towards mode collapse reduction and feature representation enhancement.
+\newblock {\em Entropy}, 25:1657, 2023.
+
+\bibitem{10.1117/1.jei.32.4.043029}
+Y.~Gong, Z.~Ming, J.~Yang, M.~Xie, and X.~Ma.
+\newblock Distribution constraining for combating mode collapse in generative adversarial networks.
+\newblock {\em Journal of Electronic Imaging}, 32, 2023.
+
+\bibitem{10.48550/arxiv.1910.04302}
+A.~Dieng.
+\newblock Prescribed generative adversarial networks.
+\newblock 2019.
+
+\bibitem{10.48550/arxiv.2207.01561}
+J.~Dubinski, K.~Deja, S.~Wenzel, P.~Rokita, and T.~Trzciński.
+\newblock Selectively increasing the diversity of gan-generated samples.
+\newblock 2022.
+
+\bibitem{10.1111/rssb.12476}
+Y.~Chen, Q.~Gao, and W.~Xiao.
+\newblock Inferential wasserstein generative adversarial networks.
+\newblock {\em Journal of the Royal Statistical Society Series B (Statistical Methodology)}, 84:83--113, 2021.
+
+\bibitem{10.54254/2755-2721/18/20230984}
+H.~Zhu.
+\newblock Comparison of deep convolutional gan and progressive gan for facial image generation.
+\newblock {\em Applied and Computational Engineering}, 18:165--171, 2023.
+
+\bibitem{10.3390/e22091055}
+H.~Zhao, T.~Li, Y.~Xiao, and Y.~Wang.
+\newblock Improving multi-agent generative adversarial nets with variational latent representation.
+\newblock {\em Entropy}, 22:1055, 2020.
+
+\bibitem{10.48550/arxiv.2207.12598}
+J.~Ho and T.~Salimans.
+\newblock Classifier-free diffusion guidance.
+\newblock 2022.
+
+\bibitem{10.48550/arxiv.2010.02502}
+J.~Song, C.~Meng, and S.~Ermon.
+\newblock Denoising diffusion implicit models.
+\newblock 2020.
+
+\bibitem{10.48550/arxiv.2111.15640}
+K.~Preechakul, N.~Chatthee, S.~Wizadwongsa, and S.~Suwajanakorn.
+\newblock Diffusion autoencoders: toward a meaningful and decodable representation.
+\newblock 2021.
+
+\bibitem{10.48550/arxiv.2101.02388}
+E.~Luhman.
+\newblock Knowledge distillation in iterative generative models for improved sampling speed.
+\newblock 2021.
+
+\bibitem{10.1109/msp.2017.2765202}
+A.~Creswell, T.~White, V.~Dumoulin, K.~Arulkumaran, B.~Sengupta, and A.~A. Bharath.
+\newblock Generative adversarial networks: an overview.
+\newblock {\em IEEE Signal Processing Magazine}, 35:53--65, 2018.
+
+\bibitem{10.1145/3422622}
+I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair, A.~Courville, and Y.~Bengio.
+\newblock Generative adversarial networks.
+\newblock {\em Communications of the Acm}, 63:139--144, 2020.
+
+\bibitem{10.48550/arxiv.2211.07804}
+A.~Kazerouni, E.~Aghdam, M.~Heidari, R.~Azad, M.~Fayyaz, I.~Hacihaliloglu, and D.~Merhof.
+\newblock Diffusion models for medical image analysis: a comprehensive survey.
+\newblock 2022.
+
+\bibitem{10.48550/arxiv.2011.13456}
+Y.~Song.
+\newblock Score-based generative modeling through stochastic differential equations.
+\newblock 2020.
+
+\bibitem{10.1109/cvpr52688.2022.01117}
+A.~Lugmayr, M.~Danelljan, A.~Romero, F.~Yu, R.~Timofte, and L.~Gool.
+\newblock Repaint: inpainting using denoising diffusion probabilistic models.
+\newblock 2022.
+
 \bibitem{10.1007/s10928-021-09787-4}
 J.~Parikh, T.~Rumbell, X.~Butova, T.~Myachina, J.~Acero, S.~Khamzin, O.~Solovyova, J.~Kozloski, A.~Khokhlova, and V.~Gurev.
 \newblock Generative adversarial networks for construction of virtual populations of mechanistic models: simulations to study omecamtiv mecarbil action.
