@@ -2,7 +2,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces NCE Architecture.\relax }}{9}{figure.caption.6}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces VAE Architecture.\relax }}{13}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diffusion model Architecture.\relax }}{17}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diffusion Model Architecture.\relax }}{17}{figure.caption.8}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces GAN Architecture.\relax }}{22}{figure.caption.9}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Comparison of $\log (1 - D)$ and $-\log (D)$.\relax }}{23}{figure.caption.10}%
