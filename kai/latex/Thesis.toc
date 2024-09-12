@@ -1,38 +1,39 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Historical Models of Image Generation}{7}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Historical Models of Image Generation}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Noise Contrastive Estimation (NCEs)}{8}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}NCE Structure}{9}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}NCE Objective Function}{10}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Comparison with GANs}{11}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Applications of NCE}{12}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Limitations of NCE}{13}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}Variational Autoencoders (VAEs)}{13}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}VAE Structure}{14}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}VAE Objective Function}{14}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Comparison with GANs}{15}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Applications of VAEs}{16}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Limitations of VAEs}{16}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Diffusion Models}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Diffusion Model Structure}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Diffusion Model Objective Function}{18}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Comparison with GANs}{19}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Applications of Diffusion Models}{19}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Limitations of Diffusion Models}{20}{subsection.3.3.5}%
-\contentsline {chapter}{\numberline {4}Theoretical Background}{22}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Objective Function of GAN}{22}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Training Process of GAN}{25}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Distribution Changes During GAN Training}{26}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Mathematical Formulation Changes During GAN Training}{27}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Evaluating GAN Performance}{30}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Limitations of Accuracy in Evaluating GANs}{31}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Results}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Standard GAN Versus Other GAN Realizations}{33}{section.5.1}%
-\contentsline {section}{\numberline {5.2}GAN With Convolutional or Dense layers}{34}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Exploring Layer Depth}{38}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Impact of Data Augmentation on Model Performance}{39}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Applying the Model to the Animal Faces-HQ Dataset}{40}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Model Structure and Training}{40}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Generated Results}{43}{subsection.5.5.2}%
-\contentsline {section}{\numberline {5.6}Discussion}{45}{section.5.6}%
-\contentsline {chapter}{\numberline {A}Code}{47}{appendix.A}%
+\contentsline {section}{\numberline {2.1}Noise Contrastive Estimation (NCEs)}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}NCE Architecture}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}NCE Objective Function}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Comparison with GANs}{10}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Applications of NCE}{11}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Limitations of NCE}{12}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Variational Autoencoders (VAEs)}{12}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}VAE Architecture}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}VAE Objective Function}{13}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Comparison with GANs}{14}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Applications of VAEs}{15}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Limitations of VAEs}{15}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Diffusion Models}{16}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Diffusion Model Architecture}{16}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Diffusion Model Objective Function}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Comparison with GANs}{18}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Applications of Diffusion Models}{18}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Limitations of Diffusion Models}{19}{subsection.2.3.5}%
+\contentsline {chapter}{\numberline {3}Theoretical Background}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Generative Adversarial Networks (GANs)}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}GAN Architecture}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Objective Function of GAN}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.4}GAN Training Process}{24}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Distribution Changes During GAN Training}{24}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Mathematical Formulation during GAN Training}{26}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Evaluating GAN Performance}{29}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Limitations of Accuracy in Evaluating GANs}{30}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Results}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Standard GAN Versus Other GAN Realizations}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}GAN With Convolutional or Dense layers}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Exploring Layer Depth}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Impact of Data Augmentation on Model Performance}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Applying the Model to the Animal Faces-HQ Dataset}{39}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Model Structure and Training}{39}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Generated Results}{42}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Discussion}{44}{section.4.6}%
+\contentsline {chapter}{\numberline {A}Code}{46}{appendix.A}%

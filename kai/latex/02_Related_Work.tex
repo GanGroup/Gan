@@ -1,7 +1,5 @@
 \chapter{Historical Models of Image Generation}
 
-\chapter{Historical Models of Image Generation}
-
 In this chapter, I aim to provide an overview of three important generative modeling techniques: Noise Contrastive Estimation (NCE), Variational Autoencoders (VAEs), and Diffusion Models. These models have each played a significant role in the evolution of generative modeling and continue to influence modern approaches in the field. 
 
 \section{Noise Contrastive Estimation (NCEs)}
@@ -10,13 +8,13 @@ Noise Contrastive Estimation (NCE) was introduced in 2010 by Gutmann and Hyväri
 
 The core idea behind NCE is to treat MLE as a binary classification task. Traditionally, training models for unnormalized probability distributions using MLE involves calculating the partition function, which can be computationally infeasible for large datasets. NCE mitigates this difficulty by incorporating noise samples drawn from a known distribution. The model is then trained to differentiate between real data and noise samples, with higher probabilities assigned to real data and lower probabilities to noise. This approach allows the model to learn the data distribution without the need for explicit normalization \citep{10.48550/arxiv.2110.11271}.
 
-\subsection{NCE Structure}
+\subsection{NCE Architecture}
 In NCE, the likelihood of a data point \( x \) is reformulated as the probability that it comes from the real data distribution rather than from the noise distribution. As depicted in Figure~\ref{fig:NCE_structure}, the architecture of a typical NCE model includes an input layer, a hidden layer, and an output layer. The input layer receives both real and noise samples, while the hidden layer learns representations of these samples. The output layer functions as a binary classifier, producing probabilities that indicate whether a given sample is real or noise.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{./Images/NCE_structure.jpg}
-    \caption{NCE architecture showing the input, hidden, and output layers.}
+    \caption{NCE Architecture.}
     \label{fig:NCE_structure}
 \end{figure}
 
@@ -88,7 +86,7 @@ While NCE has proven to be a powerful estimation technique, it is not without li
 
 Variational Autoencoders (VAEs), introduced in 2013, represent one of the foundational approaches to generative modeling. The primary goal of VAEs is to model the underlying distribution of data by learning a compressed latent representation, denoted as \(z\), from the input data \(x\).
 
-\subsection{VAE Structure}
+\subsection{VAE Architecture}
 VAEs consist of two main components: an encoder and a decoder. The encoder maps input data into a latent space, where the latent variables are generally assumed to follow a Gaussian distribution. This assumption simplifies the training process and enables techniques such as the reparameterization trick, which facilitates backpropagation through stochastic layers \citep{10.1561/2200000056}. The decoder then reconstructs the input data from the latent variables, ensuring that the essential characteristics of the data distribution are captured.
 
 As illustrated in Figure~\ref{fig:VAE_structure}, the VAE architecture comprises:
@@ -100,7 +98,7 @@ As illustrated in Figure~\ref{fig:VAE_structure}, the VAE architecture comprises
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{./Images/VAE_structure.jpg}
-    \caption{VAE structure, showing the encoder and decoder processes.}
+    \caption{VAE Architecture.}
     \label{fig:VAE_structure}
 \end{figure}
 
@@ -154,7 +152,7 @@ Despite these challenges, VAEs remain a foundational tool in generative modeling
 
 Diffusion models, emerging in the early 2020s, represent a significant advancement in generative modeling. These models progressively add noise to data and then learn to reverse this process, effectively "denoising" it back to its original form. This iterative process distinguishes diffusion models from traditional approaches like GANs and VAEs \citep{10.48550/arxiv.2105.05233}.
 
-\subsection{Diffusion Model Structure}
+\subsection{Diffusion Model Architecture}
 
 The core idea behind diffusion models relies on a Markov chain where noise is added in the forward process, starting from a simple distribution (e.g., Gaussian), and reversed through a learned denoising mechanism \citep{10.48550/arxiv.2009.09761}, \citep{10.48550/arxiv.2206.05564}. This approach has proven effective in generating high-quality samples across various domains, such as image synthesis, audio generation, and medical imaging \citep{10.48550/arxiv.2201.11972}, \citep{10.48550/arxiv.2211.00611}. In several benchmarks, diffusion models have outperformed GANs \citep{10.48550/arxiv.2105.05233}, \citep{10.48550/arxiv.2201.00308}.
 
@@ -167,7 +165,7 @@ The process involves two key steps, as shown in Figure~\ref{fig:Diffusion_struct
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{./Images/Diffusion_structure.jpg}
-    \caption{Diffusion model structure showing the forward and reverse processes.}
+    \caption{Diffusion model Architecture.}
     \label{fig:Diffusion_structure}
 \end{figure}
 

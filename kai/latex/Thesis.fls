@@ -948,6 +948,11 @@ INPUT 03_Theoretical_Background.tex
 INPUT ./03_Theoretical_Background.tex
 INPUT ./03_Theoretical_Background.tex
 INPUT 03_Theoretical_Background.tex
+INPUT ./Images/GAN_structure.jpg
+INPUT ./Images/GAN_structure.jpg
+INPUT ./Images/GAN_structure.jpg
+INPUT ./Images/GAN_structure.jpg
+INPUT ./Images/GAN_structure.jpg
 INPUT ./Images/log_gunction.jpg
 INPUT ./Images/log_gunction.jpg
 INPUT ./Images/log_gunction.jpg
