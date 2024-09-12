@@ -39,4 +39,4 @@
 \contentsline {subsection}{\numberline {4.5.1}Model Structure and Training}{39}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Generated Results}{42}{subsection.4.5.2}%
 \contentsline {section}{\numberline {4.6}Discussion}{44}{section.4.6}%
-\contentsline {chapter}{\numberline {A}Code}{46}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Appendix}{46}{appendix.A}%
