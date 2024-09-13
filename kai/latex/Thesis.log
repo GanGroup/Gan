@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  13 SEP 2024 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  13 SEP 2024 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -609,16 +609,6 @@ Package pdftex.def Info: ./Images/Diffusion_structure.jpg  used on input line 16
 (pdftex.def)             Requested size: 350.99762pt x 107.25026pt.
  [17] [18 <./Images/Diffusion_structure.jpg>] [19] [20]) [21] (./03_Theoretical_Background.tex
 Chapter 3.
-
-Overfull \hbox (8.98755pt too wide) in paragraph at lines 3--4
-\OT1/cmr/m/n/12 This chap-ter pro-vides an overview of Gen-er-a-tive Ad-ver-sar-ial Net-works (GANs),
- []
-
-
-Overfull \hbox (5.44388pt too wide) in paragraph at lines 7--7
-[]\OT1/cmr/bx/n/17.28 Generative Ad-ver-sar-ial Net-works (GANs) 
- []
-
 [22
 
 ]
@@ -645,37 +635,37 @@ Overfull \hbox (77.99881pt too wide) in paragraph at lines 107--113
  []
 
 [26 <./Images/data_distribution.jpg>] [27] [28]
-Overfull \hbox (56.78545pt too wide) detected at line 211
+Overfull \hbox (36.2439pt too wide) detected at line 210
 [][][]\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D[]; G\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/12 dx:
  []
 
 
-Overfull \hbox (36.2439pt too wide) detected at line 223
+Overfull \hbox (36.2439pt too wide) detected at line 222
 [][][]\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D[]; G\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/12 dx:
  []
 
 [29] [30]
-Overfull \hbox (26.97583pt too wide) in paragraph at lines 282--282
-[]\OT1/cmr/bx/n/17.28 Limitations of Ac-cu-racy in Eval-u-at-ing GANs 
+Overfull \hbox (19.30782pt too wide) in paragraph at lines 277--277
+[]\OT1/cmr/bx/n/17.28 Limitations of Ac-cu-racy in Eval-u-at-ing GAN 
  []
 
 <./Images/model_accuracy.jpg, id=602, 1089.06876pt x 369.38pt>
 File: ./Images/model_accuracy.jpg Graphic file (type jpg)
 <use ./Images/model_accuracy.jpg>
-Package pdftex.def Info: ./Images/model_accuracy.jpg  used on input line 294.
+Package pdftex.def Info: ./Images/model_accuracy.jpg  used on input line 288.
 (pdftex.def)             Requested size: 467.99881pt x 158.72884pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 294--295
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 288--289
  [][] 
  []
 
 <./Images/generate_images.jpg, id=603, 920.43875pt x 250.9375pt>
 File: ./Images/generate_images.jpg Graphic file (type jpg)
 <use ./Images/generate_images.jpg>
-Package pdftex.def Info: ./Images/generate_images.jpg  used on input line 301.
+Package pdftex.def Info: ./Images/generate_images.jpg  used on input line 295.
 (pdftex.def)             Requested size: 467.99881pt x 127.59352pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 301--302
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 295--296
  [][] 
  []
 
@@ -800,7 +790,7 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 615E9F1AC31A8A59D1E279EF2D356B2E;8289.
+(rerunfilecheck)             Checksum: 5A7B07E26768F2FC8D875334D2B2A21D;8274.
  ) 
 Here is how much of TeX's memory you used:
  18580 strings out of 476025
@@ -811,7 +801,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  75i,17n,100p,1228b,2250s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Thesis.pdf (115 pages, 4826464 bytes).
+Output written on Thesis.pdf (115 pages, 4826396 bytes).
 PDF statistics:
  3494 PDF objects out of 3580 (max. 8388607)
  3272 compressed objects within 33 object streams
