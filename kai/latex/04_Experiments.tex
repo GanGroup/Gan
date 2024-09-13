@@ -1,4 +1,4 @@
-\chapter{Results and Disscussion}
+\chapter{Results and Discussion}
 \label{Experiments}
 
 This chapter details the numerical processes undertaken to evaluate the performance of various GAN 
@@ -9,41 +9,40 @@ in generating high-quality images.
 
 
 \section{Standard GAN Versus Other GAN Realizations}
-Approximately a decade has passed since Goodfellow introduced Generative Adversarial Networks (GANs), 
+Approximately a decade has passed since Goodfellow introduced Generative Adversarial Network (GAN), 
 during which numerous variants of GAN models have been developed. For the purpose of this study, 
-I have selected seven distinct GAN models for examination and minimal implementation: Standard GANs, 
-Conditional GANs, Auxiliary Classifier GANs, Cycle GANs, Domain Transfer Network GANs, Coupled GANs, 
-and Style GANs. Based on their foundational nature, extensive research and documentation, training and 
-implementation efficiency, and flexibility and versatility, Standard GANs were selected for this study. 
+I have selected seven distinct GAN models for examination and minimal implementation: Standard GAN, 
+Conditional GAN, Auxiliary Classifier GAN, Cycle GAN, Domain Transfer Network GAN, Coupled GAN, 
+and Style GAN. Based on their foundational nature, extensive research and documentation, training and 
+implementation efficiency, and flexibility and versatility, Standard GAN was selected for this study. 
 The following outlines the reasons for this choice.
 
 
 \begin{enumerate}
-    \item Foundational Nature: Standard GANs, introduced by Ian Goodfellow et al. in 2014, serve as the 
+    \item Foundational Nature: Standard GAN, introduced by Ian Goodfellow et al. in 2014, serves as the 
     foundational model for all subsequent GAN variants. Understanding the principles and mechanics of 
-    Standard GANs is crucial for comprehending more complex versions like Conditional GANs, Cycle GANs, 
-    and Style GANs. By focusing on the Standard GAN, this study lays a solid foundation for exploring more advanced models.
+    Standard GAN is crucial for comprehending more complex versions like Conditional GAN, Cycle GAN, 
+    and Style GAN. By focusing on the Standard GAN, this study lays a solid foundation for exploring more advanced models.
 
-    \item Widely Studied and Well-Documented: Standard GANs have been extensively researched, with a 
+    \item Widely Studied and Well-Documented: Standard GAN has been extensively researched, with a 
     vast amount of literature available. This wealth of resources provides a robust theoretical 
     background and a variety of implementation strategies, facilitating a more thorough and 
     well-supported analysis. This also means that there is ample precedent for common challenges 
     and solutions, making it easier to troubleshoot and refine the model during the study.
 
     \item Training and Implementation Efficiency: Compared to more complex GAN variants, 
-    Standard GANs typically require less computational power and shorter training times, 
-    making them more accessible for experimentation and analysis. This efficiency allows 
+    Standard GAN typically requires less computational power and shorter training times, 
+    making it more accessible for experimentation and analysis. This efficiency allows 
     for multiple experiments and parameter tuning within the constraints of the study, 
     leading to more reliable and reproducible results.
 
-    \item Flexibility and Versatility: Standard GANs are highly versatile and can be adapted 
-    to a wide range of tasks and datasets. This flexibility makes them an excellent choice for 
+    \item Flexibility and Versatility: Standard GAN is highly versatile and can be adapted 
+    to a wide range of tasks and datasets. This flexibility makes it an excellent choice for 
     a detailed study that may involve exploring various applications or extending the model to new domains.
 \end{enumerate}
 
 
-
-\section{GAN With Convolutional or Dense layers}
+\section{GAN With Convolutional or Dense Layers}
 
 On the MNIST dataset for 3000 epochs, I compared the generated images from two GAN architectures: one using dense layers and the other using convolutional layers (CNN). It was observed that the GAN with the CNN architecture outperformed the dense layer architecture in terms of image quality, producing clearer and more realistic images.
 
@@ -68,7 +67,6 @@ As shown in Figures \ref{fig:gen_architecture} and \ref{fig:disc_architecture}, 
     \label{fig:gen_architecture}
 \end{figure}
 
-
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.45\linewidth}
@@ -88,9 +86,7 @@ As shown in Figures \ref{fig:gen_architecture} and \ref{fig:disc_architecture}, 
     \label{fig:disc_architecture}
 \end{figure}
 
-
 Notably, the dense-layer models contain significantly more parameters compared to the convolutional models. The generator with dense layers has approximately 1.5 million parameters, whereas the convolutional generator has only about 1 million parameters. Similarly, the dense-layer discriminator has over 500,000 parameters, while the convolutional discriminator has only 80,000. Despite the larger parameter size, the dense-layer architectures were less effective in producing high-quality images, highlighting the advantage of convolutional layers in capturing spatial dependencies in the data.
-
 
 \begin{figure}[H]
     \centering
@@ -133,6 +129,8 @@ Notably, the dense-layer models contain significantly more parameters compared t
 Based on the results, the GAN model with convolutional layers demonstrated superior performance in generating high-quality images compared to the dense layer model. As shown in the generated images (Figure \ref{fig:generated_images}), the convolutional GAN produced more coherent and realistic outputs, whereas the dense layer GAN struggled to generate clear and recognizable digits. Additionally, the FID scores, which measure the dissimilarity between generated and real images, further validate this observation. The FID scores for the convolutional GAN (Figure \ref{fig:fid_conv}) are consistently lower across training epochs compared to the dense layer model (Figure \ref{fig:fid_dense}), indicating better quality in the generated images.
 
 Given these results, I selected the standard GAN model with convolutional layers for further experiments, as it not only generated higher-quality images but also used fewer parameters, making it a more efficient and effective choice.
+
+
 \section{Exploring Layer Depth}
 
 In this section, I explored the impact of changing convolutional layers in the generator and discriminator of a GAN.
@@ -140,7 +138,6 @@ In this section, I explored the impact of changing convolutional layers in the g
 Firstly, I trained the basic convolutional GAN model three times and recorded the FID scores. Secondly, based on the basic structure, I gradually added convolutional layers to the generator, from one to three layers, while keeping the discriminator structure fixed. I trained the model three times for each configuration and recorded the FID scores, as shown in Table \ref{tab:fid_scores}.
 
 Finally, using the base GAN with three additional convolutional layers in the generator, I gradually added convolutional layers to the discriminator, from one to three layers, while keeping the generator structure fixed. I trained the model three times for each configuration and recorded the FID scores.
-
 
 \begin{table}[h!]
     \centering
@@ -162,12 +159,10 @@ Finally, using the base GAN with three additional convolutional layers in the ge
 
 Upon comparing, I found that increasing the number of layers in either the generator or the discriminator alone worsened the model’s performance. This imbalance disrupts the dynamic equilibrium between the generator and discriminator in the GAN framework. However, simultaneously increasing the layers in both the generator and the discriminator improved the model’s performance, as demonstrated by the decreasing FID scores with higher layer counts. For example, Table \ref{tab:fid_scores} shows that increasing both the generator and discriminator layers to five results in a significantly lower FID score of 37.09 compared to the unbalanced configurations.
 
-This finding aligns with the concept of maintaining a balance between the generator and discriminator during training, as highlighted in the literature \citep{10.48550/arxiv.1703.10717}. The importance of this balance is crucial for the effective operation of GANs, ensuring stable learning and improved image quality \citep{10.48550/arxiv.2002.02112}.    
-
-
+This finding aligns with the concept of maintaining a balance between the generator and discriminator during training, as highlighted in the literature \citep{10.48550/arxiv.1703.10717}. The importance of this balance is crucial for the effective operation of GAN, ensuring stable learning and improved image quality \citep{10.48550/arxiv.2002.02112}.    
 \section{Impact of Data Augmentation on Model Performance}
 
-The impact of various data augmentation techniques on model performance was evaluated by comparing the average FID scores across different augmentation configurations (Table 4.2). The results indicate that data augmentation generally led to poorer performance in terms of image quality compared to training without any augmentation.
+The impact of various data augmentation techniques on model performance was evaluated by comparing the average FID scores across different augmentation configurations (Table \ref{tab:augmented_training_average}). The results indicate that data augmentation generally led to poorer performance in terms of image quality compared to training without any augmentation.
 
 \begin{table}[H]
     \centering
@@ -190,7 +185,6 @@ The impact of various data augmentation techniques on model performance was eval
 Among the techniques tested, applying a combination of rotation, shifting, and flipping resulted in the highest FID score (103.49), suggesting a significant negative impact on the generated image quality. Rotation and shifting alone slightly improved the FID score to 76.04, while reducing the shift range to 0.1 and 0.05 further improved performance, yielding FID scores of 70.74 and 66.06, respectively. The best performance was observed with no data augmentation, achieving an FID score of 58.94.
 
 These findings suggest that, while data augmentation is commonly employed to improve model generalization, it can potentially disrupt the data distribution and hinder the optimization process when not carefully selected or overused.
-
 
 \section{Applying the Model to the Animal Faces-HQ Dataset}
 
