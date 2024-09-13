@@ -1,4 +1,3 @@
-% \chapter{Discussion}
 \section{Discussion}
 \label{Discussion}
 
@@ -6,10 +5,10 @@ In this study, I conducted a series of experiments to evaluate the performance o
 
 The experiments revealed that GAN models utilizing convolutional layers outperformed those using dense layers in terms of image quality, confirming the strength of convolutional layers in capturing spatial features. Additionally, I found that increasing the number of layers in the generator or discriminator independently led to a decline in performance, suggesting that the balance between these two components is critical for stable GAN training. Simultaneously increasing the number of layers in both components improved the model's output.
 
-Regarding data augmentation, the results indicated that certain augmentation techniques negatively impacted GAN training, likely by introducing noise or disrupting the data distribution. This suggests that when applying data augmentation to GANs, careful selection and parameter tuning are necessary to avoid adverse effects on training stability and performance.
+Regarding data augmentation, the results indicated that certain augmentation techniques negatively impacted GAN training, likely by introducing noise or disrupting the data distribution. This suggests that when applying data augmentation to a GAN, careful selection and parameter tuning are necessary to avoid adverse effects on training stability and performance.
 
 When applying the model to the Animal Faces-HQ dataset, I successfully trained the GAN to generate cat images. However, due to hardware constraints, I had to downscale the images from 512x512 to 128x128 pixels, which may have limited the generated images' resolution and quality.
 
-The limitations of this study include computational restrictions, which prevented experiments on higher-resolution images, and a focus on standard GANs rather than more advanced architectures such as StyleGAN or BigGAN. Future work could explore these more complex GAN architectures and improve data augmentation strategies to enhance training performance and image quality. Additionally, training GANs on higher-resolution datasets and experimenting with advanced GAN models, such as Conditional GANs or Adaptive GANs, could provide further insights into enhancing image diversity and fidelity.
+The limitations of this study include computational restrictions, which prevented experiments on higher-resolution images, and a focus on the standard GAN rather than more advanced architectures such as StyleGAN or BigGAN. Future work could explore these more complex GAN architectures and improve data augmentation strategies to enhance training performance and image quality. Additionally, training a GAN on higher-resolution datasets and experimenting with advanced GAN models, such as Conditional GAN or Adaptive GAN, could provide further insights into enhancing image diversity and fidelity.
 
 In conclusion, this study demonstrates the effectiveness of GAN models in generating high-quality images, while highlighting areas for future improvements in architecture and training methods.
