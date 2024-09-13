@@ -912,6 +912,10 @@ INPUT ./Thesis.lot
 INPUT Thesis.lot
 INPUT Thesis.lot
 OUTPUT Thesis.lot
+INPUT ./Thesis.lol
+INPUT Thesis.lol
+INPUT Thesis.lol
+OUTPUT Thesis.lol
 INPUT ./01_Introduction.tex
 INPUT ./01_Introduction.tex
 INPUT ./01_Introduction.tex

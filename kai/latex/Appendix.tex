@@ -3,7 +3,7 @@
 \section*{Code}
 
 % First code block
-\begin{lstlisting}[style=mypython, caption=GAN model with dense layers]
+\begin{lstlisting}[style=mypython, caption=GAN Model with Dense Layers]
 import tensorflow as tf
 from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, BatchNormalization
 from tensorflow.keras.models import Sequential
@@ -149,7 +149,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
 
 
 
-\begin{lstlisting}[style=mypython, caption=GAN model with Convolutional layers]
+\begin{lstlisting}[style=mypython, caption=GAN Model with Convolutional Layers]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -294,7 +294,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
 \end{lstlisting}
 
 
-\begin{lstlisting}[style=mypython, caption= Explore data augmentaion 1]
+\begin{lstlisting}[style=mypython, caption= { Explore Data Augmentaion (rotation 10, width and height shift 0.1 \\ and  horizontal flip)}, captionpos=t]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -447,7 +447,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
 \end{lstlisting}
 
 
-\begin{lstlisting}[style=mypython, caption=Explore data augmentation 2]
+\begin{lstlisting}[style=mypython, caption={Explore Data Augmentation (rotation {10}, width and \\ height shift {0.1})},captionpos=t]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -598,7 +598,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
     generator, d_losses, g_losses, d_acc, fid_scores = train_gan(epochs=1000, batch_size=64, p_epoch=100)
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption=Explore data augmetation 3]
+\begin{lstlisting}[style=mypython, caption=Explore Data Augmetation (width and height shift {0.1})]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -748,7 +748,157 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
     generator, d_losses, g_losses, d_acc, fid_scores = train_gan(epochs=1000, batch_size=64, p_epoch=100)
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption= Explore GAN with more convolutional layers 1]
+\begin{lstlisting}[style=mypython, caption=Explore Data Augmetation (width and height shift {0.05})]
+    import tensorflow as tf
+    from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.optimizers import Adam
+    from scipy.linalg import sqrtm
+    import numpy as np
+    import time
+    import matplotlib.pyplot as plt
+    
+    np.random.seed(1000)
+    tf.random.set_seed(1000)
+    
+    # input 100
+    # output 28*28*1
+    
+    def build_generator():
+        model = Sequential()
+        
+        # increase the dimension
+        model.add(Dense(7*7*128, input_dim=100))
+        model.add(LeakyReLU(alpha=0.2))
+        model.add(Reshape((7, 7, 128)))
+        model.add(BatchNormalization(momentum=0.8))
+    
+        model.add(Conv2DTranspose(128, kernel_size=4, strides=2, padding='same'))
+        model.add(LeakyReLU(alpha=0.2))
+        model.add(BatchNormalization(momentum=0.8))
+    
+        model.add(Conv2DTranspose(64, kernel_size=4, strides=2, padding='same'))
+        model.add(LeakyReLU(alpha=0.2))
+        model.add(BatchNormalization(momentum=0.8))
+    
+        model.add(Conv2D(1, kernel_size=7, activation='tanh', padding='same'))
+    
+        return model
+    
+    # input 28*28*1
+    # output 1
+    
+    def build_discriminator():
+        model = Sequential()
+        
+        model.add(Conv2D(64, kernel_size=3, strides=2, input_shape=(28, 28, 1), padding='same'))
+        model.add(LeakyReLU(alpha=0.2))
+        model.add(Dropout(0.25))
+    
+        model.add(Conv2D(128, kernel_size=3, strides=2, padding='same'))
+        model.add(LeakyReLU(alpha=0.2))
+        model.add(Dropout(0.25))
+    
+        model.add(Flatten())
+        model.add(Dense(1, activation='sigmoid'))
+    
+        return model
+    
+    (x_train, _), (_, _) = tf.keras.datasets.mnist.load_data()
+    x_train = (x_train - 127.5) / 127.5
+    x_train = np.expand_dims(x_train, axis=3)
+    
+    datagen = tf.keras.preprocessing.image.ImageDataGenerator(
+        width_shift_range=0.05,
+        height_shift_range=0.05,
+    )
+    
+    def calculate_fid(real_images, fake_images):
+        act1 = real_images.reshape((real_images.shape[0], -1))
+        mu1, sigma1 = act1.mean(axis=0), np.cov(act1, rowvar=False)
+        
+        act2 = fake_images.reshape((fake_images.shape[0], -1))
+        mu2, sigma2 = act2.mean(axis=0), np.cov(act2, rowvar=False)
+        
+        ssdiff = np.sum((mu1 - mu2)**2.0)
+        covmean = sqrtm(sigma1.dot(sigma2))
+        
+        if np.iscomplexobj(covmean):
+            covmean = covmean.real
+        
+        fid = ssdiff + np.trace(sigma1 + sigma2 - 2.0 * covmean)
+        
+        return fid
+    
+    def train_gan(epochs=1000, batch_size=64, p_epoch=100):
+        generator = build_generator()
+        discriminator = build_discriminator()
+    
+        discriminator.compile(loss='binary_crossentropy', optimizer=Adam(0.0002, 0.5), metrics=['accuracy'])
+        discriminator.trainable = False
+    
+        gan_input = tf.keras.Input(shape=(100,))
+        gan_output = discriminator(generator(gan_input))
+        gan = tf.keras.Model(gan_input, gan_output)
+        gan.compile(loss='binary_crossentropy', optimizer=Adam(0.0002, 0.5))
+    
+        half_batch = int(batch_size / 2)
+        
+        d_losses = []
+        g_losses = []
+        d_acc = []
+        fid_scores = []
+        
+        start_time = time.time()  # Record the start time
+    
+        for epoch in range(epochs):
+            # Select a random half batch of real images
+            idx = np.random.randint(0, x_train.shape[0], half_batch)
+            real_images = x_train[idx]
+    
+            real_images_augmented = next(datagen.flow(real_images, batch_size=half_batch))
+    
+            # Generate a half batch of new fake images
+            noise = np.random.normal(0, 1, (half_batch, 100))
+            fake_images = generator.predict(noise)
+    
+            # Train the discriminator
+            real_labels = np.ones((half_batch, 1))
+            fake_labels = np.zeros((half_batch, 1))
+    
+            d_loss_real = discriminator.train_on_batch(real_images_augmented, real_labels)
+            d_loss_fake = discriminator.train_on_batch(fake_images, fake_labels)
+            d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
+    
+            # Train the generator
+            noise = np.random.normal(0, 1, (batch_size, 100))
+            valid_y = np.ones((batch_size, 1))
+    
+            g_loss = gan.train_on_batch(noise, valid_y)
+    
+            # Record the losses
+            d_losses.append(d_loss[0])
+            g_losses.append(g_loss)
+            d_acc.append(d_loss[1] * 100)
+            
+            # Calculate FID every p_epoch epochs
+            if epoch % p_epoch == 0:
+                noise = np.random.normal(0, 1, (1000, 100))
+                fake_images = generator.predict(noise)
+                fid = calculate_fid(x_train[:1000], fake_images)
+                fid_scores.append(fid)
+                print(f"{epoch} [D loss: {d_loss[0]}, acc.: {100 * d_loss[1]}%] [G loss: {g_loss}] [FID: {fid}]")
+    
+        end_time = time.time()  # Record the end time
+        total_time = end_time - start_time
+        print(f"Total training time: {total_time:.2f} seconds")
+        return generator, d_losses, g_losses, d_acc, fid_scores
+    
+    # Training the GAN with data augmentation and FID calculation
+    generator, d_losses, g_losses, d_acc, fid_scores = train_gan(epochs=1000, batch_size=64, p_epoch=100)
+\end{lstlisting}
+
+\begin{lstlisting}[style=mypython, caption= {Explore GAN with 4 Convolutional Layers in Generator \\ and 3 Convolutional Layers in Discriminator}]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -892,7 +1042,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
         return generator, d_losses, g_losses, d_acc, fid_scores
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption=Explore GAN with more convolutional layers 2]
+\begin{lstlisting}[style=mypython, caption= {Explore GAN with 5 Convolutional Layers in Generator \\ and 3 Convolutional Layers in Discriminator}]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -1042,7 +1192,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
     
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption=Explore GAN with more convolutional layers 3]
+\begin{lstlisting}[style=mypython, caption= {Explore GAN with 6 Convolutional Layers in Generator \\ and 3 Convolutional Layers in Discriminator}]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -1197,7 +1347,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
     
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption=Explore GAN with more convolutional layers 4]
+\begin{lstlisting}[style=mypython, caption= {Explore GAN with 6 Convolutional Layers in Generator \\ and 4 Convolutional Layers in Discriminator}]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -1356,7 +1506,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
         return generator, d_losses, g_losses, d_acc, fid_scores
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption=Explore GAN with more convolutional layers 5]
+\begin{lstlisting}[style=mypython, caption= {Explore GAN with 6 Convolutional Layers in Generator \\ and 5 Convolutional Layers in Discriminator}]
     import tensorflow as tf
     from tensorflow.keras.layers import Dense, Reshape, Flatten, Dropout, LeakyReLU, Conv2D, Conv2DTranspose, BatchNormalization
     from tensorflow.keras.models import Sequential
@@ -1524,7 +1674,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
         return generator, d_losses, g_losses, d_acc, fid_scores
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption=Explore GAN with more convolutional layers 6]
+\begin{lstlisting}[style=mypython, caption= {Explore GAN with 6 Convolutional Layers in Generator \\ and 6 Convolutional Layers in Discriminator}]
     def build_generator():
     model = Sequential()
     
@@ -1694,7 +1844,7 @@ def train_gan(epochs=1000, batch_size=64, p_epoch=100):
     return generator, d_losses, g_losses, d_acc, fid_scores
 \end{lstlisting}
 
-\begin{lstlisting}[style=mypython, caption=Apply new dataset]
+\begin{lstlisting}[style=mypython, caption=Apply Animal Faces-HQ Dataset]
 
     import os
     import time
