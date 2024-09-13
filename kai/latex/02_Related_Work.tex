@@ -1,6 +1,6 @@
 \chapter{Historical Models of Image Generation}
 
-In this chapter, I aim to provide an overview of three important generative modeling techniques: Noise Contrastive Estimation (NCE), Variational Autoencoders (VAEs), and Diffusion Models. These models have each played a significant role in the evolution of generative modeling and continue to influence modern approaches in the field. 
+This chapter provide an overview of three important generative modeling techniques: Noise Contrastive Estimation (NCE), Variational Autoencoders (VAEs), and Diffusion Models. These models have each played a significant role in the evolution of generative modeling and continue to influence modern approaches in the field. 
 
 \section{Noise Contrastive Estimation (NCEs)}
 
@@ -175,7 +175,7 @@ The training objective for diffusion models is to minimize the difference betwee
 L = \sum_{t=1}^{T} \mathbb{E}_{x_0, \epsilon} \left[ \|\epsilon - \epsilon_\theta(x_t, t)\|^2 \right]
 \end{equation}
 
-Where:
+where:
 \begin{itemize}
     \item \(L\): The loss function to be minimized.
     \item \(T\): The total number of time steps in the diffusion process.

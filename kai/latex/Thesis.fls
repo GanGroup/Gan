@@ -908,6 +908,10 @@ INPUT ./Thesis.lof
 INPUT Thesis.lof
 INPUT Thesis.lof
 OUTPUT Thesis.lof
+INPUT ./Thesis.lot
+INPUT Thesis.lot
+INPUT Thesis.lot
+OUTPUT Thesis.lot
 INPUT ./01_Introduction.tex
 INPUT ./01_Introduction.tex
 INPUT ./01_Introduction.tex
