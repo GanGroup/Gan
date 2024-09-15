@@ -38,11 +38,11 @@ In this part, I will introduce 3 image generated models, Noise Contrastive Estim
 
 ### Noise Contrastive Estimation (NCE)
 
-Noise Contrastive Estimation, or NCE, was introduced in 2010 by Gutmann and Hyvärinen as a way to estimate probability distributions by contrasting real data against noise. In its architecture, NCE uses real and noise samples as input and applies binary classification to learn effectively. Its main applications include density estimation and language modelling, and it has laid a foundation for image and text generation methods.
+Noise Contrastive Estimation NCE was introduced in 2010 by Gutmann as a way to estimate probability distributions by contrasting real data against noise. In its architecture, NCE uses real and noise samples as input and applies binary classification to learn effectively. Its main applications include density estimation and language modelling, and it has laid a foundation for image and text generation methods.
 
 ### Variational Autoencoder
 
-Variational Autoencoders, or VAEs, were introduced in 2013 by Kingma and Welling as a way to generate new data by encoding the input into a latent space and then reconstructing it. VAEs consist of an encoder, which compresses the data, and a decoder, which reconstructs it. VAEs have applications in image generation, data compression, and anomaly detection, making them widely used in generative modelling.
+Variational Autoencoders, or VAEs, were introduced in 2013 by Kingma as a way to generate new data by encoding the input into a latent space and then reconstructing it. VAEs consist of an encoder, which compresses the data, and a decoder, which reconstructs it. VAEs have applications in image generation, data compression, and anomaly detection, making them widely used in generative modelling.
 
 ### Diffusion Model
 
