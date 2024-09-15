@@ -38,11 +38,13 @@ In this part, I will introduce 3 image generated models, Noise Contrastive Estim
 
 ### Noise Contrastive Estimation (NCE)
 
-Noise Contrastive Estimation NCE was introduced in 2010 by Gutmann as a way to estimate probability distributions by contrasting real data against noise. In its architecture, NCE uses real and noise samples as input and applies binary classification to learn effectively. Its main applications include density estimation and language modelling, and it has laid a foundation for image and text generation methods.
+Noise Contrastive Estimation NCE was introduced in 2010 by Gutmann as a way to estimate probability distributions by contrasting real data against noise.
+
+In its architecture, NCE uses real and noise samples as input and applies binary classification to learn effectively. Its main applications include density estimation and language modelling, and it has laid a foundation for image and text generation methods.
 
 ### Variational Autoencoder
 
-Variational Autoencoders, or VAEs, were introduced in 2013 by Kingma as a way to generate new data by encoding the input into a latent space and then reconstructing it. VAEs consist of an encoder, which compresses the data, and a decoder, which reconstructs it. VAEs have applications in image generation, data compression, and anomaly detection, making them widely used in generative modelling.
+Variational Autoencoder VAE, was introduced in 2013 by Kingma as a way to generate new data by encoding the input into a latent space and then reconstructing it. VAEs consist of an encoder, which compresses the data, and a decoder, which reconstructs it. VAEs have applications in image generation, data compression, and anomaly detection, making them widely used in generative modelling.
 
 ### Diffusion Model
 
@@ -58,7 +60,7 @@ In this section, I will explain what is GAN, walk through its objective function
 
 ### Generative Adversarial Network
 
-Generative Adversarial Network, or GAN, was introduced by Ian Goodfellow in 2014. Simply put, GANs involve two models that work together—the generator and the discriminator. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
+Generative Adversarial Network, or GAN, was introduced by Goodfellow in 2014. GAN involves two models that work together—the generator and the discriminator. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
 
 Now, let’s take a look at how GANs are structured.
 
@@ -70,7 +72,7 @@ GAN has made a big impact across several fields, especially powerful in generati
 
 ### GAN Objective Function
 
-In this section, let’s break down the core objective function of GANs.
+In this slide, let’s break down the core objective function of GAN.
 
 The entire system operates like a game between two players—the generator and the discriminator. The goal for the generator is to create data that is so realistic, the discriminator cannot tell it’s fake. Meanwhile, the discriminator’s job is to become an expert at distinguishing between real and generated data.
 
