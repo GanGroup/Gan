@@ -8,11 +8,11 @@ Good afternoon, everyone. My presentation is about generating images using a dee
 
 This presentation is structured into five key sections: Introduction, Historical Models, Theoretical Background, Results, and Discussion.
 
-In the Introduction, I will provide a brief overview of GANs and the objectives of my thesis.
+In the Introduction, I will provide a brief overview of GAN and the objectives of my thesis.
 
 Next, in the Historical Models section, I will introduce 3 significant image generation models in recent years.
 
-In the Theoretical Background section, I will explain the key concepts behind GANs, focusing on the interaction between the generator and discriminator through adversarial training.
+In the Theoretical Background section, I will explain the key concepts behind GAN, focusing on the interaction between the generator and discriminator through adversarial training.
 
 Following that, I will present the experimental results of our GAN training and evaluate the performance of different architectures.
 
@@ -24,11 +24,11 @@ Finally, in the Discussion, I will highlight the main findings and discuss poten
 
 
 
-In this project, I’ll be exploring the world of Generative Adversarial Networks or GAN, a concept introduced by Ian Goodfellow back in 2014. 
+In this project, I’ll be exploring the world of Generative Adversarial Network or GAN, a concept introduced by Goodfellow back in 2014. 
 
-One of the most exciting applications of GANs is in image generation. GANs have been used to generate realistic images in various domains, including art, medical imaging, and even face generation. Their versatility is one of the reasons they’ve gained so much popularity.
+One of the most exciting applications of GAN is in image generation. GAN has been used to generate realistic images in various domains, including art, medical imaging, and even face generation. Its versatility is one of the reasons it has gained so much popularity.
 
-However, training GANs is not without challenges. Problems like mode collapse, where the generator produces limited variation and instability during training make it a difficult model to optimize. That’s why the objective of my study is to explore ways to enhance the training stability and improve the quality of the generated images.
+However, training GAN is not without challenges. Problems like mode collapse, where the generator produces limited variation and instability during training make it a difficult model to optimize. That’s why the objective of my study is to explore ways to enhance the training stability and improve the quality of the generated images.
 
 
 
@@ -52,7 +52,7 @@ Diffusion models, introduced in 2020 by Jonathan, generate data by progressively
 
 
 
-## Theoritical Background
+## Theoretical Background
 
 In this section, I will explain what is GAN, walk through its objective function, describe the training process, and show how to evaluate its performance.
 
