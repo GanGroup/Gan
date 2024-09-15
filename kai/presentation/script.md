@@ -100,6 +100,12 @@ Next, we have the generator’s loss function. The generator aims to generate da
 
 
 
+加负号是为两grediant desent, 和 原函数对比是不用考虑它。当判别器给的概率很低时蓝线的斜率接近于0.
+
+![image-20240915095834749](/Users/dengkai/Library/Application Support/typora-user-images/image-20240915095834749.png)
+
+
+
 This function measures how good the generator is at making the discriminator believe that the generated data is real.
 
 In short, the generator tries to minimize its loss by creating more convincing data, while the discriminator tries to minimize its own loss by getting better at spotting fake data. This adversarial process drives both networks to improve, leading to increasingly realistic results.
