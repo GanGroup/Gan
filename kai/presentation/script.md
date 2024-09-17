@@ -1,6 +1,6 @@
 ## Start
 
-Good afternoon, everyone. My presentation is about generating images using a deep convolutional GAN. In this presentation, I am excited to take you through the fascinating world of GAN.
+Good afternoon, everyone. My presentation is about generating images using a deep convolutional Generative Adversarial Network  GAN. In this presentation, I am excited to take you through the fascinating world of GAN.
 
 
 
@@ -8,33 +8,23 @@ Good afternoon, everyone. My presentation is about generating images using a dee
 
 This presentation is structured into five key sections: Introduction, Historical Models, Theoretical Background, Results, and Discussion.
 
-In the Introduction, I will provide a brief overview of GAN and the objectives of my thesis.
-
-Next, in the Historical Models section, I will introduce 3 significant image generation models in recent years.
-
-In the Theoretical Background section, I will explain the key concepts behind GAN, focusing on the interaction between the generator and discriminator through adversarial training.
-
-Following that, I will present the experimental results of our GAN training and evaluate the performance of different architectures.
-
-Finally, in the Discussion, I will highlight the main findings and discuss potential directions for future work.
-
-
-
 ## Introduction
 
+I will give a brief overview of GANs and the main objectives of my thesis.
 
-
-In this project, I’ll be exploring the world of Generative Adversarial Network or GAN, a concept introduced by Goodfellow back in 2014. 
+GAN is a concept introduced by Goodfellow in 2014. 
 
 One of the most exciting applications of GAN is in image generation. GAN has been used to generate realistic images in various domains, including art, medical imaging, and even face generation. Its versatility is one of the reasons it has gained so much popularity.
 
-However, training GAN is not without challenges. Problems like mode collapse, where the generator produces limited variation and instability during training make it a difficult model to optimize. That’s why the objective of my study is to explore ways to enhance the training stability and improve the quality of the generated images.
+However, training GAN is not without challenges. Problems like mode collapse, where the generator produces limited variation and instability during training make it a difficult model to optimize. 
+
+The objective of this thesis is to find the differences between GANs with dense layers and convolutional layers, explore the impact of layer depth and data augmentation, and finally, apply the GAN model to the Animal Faces-HQ dataset.
 
 
 
 ## Historical Models
 
-In this part, I will introduce 3 image generated models, Noise Contrastive Estimation NCE, Variational Autoencoder VAE and Diffusion model.
+In this part, I will introduce 3 milestones in image-generating history: Noise Contrastive Estimation NCE, Variational Autoencoder VAE and Diffusion model.
 
 ### Noise Contrastive Estimation (NCE)
 
@@ -42,9 +32,17 @@ Noise Contrastive Estimation NCE was introduced in 2010 by Gutmann as a way to e
 
 In its architecture, NCE uses real and noise samples as input and applies binary classification to learn effectively. Its main applications include density estimation and language modelling, and it has laid a foundation for image and text generation methods.
 
+
+
+NCE通常不会直接生成图片，但可以用作生成式模型中的损失优化方法，从而改进生成器的表现。
+
 ### Variational Autoencoder
 
 Variational Autoencoder VAE, was introduced in 2013 by Kingma as a way to generate new data by encoding the input into a latent space and then reconstructing it. VAEs consist of an encoder, which compresses the data, and a decoder, which reconstructs it. VAEs have applications in image generation, data compression, and anomaly detection, making them widely used in generative modelling.
+
+
+
+使用训练好的解码器将潜在向量  z  作为输入，输出生成图片。
 
 ### Diffusion Model
 
