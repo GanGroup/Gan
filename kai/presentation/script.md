@@ -14,9 +14,9 @@ I will give a brief overview of GANs and the main objectives of my thesis.
 
 GAN is a concept introduced by Goodfellow in 2014. 
 
-One of the most exciting applications of GAN is in image generation. GAN has been used to generate realistic images in various domains, including art, medical imaging, and even face generation. Its versatility is one of the reasons it has gained so much popularity.
+One of the most exciting applications of GAN is in image generation. GAN has been used to generate realistic images in various domains, including art, medical imaging, and even face generation. 
 
-However, training GAN is not without challenges. Problems like mode collapse, where the generator produces limited variation and instability during training make it a difficult model to optimize. 
+However, training GAN is not without challenges. Problems like mode collapse, vanishing gradients and instability can cause model training to fail.
 
 The objective of this thesis is to find the differences between GANs with dense layers and convolutional layers, explore the impact of layer depth and data augmentation, and finally, apply the GAN model to the Animal Faces-HQ dataset.
 
@@ -30,7 +30,11 @@ In this part, I will introduce 3 milestones in image-generating history: Noise C
 
 Noise Contrastive Estimation NCE was introduced in 2010 by Gutmann as a way to estimate probability distributions by contrasting real data against noise.
 
-In its architecture, NCE uses real and noise samples as input and applies binary classification to learn effectively. Its main applications include density estimation and language modelling, and it has laid a foundation for image and text generation methods.
+Here, we can see the architecture of NCE. It begins with the input layer that receives both real data and noise. The data is then processed through a hidden layer, ultimately producing a binary output that indicates whether the input is real or noise.
+
+Overhere is the architecture of NCE. The input real data and noise and then pass a hidden layer. the output is a binary shows whether the input is real or noise.
+
+Its main applications include density estimation and language modelling, and it has laid a foundation for image and text generation methods.
 
 
 
@@ -38,7 +42,17 @@ NCE通常不会直接生成图片，但可以用作生成式模型中的损失�
 
 ### Variational Autoencoder
 
-Variational Autoencoder VAE, was introduced in 2013 by Kingma as a way to generate new data by encoding the input into a latent space and then reconstructing it. VAEs consist of an encoder, which compresses the data, and a decoder, which reconstructs it. VAEs have applications in image generation, data compression, and anomaly detection, making them widely used in generative modelling.
+Variational Autoencoder VAE, was introduced in 2013 by Kingma as a way to generate new data by encoding the input into a latent space and then reconstructing it. 
+
+
+
+Here is the architecture of VAE, the left side is the encoder, which accepts the image and outputs a small latent space.
+
+The right side is the decoder which upsamples the latent space to a new image.
+
+VAEs have applications in image generation, data compression, and outlier detection, making them widely used in generative modelling.
+
+Only 1 year later, GAN was introduced by Goodfellow. Over here we can see the architecture of VAE and GAN, very similar architecture.
 
 
 
@@ -46,7 +60,11 @@ Variational Autoencoder VAE, was introduced in 2013 by Kingma as a way to genera
 
 ### Diffusion Model
 
-Diffusion models, introduced in 2020 by Jonathan, generate data by progressively adding noise to it and then learning to reverse the noise addition process. This two-step process involves adding noise during the forward phase and removing it during the reverse phase, which allows the model to generate high-quality images. Diffusion models have gained popularity for applications in image generation, audio synthesis, and even medical imaging.
+Diffusion model was introduced in 2020 by Jonathan as a way to generate data by progressively adding noise to it and then learning to reverse the noise addition process. 
+
+This two-step process involves adding noise during the forward phase and removing it during the reverse phase, which allows the model to generate high-quality images. 
+
+Diffusion models have gained popularity for applications in image generation, audio synthesis, and even medical imaging.
 
 
 
