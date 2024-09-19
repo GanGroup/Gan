@@ -1,6 +1,6 @@
 ## Start
 
-Good afternoon, everyone. My presentation is about generating images using a deep convolutional Generative Adversarial Network  GAN. In this presentation, I am excited to take you through the fascinating world of GAN.
+Good afternoon, everyone. My presentation is about generating images using a deep Convolutional  GAN. In this presentation, I am excited to take you through the fascinating world of GAN.
 
 
 
@@ -14,7 +14,7 @@ I will give a brief overview of GANs and the main objectives of my thesis.
 
 GAN is a concept introduced by Goodfellow in 2014. 
 
-One of the most exciting applications of GAN is in image generation. GAN has been used to generate realistic images in various domains, including art, medical imaging, and even face generation. 
+One of the most exciting applications of GAN is in image generation. GAN has been used to generate realistic images in various domains.
 
 However, training GAN is not without challenges. Problems like mode collapse, vanishing gradients and instability can cause model training to fail.
 
@@ -52,7 +52,9 @@ The right side is the decoder which upsamples the latent space to a new image.
 
 VAEs have applications in image generation, data compression, and outlier detection, making them widely used in generative modelling.
 
-Only 1 year later, GAN was introduced by Goodfellow. Over here we can see the architecture of VAE and GAN, very similar architecture.
+Only 1 year later, GAN was introduced by Goodfellow. Over here we can see the architecture of VAE and GAN, very similar architecture. 
+
+Just add a purple circle, and the new architecture can generate amazing, realistic images. I will show you why GAN can make it, but let's move to the last model first. 
 
 
 
@@ -76,15 +78,13 @@ In this section, I will explain what is GAN, walk through its objective function
 
 ### Generative Adversarial Network
 
-Generative Adversarial Network, or GAN, was introduced by Goodfellow in 2014. GAN involves two models that work together—the generator and the discriminator. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
+GAN involves two models that work together—the generator and the discriminator. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
 
 Now, let’s take a look at how GANs are structured.
 
 In terms of structure, GAN has two core parts: the generator and the discriminator. The generator starts with random noise and attempts to turn it into data that looks real. Meanwhile, the discriminator takes both real data and the generator’s fake data and tries to tell which is which. The generator is essentially trying to trick the discriminator, while the discriminator is trying to become an expert in spotting fake data. This process, called adversarial training, pushes the generator to constantly improve its creations until they’re nearly indistinguishable from the real data.
 
-Now, let’s explore some of the practical applications of GANs.
-
-GAN has made a big impact across several fields, especially powerful in generating realistic images and videos, which can be used for things like creating synthetic images for training other models or even for creative purposes like art. It also has applications in image restoration—think of restoring old or damaged photos to their former glory. In addition, GAN is used in style transfer, which allows us to blend the style of one image with the content of another. They’ve even been used to generate completely lifelike human faces, which can be useful in video games, movies, and virtual environments.
+GAN is good at image generation, video synthesis and style transfer.
 
 ### GAN Objective Function
 
