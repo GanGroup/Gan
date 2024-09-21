@@ -74,11 +74,13 @@ Diffusion models have gained popularity for applications in image generation, au
 
 ## Theoretical Background
 
-In this section, I will explain what is GAN, walk through its objective function, describe the training process, and show how to evaluate its performance.
+In this section, I will explain what is GAN, walk through its objective function, describe the training process, and finally show you how to evaluate its performance.
 
 ### Generative Adversarial Network
 
-GAN involves two models that work together—the generator and the discriminator. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
+As I mentioned before, GAN was a concept introduced by Goodfellow in 2014.
+
+It involves two models that work together—the generator and the discriminator. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
 
 GAN is good at image generation, video synthesis and style transfer.
 
@@ -86,7 +88,7 @@ GAN is good at image generation, video synthesis and style transfer.
 
 
 
-The objective function is like a min-max game between two players. The generator tries to make fake data look real, while the discriminator tries to correctly spot the fakes. As they compete, both get better over time, allowing GAN to create very realistic images and videos.
+The objective function is like a min-max game between two players. The generator tries to improve itself to make fake data look real, while the discriminator tries to correctly spot the fakes. As they compete, both get better over time, allowing GAN to create very realistic images and videos.
 
 Over here, we can see the min-max function of GAN.
 
@@ -112,9 +114,15 @@ This generator loss measures how good the generator is at making the discriminat
 
 ![image-20240915085730854](/Users/dengkai/Library/Application Support/typora-user-images/image-20240915085730854.png)
 
+And here is the loss function of the generator, it is not good. look at here: the blue curve is for function log(1-D), it shows in the early stage of training, the gradient is close to 0. This will cause the gradient vanishing problem, so we use log D to replace the original one to avoid the gradient vanishing issue.
+
+x-axis y-axis
+
+Horizontal and vertical
 
 
-Here, we can see the loss function curve. In the early stages of training, this function can lead to gradient vanishing. To address this, we modify the loss function to log D(x) to avoid this issue.
+
+Here, we can see the function curve log(1-D) and log D. In the early stages of training, this function can lead to gradient vanishing. To address this, we modify the loss function to log D to avoid this issue.
 
 
 
@@ -122,17 +130,17 @@ Here, we can see the loss function curve. In the early stages of training, this 
 
 ![image-20240915095834749](/Users/dengkai/Library/Application Support/typora-user-images/image-20240915095834749.png)
 
-
-
-This function measures how good the generator is at making the discriminator believe that the generated data is real.
-
-In short, the generator tries to minimize its loss by creating more convincing data, while the discriminator tries to minimize its own loss by getting better at spotting fake data. This adversarial process drives both networks to improve, leading to increasingly realistic results.
-
-
-
 ### GAN Training Process
 
-The training process of GAN is adversarial. Initially, the generator produces poor-quality data, but over time, as the generator improves, the quality of the generated data becomes more similar to the real data. The key to training GANs is achieving a balance between the generator and the discriminator. This is shown in the distribution diagram, where the error gradually decreases over time, and the generated data distribution eventually aligns with the real data distribution.
+Here is the diagram of the GAN training process in distribution angle. 
+
+先说出图总 z, x, 黑线，绿线和蓝线代表的意义
+
+Initially, the generator produces poor-quality data, but over time, as the generator improves, the quality of the generated data becomes more similar to the real data. 
+
+
+
+The key to training GAN is achieving a balance between the generator and the discriminator. This is shown in the distribution diagram, where the error gradually decreases over time, and the generated data distribution eventually aligns with the real data distribution.
 
 ![image-20240915085837801](/Users/dengkai/Library/Application Support/typora-user-images/image-20240915085837801.png)
 
@@ -142,9 +150,13 @@ The training process of GAN is adversarial. Initially, the generator produces po
 
 当黑线低于绿线， 如a 图过了交点后黑线低于绿线，判别器认为数据是假数据，蓝线位置接近于0.
 
+**未达到平衡**：在a图中，生成器和判别器都还没有经过足够的训练，因此两者之间的“对抗”还处于不稳定状态。生成器生成的样本与真实数据之间的差异较大，因此判别器能够快速地判断真假，这使得输出值波动更大，表现为蓝线的上下起伏。
+
 
 
 z uniform distribution, green curve normal distribution
+
+x is sample space; it has the sample from real distribution and fake distribution 
 
 a图中z映射到右边，所有绿线的峰值在右边 peak
 
@@ -224,6 +236,12 @@ To illustrate, imagine trying to generate tiger images. The generator first crea
 
 On the other hand, if both the generator and discriminator are weak, the generator may generate something incorrect, like a tiger-skin cake, but the weak discriminator says it’s a tiger. Through this flawed feedback, the generator learns incorrect features and ultimately produces poor images like a cat with tiger skin, which still passes as a tiger.
 
+
+
+
+
+协方差矩阵的元素代表不同图像特征之间的线性关系，特别是这些特征如何协同变化。如果两个特征总是一起增加或减少，它们的协方差将是正的；如果一个增加而另一个减少，则协方差为负。协方差矩阵通过这些成对特征的协方差值来描述数据的分布结构。
+
 ## Results
 
 
@@ -232,7 +250,7 @@ On the other hand, if both the generator and discriminator are weak, the generat
 
 
 
-In the early stages of my project, I focused on implementing and studying different types of GAN models. As shown here, I worked through a range of GAN variations, from the standard GAN to more advanced architectures like conditional GANs, style GANs, and even domain transfer GANs. Each notebook helped me explore the unique aspects of these models and understand their strengths and limitations.
+In the early stages of my thesis, I focused on implementing and studying different types of GAN models. As shown here, I worked through a range of GAN variations, from the standard GAN to more advanced architectures like conditional GANs, style GANs, and even domain transfer GANs. Each notebook helped me explore the unique aspects of these models and understand their strengths and limitations.
 
 After gaining hands-on experience with these variants, I decided to proceed with the **Standard GAN** for several reasons:
 
