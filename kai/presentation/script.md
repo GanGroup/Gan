@@ -70,25 +70,15 @@ Diffusion models have gained popularity for applications in image generation, au
 
 
 
-
-
 ## Theoretical Background
 
-In this section, I will explain what is GAN, walk through its objective function, describe the training process, and finally show you how to evaluate its performance.
-
-### Generative Adversarial Network
-
-As I mentioned before, GAN was a concept introduced by Goodfellow in 2014.
-
-It involves two models that work together—the generator and the discriminator. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
-
-GAN is good at image generation, video synthesis and style transfer.
+In this section, I will explain what is the objective function of GAN, describe the training process, and finally show you how to evaluate its performance.
 
 ### GAN Objective Function
 
 
 
-The objective function is like a min-max game between two players. The generator tries to improve itself to make fake data look real, while the discriminator tries to correctly spot the fakes. As they compete, both get better over time, allowing GAN to create very realistic images and videos.
+The objective function is like a min-max game between two players. Think of the generator as an artist trying to create fake data that looks real, and the discriminator as a judge who tries to distinguish between real and fake data. Over time, the generator learns to produce data that’s harder and harder to distinguish from the real thing. This constant back-and-forth helps both models improve, pushing the generator to create highly realistic data.
 
 Over here, we can see the min-max function of GAN.
 
@@ -212,7 +202,11 @@ Once we’ve taken the derivative, the next step is to set it equal to zero. Thi
 
 ### Verifying the Optimal Discriminator
 
+ • When p_data (x) is larger than p_g (x) ,D^∗ (x) ≈ 1, indicating that the data point is almost certainly from the real data.
 
+  • When p_data (x) is much smaller than p_g (x), D^∗ (x) ≈ 0, indicating that the data point is almost certainly from the generated data.
+
+  • When p_data (x) is close to p_g (x), D^∗ (x) ≈ 0.5, indicating that the discriminator cannot confidently determine whether the data point is realor generated, giving each a 50% probability.
 
 ### Evaluating GAN Performance
 
@@ -220,23 +214,9 @@ Once we’ve taken the derivative, the next step is to set it equal to zero. Thi
 
 In most machine learning models, accuracy is a key evaluation metric. However, in the case of GAN training, achieving 100% accuracy indicates a problem. It means that the balance between the generator and the discriminator is broken.
 
-
-
 For example, I once saw a training log showing that the discriminator had 100% accuracy, and I thought I had built the perfect GAN model. However, the images generated were poor. After further investigation, I realized the issue.
 
-
-
-If the discriminator is too strong and consistently identifies images as fake (with 100% accuracy), the generator doesn’t receive any positive feedback and can’t learn what it needs to generate, leading to failed training.
-
-
-
-To illustrate, imagine trying to generate tiger images. The generator first creates a lion, then a cat, then a dog, and each time the discriminator says “No, this is not a tiger.” After multiple attempts, the generator never learns what a tiger looks like.
-
-
-
-On the other hand, if both the generator and discriminator are weak, the generator may generate something incorrect, like a tiger-skin cake, but the weak discriminator says it’s a tiger. Through this flawed feedback, the generator learns incorrect features and ultimately produces poor images like a cat with tiger skin, which still passes as a tiger.
-
-
+FID measures how similar the distribution of generated images is to the distribution of real images.
 
 
 
@@ -327,6 +307,24 @@ The assumption here is that data augmentation techniques like rotation and flipp
 
 
 Let's begin by introducing the dataset used for our model. The **Animal Faces-HQ (AFHQ)** dataset consists of **16,130 high-quality images** of animal faces, including various species such as cats, dogs, and wildlife. These images are originally **512x512 pixels** but have been **downscaled to 128x128 pixels** to optimize memory usage during training. This allows for faster processing without compromising too much on the quality of the generated images.
+
+
+
+
+
+**Model Structure:**
+
+ • The generator takes a 100-dimensional noise vector, has 5 transpose convolutional layers with LeakyReLU activation and batch normalization, and outputs a 3×128×128 image.
+
+ • The discriminator takes a 3×128×128 image as input, has 5 convolutional layers with LeakyReLU activation, batch normalization, and dropout and outputs a single probability value indicating real or fake data.
+
+**Training Details:**
+
+ • Optimizer: Adam.
+
+ • Learning rate: 0.0002.
+
+ • Epochs: 4000 epochs of training using this dataset.
 
 
 
