@@ -262,6 +262,10 @@ Working through these different models not only provided foundational knowledge 
 
 
 
+**Finished the architecture.**
+
+
+
 ### Convolutional or Dense
 
 
@@ -271,6 +275,10 @@ I compared two main architectures: one using convolutional layers and the other 
 dense 8 ms
 
 convolution 20 ms
+
+
+
+**Finished the structure.**
 
 
 
