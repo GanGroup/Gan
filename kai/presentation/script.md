@@ -1,6 +1,6 @@
 ## Start
 
-Good afternoon, everyone. My presentation is about generating images using a deep Convolutional  GAN. In this presentation, I am excited to take you through the fascinating world of GAN.
+Good afternoon, everyone. My supervisor is Dr Serhiy Yanchuk and This is kai. My presentation is about generating images using a deep Convolutional GAN. In this presentation, I am excited to take you through the fascinating world of GAN.
 
 
 
@@ -14,11 +14,11 @@ I will give a brief overview of GANs and the main objectives of my thesis.
 
 GAN is a concept introduced by Goodfellow in 2014. 
 
-One of the most exciting applications of GAN is in image generation. GAN has been used to generate realistic images in various domains.
+One of the most exciting applications of GAN is in image generation. GAN can generate realistic images in various domains.
 
 However, training GAN is not without challenges. Problems like mode collapse, vanishing gradients and instability can cause model training to fail.
 
-The objective of this thesis is to find the differences between GANs with dense layers and convolutional layers, explore the impact of layer depth and data augmentation, and finally, apply the GAN model to the Animal Faces-HQ dataset.
+The objective of this thesis is to find the differences between GAN with dense layers and convolutional layers, explore the impact of layer depth and data augmentation, and finally, apply the GAN model to the Animal Faces-HQ dataset.
 
 
 
@@ -122,6 +122,16 @@ Here, we can see the function curve log(1-D) and log D. In the early stages of t
 
 ### GAN Training Process
 
+先解释 黑，绿，蓝三条线代表的意义，然后从a到d讲绿线在训练过程中慢慢的向黑线靠近直至堆叠在黑线上
+
+然后蓝线慢慢的向中间移动，并且变得水平。
+
+
+
+然后再解释z 和 x， 表示z 到x 是经有生成器进行映射的结果。
+
+
+
 Here is the diagram of the GAN training process in distribution angle. 
 
 先说出图总 z, x, 黑线，绿线和蓝线代表的意义
@@ -155,6 +165,12 @@ a图中z映射到右边，所有绿线的峰值在右边 peak
 绿线和黑线是概率密度函数 pdf， 描述的是数据点在不同位置出现的概率，越高的区域表示在该位置出现的概率越大。
 
 ### Mathematical Formulation during GAN Training 1
+
+Let's prove it.
+
+
+
+
 
 In this section, we’ll go over the mathematical formulation that governs GAN training.
 
