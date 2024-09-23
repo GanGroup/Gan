@@ -188,51 +188,41 @@ when p_data(x) = p_g(x), the output of discriminator is 50%,
 
 In most machine learning models, accuracy is a key evaluation metric. However, in GAN training 100% accuracy indicates the balance between the generator and the discriminator is broken.
 
-On the right, the training log shows that I got a model with 100% accuracy, but when I use it to gen images, the quality is poor, why?
+On the right, the training log shows that I got a model with 100% accuracy, but when I use it to gen images, the quality is poor.
 
-here is an example to help us understand it. 
+In GAN, we use FID to evaluate the model performance. 
 
-now I have a model with a 100% accuracy discriminator and want to train this model to generate tiger images.
+0-10 perfect.
 
-Assuming I train this model 3 times. Since the Discriminator is very powerful, our generator gets full negative feedback.
+10-50 good. 
 
-The generator can not learn what is a tiger, so the performance is bad.
-
-
-
-In GAN, we use FID to evaluate the model performance. Since it can measure how similar the distribution of generated images is to the distribution of real images.
+above 50 poor.
 
 
+
+Since it can measure how similar the distribution of generated images is to the distribution of real images.
 
 协方差矩阵的元素代表不同图像特征之间的线性关系，特别是这些特征如何协同变化。如果两个特征总是一起增加或减少，它们的协方差将是正的；如果一个增加而另一个减少，则协方差为负。协方差矩阵通过这些成对特征的协方差值来描述数据的分布结构。
 
 ## Results
 
-
-
 ### Model Select
 
 
 
-In the early stages of my thesis, I focused on implementing and studying different types of GAN models. As shown here, I worked through a range of GAN variations, from the standard GAN to more advanced architectures like conditional GANs, style GANs, and even domain transfer GANs. Each notebook helped me explore the unique aspects of these models and understand their strengths and limitations.
+In the early stages of my thesis, I focused on studying and implementing different types of GAN models. 
 
-After gaining hands-on experience with these variants, I decided to proceed with the **Standard GAN** for several reasons:
+For example, week 1 is standard GAN. ....
 
-\- **Foundational Model**: The standard GAN serves as the base for nearly all other GAN models.
+In the second stage, I choose standard GAN for further study and here are the reasons.
 
-\- **Well-Documented**: It’s a well-studied model, with extensive research available.
+\- **Foundational Model**: Obtain standard GAN can help me learn others GAN model fast.
 
-\- **Training Efficiency**: It’s computationally less demanding compared to more complex models.
+\- **Well-Documented**: I can easy find a document to help me solve the problem during the GAN training.
 
-\- **Flexibility**: The standard GAN is adaptable to various image generation tasks.
+\- **Training Efficiency**: The architecture of Standard GAN is simple, do not need powerful GPU.
 
-Working through these different models not only provided foundational knowledge but also informed my decision to use the Standard GAN for this project.
-
-
-
-**Finished the architecture.**
-
-
+\- **Flexibility**: Easy to find a dataset to training and no need extra work.
 
 ### Convolutional or Dense
 
@@ -255,8 +245,6 @@ convolution 20 ms
 
 
 In this slide, I explore how increasing the layer depth in both the generator and discriminator affects GAN performance. I experimented with different layer depths—3, 4, 5, and 6 layers—and evaluated the results using the FID score.
-
-
 
 My findings show that adding layers to only one network leads to performance degradation, with unstable training and worse image quality. However, when both the generator and discriminator have balanced, increased depth, I observed better results, with lower FID scores and higher-quality images.
 
@@ -314,5 +302,8 @@ Here are the cat face I genes; the cat is realistic and high quality.
 
 ### Summary and future work
 
-
+1. For objective 1: GAN with dense layers or Convolutional layers, the Convolutional layers structure perform better.
+2. For exploring layer depth, we should keep the balance between the generator and discriminator, in future, I want to explore the probability of more depth structure with u net and res net.
+3. For the impact of data augmentation: I assume that data augmentation may disturb the real data distribution, but it is not sufficient, in the future I will test all the data augmentation techniques to support my assumption.
+4. For applying the GAN model with the Animal Faces-HQ dataset, our model can gen realistic cat faces, but some of them are blurred, in the future, I will extend the training dataset and train the model for more epochs.
 
