@@ -126,6 +126,8 @@ Here, we can see the function curve log(1-D) and log D. In the early stages of t
 
 然后蓝线慢慢的向中间移动，并且变得水平。
 
+蓝线的左边和右边都逐渐向中间移动，到达50%的水平，表明在模型训练完成后判别器不能很准确的判断真实图片和虚假的图片。
+
 
 
 然后再解释z 和 x， 表示z 到x 是经有生成器进行映射的结果。
@@ -178,15 +180,7 @@ deriving and then setting the derivative to zero, we can get the optimal discrim
 
 D(x) is a function of p_data (x) and p_g (x), it has 3 conditions.
 
-### Verifying the Optimal Discriminator
-
- • When p_data (x) is larger than p_g (x) ,D^∗ (x) ≈ 1, indicating that the data point is almost certainly from the real data.
-
-  • When p_data (x) is much smaller than p_g (x), D^∗ (x) ≈ 0, indicating that the data point is almost certainly from the generated data.
-
-  • When p_data (x) is close to p_g (x), D^∗ (x) ≈ 0.5, indicating that the discriminator cannot confidently determine whether the data point is realor generated, giving each a 50% probability.
-
-Only the last condition is what we want, so this is why GAN training is unstable.
+when p_data(x) = p_g(x), the output of discriminator is 50%, 
 
 ### Evaluating GAN Performance
 
