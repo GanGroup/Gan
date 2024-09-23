@@ -206,9 +206,11 @@ Since it can measure how similar the distribution of generated images is to the 
 
 ## Results
 
+In this part, I will show the experiment results for my objectives.
+
 ### Model Select
 
-
+Before the experiment, I need to select a model.
 
 In the early stages of my thesis, I focused on studying and implementing different types of GAN models. 
 
@@ -216,73 +218,45 @@ For example, week 1 is standard GAN. ....
 
 In the second stage, I choose standard GAN for further study and here are the reasons.
 
-\- **Foundational Model**: Obtain standard GAN can help me learn others GAN model fast.
+\- **Foundational Model**: Obtaining standard GAN can help me learn other GAN models fast.
 
-\- **Well-Documented**: I can easy find a document to help me solve the problem during the GAN training.
+\- **Well-Documented**: I can easily find a document to help me solve the problem during the GAN training.
 
-\- **Training Efficiency**: The architecture of Standard GAN is simple, do not need powerful GPU.
+\- **Training Efficiency**: The architecture of Standard GAN is simple, and does not need a powerful GPU.
 
-\- **Flexibility**: Easy to find a dataset to training and no need extra work.
+\- **Flexibility**: Easy to find a dataset to train and no need for extra work.
 
 ### Convolutional or Dense
 
-
-
-I compared two main architectures: one using convolutional layers and the other using dense layers. Our results showed that convolutional layers significantly outperformed dense layers in generating high-quality images.
+The first is convolutional or Dense, in this experiment, I compared two main architectures: one using convolutional layers and the other using dense layers. The results showed that convolutional layers perform better.
 
 dense 8 ms
 
 convolution 20 ms
 
-
-
-**Finished the structure.**
-
-
-
 ### Exploring Layer Depth in GAN
 
 
 
-In this slide, I explore how increasing the layer depth in both the generator and discriminator affects GAN performance. I experimented with different layer depths—3, 4, 5, and 6 layers—and evaluated the results using the FID score.
+The second is layer depth. in this experiment, I explored the different layer depths—3, 4, 5, and 6 layers trained them 3 times and evaluated the results using the average FID score.
 
-My findings show that adding layers to only one network leads to performance degradation, with unstable training and worse image quality. However, when both the generator and discriminator have balanced, increased depth, I observed better results, with lower FID scores and higher-quality images.
-
-
-
-In conclusion, balancing the depth of both networks is crucial to achieving optimal GAN performance.
+And over here is the result table. It shows if I singly increase the layers in the generator or discriminator, the model performance will get worse. But if I keep the layer balance, the model performance will get better.
 
 
 
 
 
-### Impact of Data Augmentation 1
+### Impact of Data Augmentation
 
+Then, I explored the 3 data augmentation techniques, including rotation, shifting and flipping, and trained them with the Mnist dataset 3 times. Evaluated the results using the average FID score.
 
+Over here is the result table. It shows the GAN model without data augmentation techniques performs better.
 
-Let’s first talk about the objective of this part of the study. The goal was to evaluate the impact of different data augmentation techniques on the performance of GAN. We specifically tested three main augmentation techniques: rotating the images by 10 degrees, shifting the images both vertically and horizontally by 0.1, and flipping the images horizontally.
+in this scenario, I assume the data augmentation will disturb the real data distribution and make GAN model performance worse.
 
+### Applying Animal Faces HQ Dataset
 
-
-Now, here’s the interesting part. The results showed that, surprisingly, the model without any data augmentation performed better than when these techniques were applied. This suggests that the augmentation methods, such as flipping or rotating, introduced more noise into the system rather than improving its performance. As a result, certain augmentation techniques like flipping and rotation were removed to optimize the model.
-
-
-
-### Impact of Data Augmentation 2
-
-
-
-Now, let’s take a closer look at the results. As we can see from the table, the model that used no data augmentation at all achieved the best FID score of 58.94, indicating relatively better image quality. On the other hand, models that used a combination of techniques such as rotation, shifting, and flipping resulted in much higher FID scores—over 100 in some cases—indicating poorer image quality.
-
-
-
-The assumption here is that data augmentation techniques like rotation and flipping disturbed the real data distribution, introducing noise rather than enhancing the learning process. The FID score represents how well the generated images resemble real images, and lower scores are better. The ideal FID score is below 50, with anything over that considered poor quality.
-
-
-
-
-
-### Applying Animal Faces HQ Dataset 1
+Finally, I apply the standard GAN model with the animal faces HQ dataset.
 
 The data set has about 16 thousand images, each 512*512 pixels.
 
@@ -300,10 +274,12 @@ Here are the cat face I genes; the cat is realistic and high quality.
 
 ## Discussion
 
+In this section, I will show you a brief summary and the future work for my objectives.
+
 ### Summary and future work
 
-1. For objective 1: GAN with dense layers or Convolutional layers, the Convolutional layers structure perform better.
-2. For exploring layer depth, we should keep the balance between the generator and discriminator, in future, I want to explore the probability of more depth structure with u net and res net.
-3. For the impact of data augmentation: I assume that data augmentation may disturb the real data distribution, but it is not sufficient, in the future I will test all the data augmentation techniques to support my assumption.
-4. For applying the GAN model with the Animal Faces-HQ dataset, our model can gen realistic cat faces, but some of them are blurred, in the future, I will extend the training dataset and train the model for more epochs.
+1. The first is dense or Convolutional layers. The result shows the convolutional layers structure performs better.
+2. The second is exploring layer dept. The result table shows it is significant for us to keep the balance between the generator and discriminator when designing the structure of GAN. In future, I will explore the probability of more depth structure with u net and res net.
+3. The next is the impact of data augmentation. Based on the result, I assume that data augmentation may disturb the real data distribution, but it is not sufficient, in the future I will test all the data augmentation techniques to support my assumption.
+4. Finally, I applied the GAN model with the Animal Faces-HQ dataset. The result shows it can gen realistic cat faces, but some of them are blurred, in the future, I will extend the training dataset and train the model for more epochs.
 
