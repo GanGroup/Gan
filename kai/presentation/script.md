@@ -124,7 +124,13 @@ Here, we can see the function curve log(1-D) and log D. In the early stages of t
 
 先解释 黑，绿，蓝三条线代表的意义，然后从a到d讲绿线在训练过程中慢慢的向黑线靠近直至堆叠在黑线上
 
-然后蓝线慢慢的向中间移动，并且变得水平。
+shows that fake data distribution tends to equal real data distribution during the GAN training process.
+
+蓝线的左边和右边都逐渐向中间移动，并且变得水平。
+
+This shows that the generator learns to produce fake images that are hard to distinguish.
+
+
 
 蓝线的左边和右边都逐渐向中间移动，到达50%的水平，表明在模型训练完成后判别器不能很准确的判断真实图片和虚假的图片。
 
@@ -178,9 +184,9 @@ to get the max value of D, we can convert it to an antiderivative function f(D(x
 
 deriving and then setting the derivative to zero, we can get the optimal discriminator.
 
-D(x) is a function of p_data (x) and p_g (x), it has 3 conditions.
+D(x) is a function of p_data (x) and p_g (x).
 
-when p_data(x) = p_g(x), the output of discriminator is 50%, 
+when p_data(x) = p_g(x), the output of the discriminator is 50%,  this can support the phenomenon of gradually blue moving to the Middle and getting stable.
 
 ### Evaluating GAN Performance
 
@@ -210,7 +216,7 @@ In this part, I will show the experiment results for my objectives.
 
 ### Model Select
 
-Before the experiment, I need to select a model.
+Before the experiment, let's select a model first.
 
 In the early stages of my thesis, I focused on studying and implementing different types of GAN models. 
 
@@ -228,7 +234,7 @@ In the second stage, I choose standard GAN for further study and here are the re
 
 ### Convolutional or Dense
 
-The first is convolutional or Dense, in this experiment, I compared two main architectures: one using convolutional layers and the other using dense layers. The results showed that convolutional layers perform better.
+The first is convolutional or Dense, in this experiment, I compared two main structures: one using convolutional layers and the other using dense layers. The results showed that convolutional layers perform better.
 
 dense 8 ms
 
@@ -250,7 +256,9 @@ And over here is the result table. It shows if I singly increase the layers in t
 
 Then, I explored the 3 data augmentation techniques, including rotation, shifting and flipping, and trained them with the Mnist dataset 3 times. Evaluated the results using the average FID score.
 
-Over here is the result table. It shows the GAN model without data augmentation techniques performs better.
+Over here is the result table. It shows the more data augmentation techniques I use the more average fid score I got, even though I only shifted 0.05 the fid score was still higher than with data augmentation  
+
+the GAN model without data augmentation techniques performs better.
 
 in this scenario, I assume the data augmentation will disturb the real data distribution and make GAN model performance worse.
 
