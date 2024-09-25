@@ -54,7 +54,9 @@ VAEs have applications in image generation, data compression, and outlier detect
 
 Only 1 year later, GAN was introduced by Goodfellow. Over here we can see the architecture of VAE and GAN, very similar architecture. 
 
-Just add a purple circle, and the new architecture can generate amazing, realistic images. I will show you why GAN can make it, but let's move to the last model first. 
+The Goodfellow only adds a small circle in the middle; then, the new model can generate amazing realistic images.
+
+The left side is ..., and the right side is ...
 
 
 
@@ -62,7 +64,7 @@ Just add a purple circle, and the new architecture can generate amazing, realist
 
 ### Diffusion Model
 
-Diffusion model was introduced in 2020 by Jonathan as a way to generate data by progressively adding noise to it and then learning to reverse the noise addition process. 
+The diffusion model was introduced in 2020 by Jonathan as a way to generate data by progressively adding noise to it and then learning to reverse the noise addition process. 
 
 This two-step process involves adding noise during the forward phase and removing it during the reverse phase, which allows the model to generate high-quality images. 
 
@@ -186,7 +188,11 @@ deriving and then setting the derivative to zero, we can get the optimal discrim
 
 D(x) is a function of p_data (x) and p_g (x).
 
-when p_data(x) = p_g(x), the output of the discriminator is 50%,  this can support the phenomenon of gradually blue moving to the Middle and getting stable.
+p_data(x) is real data distribution and p_g(x) is fake data distribution.
+
+when p_data(x) = p_g(x), the output of the discriminator is 50%. This is why when the green line stacks on the black line, the blue moves to the middle.
+
+
 
 ### Evaluating GAN Performance
 
