@@ -297,3 +297,9 @@ In this section, I will show you a brief summary and the future work for my obje
 3. The next is the impact of data augmentation. Based on the result, I assume that data augmentation may disturb the real data distribution, but it is not sufficient, in the future I will test all the data augmentation techniques to support my assumption.
 4. Finally, I applied the GAN model with the Animal Faces-HQ dataset. The result shows it can gen realistic cat faces, but some of them are blurred, in the future, I will extend the training dataset and train the model for more epochs.
 
+
+
+
+
+
+
